@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Candy.ai - Enjoy The Ultimate AI Girlfriend Experience</title>
+  <link rel="stylesheet" href="dist/output.css" />
+</head>
+
+<body>
+  <div
+    class="bg-main fixed w-full top-0 z-40 flex h-16 shrink-0 items-center border-b border-[#363636] sm:px-4 px-2 shadow-sm sm:gap-x-2 lg:px-8">
+    <button id="nav-hamburger" type="button" class="py-2 sm:mr-0 md:mr-[10px] mr-0 text-gray-700 nav-hamburger">
+      <span class="sr-only">Open sidebar</span>
+      <svg class="nav-hamburger h-8 w-8 mr-1 text-white" data-action="click->sidebar#handleMenuClick" fill="none"
+        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </button>
+    <a href="/">
+      <img src="./icons/candyai-navbar.svg" class="h-[30px] md:h-[30px] w-[115px]">
+    </a>
+    <!-- Separator -->
+    <div class="h-6 w-px bg-gray-900/10 lg:hidden" aria-hidden="true"></div>
+    <div class="h-full ml-12 -mb-[2px] hidden md:flex">
+      <form class="button_to" method="post" action="/users/update_gender_interest"><input type="hidden" name="_method"
+          value="patch" autocomplete="off"><button disabled="disabled"
+          class="w-[93px] h-full mr-5 justify-center items-center inline-flex border-b-4 border-rose-400" type="submit">
+          <div class="flex items-center">
+            <div class="w-4 h-4 relative mr-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M13.1562 5.15625C13.1562 2.30856 10.8477 0 8 0C5.15231 0 2.84375 2.30856 2.84375 5.15625C2.84375 7.68334 4.66306 9.78184 7.0625 10.2233V11.75H4.71875V13.625H7.0625V16H8H8.9375V13.625H11.2812V11.75H8.9375V10.2233C11.3369 9.78184 13.1562 7.68334 13.1562 5.15625ZM8 8.4375C6.19091 8.4375 4.71875 6.96534 4.71875 5.15625C4.71875 3.34716 6.19091 1.875 8 1.875C9.80909 1.875 11.2812 3.34716 11.2812 5.15625C11.2812 6.96534 9.80909 8.4375 8 8.4375Z"
+                  fill="#F97187"></path>
+                <path
+                  d="M8.9375 13.625H11.2812V11.75H8.9375V10.2233C11.3369 9.78184 13.1562 7.68334 13.1562 5.15625C13.1562 2.30856 10.8477 0 8 0V1.875C9.80909 1.875 11.2812 3.34716 11.2812 5.15625C11.2812 6.96534 9.80909 8.4375 8 8.4375V16H8.9375V13.625Z"
+                  fill="#F97187"></path>
+              </svg>
+            </div>
+            <div class="text-rose-400 text-[13px] font-semibold leading-normal">
+              Female
+            </div>
+          </div>
+        </button><input type="hidden" name="authenticity_token"
+          value="3J6GcgzG8az83UepDob9khNL7T8ooekKufKh6pEy9ypwcn--Gq5ie7k0mP9CC3wXrrHqhPzM_qrKVnru5Z4EWg"
+          autocomplete="off"><input type="hidden" name="gender_interest" value="female" autocomplete="off"><input
+          type="hidden" name="query_string" value="" autocomplete="off"></form>
+      <form class="button_to" method="post" action="/users/update_gender_interest"><input type="hidden" name="_method"
+          value="patch" autocomplete="off"><button
+          class="w-[93px] h-full justify-center items-center inline-flex border-b-4 border-transparent" type="submit">
+          <div class="flex items-center">
+            <div class="w-4 h-4 relative mr-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M6.51176 14.6667C3.65643 14.6667 1.3335 12.3438 1.3335 9.48844C1.3335 6.63324 3.65643 4.3103 6.51176 4.3103C9.36696 4.3103 11.6899 6.63324 11.6899 9.48844C11.6899 12.3438 9.36696 14.6667 6.51176 14.6667ZM6.51176 6.24697C4.7243 6.24697 3.27003 7.7011 3.27003 9.48857C3.27003 11.276 4.72416 12.7303 6.51176 12.7303C8.2991 12.7303 9.7535 11.2762 9.7535 9.48857C9.75336 7.7011 8.2991 6.24697 6.51176 6.24697Z"
+                  fill="#FFF"></path>
+                <path d="M14.668 6.51164H12.7315V3.26991H9.48975V1.33337H14.668V6.51164Z" fill="#FFF"></path>
+                <path d="M13.0142 1.61597L14.3833 2.9851L10.174 7.19439L8.80487 5.82526L13.0142 1.61597Z" fill="#FFF">
+                </path>
+              </svg>
+            </div>
+            <div class="text-white text-[13px] font-semibold leading-normal">Male</div>
+          </div>
+        </button><input type="hidden" name="authenticity_token"
+          value="qC049xJBdS7CiQ1i8jbNgyigUdJ19-MMdenclhjVDEAEwcE7BCnm-Ydg0jS-u0wGlVpWaaGa9KwGTQeSbHn_MA"
+          autocomplete="off"><input type="hidden" name="gender_interest" value="male" autocomplete="off"><input
+          type="hidden" name="query_string" value="" autocomplete="off"></form>
+    </div>
+
+    <div class="flex flex-1 self-stretch lg:gap-x-6 bg-main">
+      <form class="relative flex flex-1" action="#" method="GET"></form>
+      <div class="hidden min-[350px]:flex items-center gap-x-4 lg:gap-x-6">
+        <a href="/subscriptions?from=discover"
+          class="justify-center items-center primary-gradient flex max-w-full gap-2 px-2 py-1.5 rounded-xl">
+          <img src="./icons/premium.svg" class="object-cover object-center w-5 overflow-hidden shrink-0">
+          <div class="text-white text-xs font-semibold self-stretch">
+            Subscribe 75% OFF
+          </div>
+        </a>
+      </div>
+      <div class="hidden lg:flex items-center gap-x-4 lg:gap-x-6">
+        <!-- Separator -->
+        <div class="lg:block lg:h-6 lg:w-px lg:bg-gray-900/10" aria-hidden="true"></div>
+        <!-- Profile dropdown -->
+        <div x-data="{ open: false }" @keydown.escape="open = false" @click.away="open = false" class="w-fit relative ">
+          <button type="button" class="-m-1.5 flex items-center p-1.5 " id="user-menu-button" @click="open = !open"
+            aria-expanded="false" :aria-expanded="open.toString()">
+            <span class="sr-only">Open user menu</span>
+            <img src="./icons/man.svg" class="h-8 w-8 rounded-full">
+            <span class="hidden lg:flex lg:items-center">
+              <span class="ml-4 text-sm font-semibold leading-6 text-white" aria-hidden="true">My Profile</span>
+              <svg class="ml-2 h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="open" @keydown.arrow-up.prevent="" @keydown.arrow-down.prevent="" @keydown.tab="open = false"
+            @keydown.enter.prevent="open = false"
+            class="absolute right-0 z-10 mt-2.5 origin-top-right rounded-lg shadow-lg focus:outline-none"
+            style="display: none;">
+            <a class="w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+              href="/subscriptions?from=dropdown">
+              <div class="w-5 h-5 relative"><img
+                  src="/assets/sidebar-icons/premium-bef4c0d01b6b99b6f2764cf40b755bd97debc307331857ca26f97628c6a38eec.svg">
+              </div>
+              <div class="text-white text-sm font-semibold leading-normal">Subscription</div>
+            </a> <a
+              class="w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+              href="/settings">
+              <div class="w-5 h-5 relative"><img
+                  src="/assets/settings-087d65eb2d9a7508f04c379467f39735f971ac6299872f159da8e6c1d735a710.svg"></div>
+              <div class="text-white text-sm font-semibold leading-normal">Settings</div>
+            </a>
+            <form class="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method"
+                value="delete" autocomplete="off"><button data-turbo="false"
+                class="rounded-b-lg w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+                type="submit">
+                <div class="w-5 h-5 relative"><img
+                    src="/assets/logout-c5bab4efa12211db16618320220423a09cf3d7f5b562be32cdd5110df2a21c18.svg"></div>
+                <div class="text-white text-sm font-semibold leading-normal">Logout</div>
+              </button><input type="hidden" name="authenticity_token"
+                value="oePBzbXcRPhgaxtuI43gp0eUExak7RltguVJo6RLNV5L3hPaxXJJTjyo4SQRewXWiwO_cSTE0QMxIxec8vJWCA"
+                autocomplete="off"></form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="hidden lg:pt-[63px] lg:z-20 lg:block lg:overflow-y-auto lg:overflow-x-hidden bg-g1 lg:fixed z-20 border-[#363636] border-r border-t lg:inset-y-0 lg:left-0 lg:w-[220px] lg:pb-5 w-[220px] fixed top-0 left-0 h-full webkit-transition-sidebar"
+    id="mainSidebarOpened">
+    <nav class="flex flex-col justify-between h-full ">
+      <ul role="list"
+        class="py-8 lg:py-6 flex flex-col gap-2 items-center justify-start px-6 overflow-y-auto  overflow-x-auto">
+        <li class="relative w-full">
+          <a href="/"
+            class="h-[40px] w-full  hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-4 h-4" src="./icons/explore.svg">
+            <span class="text-start text-grey-medium text-xxs font-medium leading-4">Explore</span>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/conversations/emily-caldwell"
+            class="h-[40px] w-full  hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-4 h-4" src="./icons/chat.svg">
+            <span class="text-start text-grey-medium text-xxs font-medium leading-4">Chat</span>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/gallery"
+            class="h-[40px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/gallery.svg">
+            <div class="text-start text-grey-medium text-xxs font-medium leading-4">Gallery</div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/generate-image?from=sidebar" class="relative
+            h-[40px] hover:bg-zinc-700  rounded-[10px] border
+            border-white border-opacity-10 justify-start px-3 items-center
+            gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/generate.svg">
+            <div class="text-start text-grey-medium text-xxs font-medium leading-none">
+              Generate Image
+            </div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/characters/new"
+            class="relative h-[40px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/magic-wand.svg">
+            <div class="text-start  text-grey-medium text-xxs font-medium leading-none">Create Character</div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/characters"
+            class="h-[40px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/love-lady.svg">
+            <div class="text-start text-grey-medium text-xxs font-medium leading-none">
+              My AI
+            </div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/subscriptions"
+            class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/premium1.svg">
+            <div class="text-start text-pink-default text-xxs font-medium leading-none">
+              Become Premium
+            </div>
+          </a>
+        </li>
+      </ul>
+      <ul role="list" class="flex flex-col gap-2 pt-6 px-6 border-[#363636] border-t items-center justify-end">
+        <li class="relative w-full">
+          <a href="https://discord.gg/candyai" target="_blank"
+            class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-4 h-4" src="./icons/discord1.svg">
+            <div class="text-start text-grey-medium text-xs font-medium leading-4">Discord</div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <div data-action="click->sidebar#openContactUs"
+            class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-4 h-4" src="./icons/contact.svg">
+            <div class="text-start sidebar-text  text-grey-medium text-xs font-medium leading-4" @click="">Contact Us
+            </div>
+          </div>
+        </li>
+        <li class="relative w-full">
+          <a target="_blank" class="" href="https://forms.gle/ngh58ASCF15TKWYG7">
+            <div
+              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+              <img class="w-4 h-4" src="./icons/trophy.svg">
+              <div class="text-start  text-grey-medium text-xs font-medium leading-4">Affiliate Program</div>
+            </div>
+          </a>
+        </li>
+        <li class="text-[8px] flex text-grey-medium pt-3 w-full">
+          <a class="leading-none mr-2" href="/privacy-policy">Privacy Policy</a>
+          <ul class="list-none">
+            <li class="flex items-center mr-2">
+              <span class="bg-white h-1 w-1 rounded-full mr-2"></span>
+              <a class="leading-none" href="/legal-information">Terms of Service</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="mainSidebarClosed"
+    class="lg:fixed lg:pt-[63px] z-20 border-[#363636] border-r border-t lg:inset-y-0 lg:left-0 lg:w-[100px] lg:pb-5 w-[100px] fixed top-0 left-0 h-full webkit-transition-sidebar hidden lg:block -translate-x-full"
+    style="background: linear-gradient(0deg, #131313 0%, #131313 100%); max-height: 100vh">
+    <span class="tooltip-containers absolute" data-sidebar-target="tooltipContainer">
+      <div id="tooltip-explore" role="tooltip"
+        class="relative z-100 invisible px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 30px);"
+        data-popper-placement="right">
+        Explore
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);"></div>
+      </div>
+      <div id="tooltip-chat" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 86px);"
+        data-popper-placement="right">
+        Chat
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);"></div>
+      </div>
+      <div id="tooltip-gallery" role="tooltip"
+        class="absolute z-100 whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm tooltip tooltip-sidebar dark:bg-gray-700 opacity-0 invisible"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 142px);"
+        data-popper-placement="right">
+        Gallery
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);"></div>
+      </div>
+      <div id="tooltip-image" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 198px);"
+        data-popper-placement="right">
+        Generate Image
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);"></div>
+      </div>
+      <div id="tooltip-character" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 254px);"
+        data-popper-placement="right">
+        Create Character
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);"></div>
+      </div>
+      <div id="tooltip-my-ai" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 310px);"
+        data-popper-placement="right">
+        My AI
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);"></div>
+      </div>
+      <div id="tooltip-tokens" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700">
+        Buy Tokens
+        <div class="tooltip-arrow" data-popper-arrow=""></div>
+      </div>
+      <div id="tooltip-premium" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 366px);"
+        data-popper-placement="right">
+        Become Premium
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);"></div>
+      </div>
+    </span>
+    <nav class="flex flex-col justify-between h-full ">
+      <ul role="list"
+        class="py-8 lg:py-6 flex flex-col gap-2 items-center justify-start px-6 overflow-y-auto  overflow-x-auto">
+        <li class="relative w-full" data-tooltip-target="tooltip-explore" data-tooltip-placement="right">
+          <a href="/"
+            class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-6 h-6" src="./icons/explore.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-chat" data-tooltip-placement="right">
+          <a href="/conversations/emily-caldwell"
+            class="h-[48px] w-[52px]  hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-6 h-6" src="./icons/chat.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-gallery" data-tooltip-placement="right">
+          <a href="/gallery"
+            class="h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/gallery.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-image" data-tooltip-placement="right">
+          <a href="/generate-image?from=sidebar" class="relative
+            h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border
+            border-white border-opacity-10 justify-start px-3 items-center
+            gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/generate.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-character" data-tooltip-placement="right">
+          <a href="/characters/new"
+            class="relative h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/magic-wand.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-my-ai" data-tooltip-placement="right">
+          <a href="/characters"
+            class="h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/love-lady.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-premium" data-tooltip-placement="right">
+          <a href="/subscriptions"
+            class="h-[48px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/premium1.svg">
+          </a>
+        </li>
+      </ul>
+      <ul role="list" class="flex flex-col gap-2 pt-6 px-6 border-[#363636] border-t items-center justify-end">
+        <li class="relative w-full" data-tooltip-target="tooltip-discord" data-tooltip-placement="right">
+          <div id="tooltip-discord" role="tooltip"
+            class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(59px, 6px);"
+            data-popper-placement="right">
+            Discord
+            <div class="tooltip-arrow" data-popper-arrow=""
+              style="position: absolute; top: 0px; transform: translate(0px, 14px);"></div>
+          </div>
+          <a href="https://discord.gg/candyai" target="_blank"
+            class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-6 h-6" src="./icons/discord1.svg">
+          </a>
+        </li>
+        <li class="relative w-full toggle-popup" data-tooltip-target="tooltip-contact" data-tooltip-placement="right">
+          <div id="tooltip-contact" role="tooltip"
+            class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(59px, 6px);"
+            data-popper-placement="right">
+            Contact Us
+            <div class="tooltip-arrow" data-popper-arrow=""
+              style="position: absolute; top: 0px; transform: translate(0px, 14px);"></div>
+          </div>
+          <div data-action="click->sidebar#openContactUs"
+            class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-6 h-6" src="./icons/contact.svg">
+          </div>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-affiliate" data-tooltip-placement="right">
+          <a target="_blank" class="" href="https://forms.gle/ngh58ASCF15TKWYG7">
+            <div id="tooltip-affiliate" role="tooltip"
+              class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+              style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(59px, 6px);"
+              data-popper-placement="right">
+              Affiliate Program
+              <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; top: 0px; transform: translate(0px, 14px);"></div>
+            </div>
+            <div
+              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+              <img class="w-6 h-6" src="./icons/trophy.svg">
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="mainMobileSidebar" data-action="click->sidebar#toggleMobileSidebar"
+    class="inset-y-0 w-[100vw] mt-[64px] z-[100] pr-[40vw] no-scroll fixed left-0 webkit-transition-sidebar block lg:hidden -translate-x-full">
+    <nav class="flex flex-col justify-between h-full w-[240px] mobile-sidebar-list-item"
+      style="background: linear-gradient(0deg, #131313 0%, #131313 100%)"
+      data-action="click->sidebar#setMobileSidebarValueToDefault">
+      <nav class="flex flex-col justify-between h-full" data-action="click->sidebar#setMobileSidebarValueToDefault">
+        <ul role="list"
+          class="flex flex-col items-center justify-start px-5 bg-zinc-900 h-screen overflow-auto mobile-sidebar-list-item">
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <!-- Profile dropdown -->
+            <div x-data="{ open: false }" @keydown.escape="open = false" @click.away="open = false">
+              <button type="button" class="w-full flex text-xs leading-5" id="user-menu-button" @click="open = !open"
+                aria-expanded="false" :aria-expanded="open.toString()">
+                <img src="./icons/man.svg" class="h-5 w-5 rounded-full mobile-sidebar-list-item">
+                <div class="flex items-center justify-between w-full mobile-sidebar-list-item">
+                  <div class="ml-2 text-xs font-semibold leading-5 text-grey-medium mobile-sidebar-list-item"
+                    aria-hidden="true">My Profile</div>
+                  <svg class="ml-2 h-4 w-4 text-white mobile-sidebar-list-item" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path class="mobile-sidebar-list-item" fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+              </button>
+              <div x-show="open" @keydown.arrow-up.prevent="" @keydown.arrow-down.prevent="" @keydown.tab="open = false"
+                @keydown.enter.prevent="open = false"
+                class="relative right-0 z-10 mt-2.5 origin-top-right rounded-lg shadow-lg focus:outline-none w-full bg-zinc-900 mobile-sidebar-list-item"
+                style="display: none;">
+                <a class="w-full mt-4 justify-start items-center gap-2 inline-flex" href="/subscriptions?from=dropdown">
+                  <div class="relative"><img class="w-5 h-5 mobile-sidebar-list-item"
+                      src="/assets/sidebar-icons/premium-bef4c0d01b6b99b6f2764cf40b755bd97debc307331857ca26f97628c6a38eec.svg">
+                  </div>
+                  <div class=" text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item">Subscription
+                  </div>
+                </a> <a class="w-full mt-4 justify-start items-center gap-2 inline-flex mobile-sidebar-list-item"
+                  href="/settings">
+                  <div class="relative"><img class="w-5 h-5 mobile-sidebar-list-item"
+                      src="/assets/settings-087d65eb2d9a7508f04c379467f39735f971ac6299872f159da8e6c1d735a710.svg"></div>
+                  <div class=" text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item">Settings</div>
+                </a>
+                <form class="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method"
+                    value="delete" autocomplete="off"><button data-turbo="false"
+                    class="rounded-b-lg w-full mt-4 justify-start items-center gap-2 inline-flex mobile-sidebar-list-item"
+                    type="submit">
+                    <div class="relative"><img class="w-5 h-5 mobile-sidebar-list-item"
+                        src="/assets/logout-c5bab4efa12211db16618320220423a09cf3d7f5b562be32cdd5110df2a21c18.svg"></div>
+                    <div class=" text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item">Logout</div>
+                  </button><input type="hidden" name="authenticity_token"
+                    value="u71Y5G-UzK0Mq0h8RIESa1ppjXKi_OTKW4ZAFOed-SRRgIrzHzrBG1BosjZ2d_calv4hFSLVLKToQB4rsSSacg"
+                    autocomplete="off"></form>
+              </div>
+            </div>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/" class="w-full flex justify-start items-center gap-2  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/explore.svg">
+              <span
+                class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item">Explore</span>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/conversations/emily-caldwell"
+              class="w-full justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/chat.svg">
+              <div class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item">Chat
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/gallery" class="justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/gallery.svg">
+              <div class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item">Gallery
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/generate-image?from=sidebar" class="relative
+            justify-start items-center
+            gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/generate.svg">
+              <div class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item">
+                Generate Image
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/characters/new"
+              class="relative justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/magic-wand.svg">
+              <div class="text-start  text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item">Create
+                Character</div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/characters" class="justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/love-lady.svg">
+              <div class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item">
+                My AI
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/subscriptions" class=" justify-start items-center gap-2 flex mx-auto mobile-sidebar-list-item">
+              <img class="w-5 h-5  mobile-sidebar-list-item" src="./icons/premium1.svg">
+              <div class="text-start text-pink-default text-xs font-medium leading-none mobile-sidebar-list-item">
+                Become Premium
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="p-5 bg-[#1A1A1A] flex-col justify-end items-start gap-[17px] inline-flex mobile-sidebar-list-item">
+          <div class="justify-start items-start gap-5 inline-flex mobile-sidebar-list-item">
+            <div
+              class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item">
+              <div
+                class="w-[70px] text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item">
+                <a href="https://discord.gg/candyai" class="mobile-sidebar-list-item" target="_blank"> Discord</a>
+              </div>
+            </div>
+            <div data-action="click->sidebar#openContactUs"
+              class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex">
+              <div
+                class="w-[70px] text-center text-neutral-200 text-xs font-semibold whitespace-nowrap leading-tight relative">
+                Contact Us
+              </div>
+            </div>
+          </div>
+          <div class="justify-start items-start gap-5 inline-flex mobile-sidebar-list-item">
+            <div
+              class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex  mobile-sidebar-list-item">
+              <a target="_blank" class="mobile-sidebar-list-item" href="https://forms.gle/ngh58ASCF15TKWYG7">
+                <div
+                  class="w-[70px] text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item">
+                  Affiliate</div>
+              </a>
+            </div>
+          </div>
+          <div class="justify-start items-center gap-2 inline-flex mobile-sidebar-list-item">
+            <a class="text-neutral-300 text-[8px] font-medium leading-[14px] mobile-sidebar-list-item"
+              href="/privacy-policy">Privacy Policy</a>
+            <div class="w-1 h-1 bg-zinc-300 rounded-full mobile-sidebar-list-item"></div>
+            <a class="text-neutral-300 text-[8px] font-medium leading-[14px] mobile-sidebar-list-item"
+              href="/legal-information">Terms of Service</a>
+          </div>
+        </div>
+      </nav>
+    </nav>
+  </div>
+
+  <div
+    class="flex px-5 py-2 justify-between w-full h-[56px] fixed bottom-0 z-50 border-t border-white border-opacity-20 bg-[#131313] lg:hidden">
+    <!-- Discover Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/explore.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Explore</span>
+    </a>
+    <!-- Generate Image Icon -->
+    <a href="#" class="flex flex-col items-center relative">
+      <img src="./icons/generate.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Generate</span>
+    </a>
+    <!-- Create AI Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/magic-wand.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Create</span>
+    </a>
+    <!-- Chat Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/chat.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Chat</span>
+    </a>
+    <!-- Premium Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/premium.svg" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Premium</span>
+    </a>
+  </div>
+
+  <div class="pt-16 lg:pl-[220px] trasnition-all duration-300 ease-in-out" id="main-content">
+    <div class="relative">
+      <div class="md:hidden h-[42px] w-full bg-[#212121]">
+        <div class="h-full -mb-[2px] flex justify-center">
+          <form class="button_to" method="post" action="/users/update_gender_interest"><input type="hidden"
+              name="_method" value="patch" autocomplete="off"><button disabled="disabled"
+              class="w-[93px] h-full mr-5 justify-center items-center inline-flex border-b-4 border-rose-400"
+              type="submit">
+              <div class="flex items-center">
+                <div class="w-4 h-4 relative mr-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M13.1562 5.15625C13.1562 2.30856 10.8477 0 8 0C5.15231 0 2.84375 2.30856 2.84375 5.15625C2.84375 7.68334 4.66306 9.78184 7.0625 10.2233V11.75H4.71875V13.625H7.0625V16H8H8.9375V13.625H11.2812V11.75H8.9375V10.2233C11.3369 9.78184 13.1562 7.68334 13.1562 5.15625ZM8 8.4375C6.19091 8.4375 4.71875 6.96534 4.71875 5.15625C4.71875 3.34716 6.19091 1.875 8 1.875C9.80909 1.875 11.2812 3.34716 11.2812 5.15625C11.2812 6.96534 9.80909 8.4375 8 8.4375Z"
+                      fill="#F97187"></path>
+                    <path
+                      d="M8.9375 13.625H11.2812V11.75H8.9375V10.2233C11.3369 9.78184 13.1562 7.68334 13.1562 5.15625C13.1562 2.30856 10.8477 0 8 0V1.875C9.80909 1.875 11.2812 3.34716 11.2812 5.15625C11.2812 6.96534 9.80909 8.4375 8 8.4375V16H8.9375V13.625Z"
+                      fill="#F97187"></path>
+                  </svg>
+                </div>
+                <div class="text-rose-400 text-[13px] font-semibold leading-normal">
+                  Female
+                </div>
+              </div>
+            </button><input type="hidden" name="authenticity_token"
+              value="aApFs7FGeN3Gg27T0KwjKxW3vRKpoqea8olIdJGAQfXE5rx_py7rCoNqsYWcIaKuqE26qX3PsDqBLZNw5SyyhQ"
+              autocomplete="off"><input type="hidden" name="gender_interest" value="female" autocomplete="off"><input
+              type="hidden" name="query_string" value="" autocomplete="off"></form>
+          <form class="button_to" method="post" action="/users/update_gender_interest"><input type="hidden"
+              name="_method" value="patch" autocomplete="off"><button
+              class="w-[93px] h-full justify-center items-center inline-flex border-b-4 border-transparent"
+              type="submit">
+              <div class="flex items-center">
+                <div class="w-4 h-4 relative mr-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M6.51176 14.6667C3.65643 14.6667 1.3335 12.3438 1.3335 9.48844C1.3335 6.63324 3.65643 4.3103 6.51176 4.3103C9.36696 4.3103 11.6899 6.63324 11.6899 9.48844C11.6899 12.3438 9.36696 14.6667 6.51176 14.6667ZM6.51176 6.24697C4.7243 6.24697 3.27003 7.7011 3.27003 9.48857C3.27003 11.276 4.72416 12.7303 6.51176 12.7303C8.2991 12.7303 9.7535 11.2762 9.7535 9.48857C9.75336 7.7011 8.2991 6.24697 6.51176 6.24697Z"
+                      fill="#FFF"></path>
+                    <path d="M14.668 6.51164H12.7315V3.26991H9.48975V1.33337H14.668V6.51164Z" fill="#FFF"></path>
+                    <path d="M13.0142 1.61597L14.3833 2.9851L10.174 7.19439L8.80487 5.82526L13.0142 1.61597Z"
+                      fill="#FFF"></path>
+                  </svg>
+                </div>
+                <div class="text-white text-[13px] font-semibold leading-normal">Male</div>
+              </div>
+            </button><input type="hidden" name="authenticity_token"
+              value="gKv-Ui5nNHS0NGS7eqOOCuQjyLSR1nF3Zp4LFdjwOtUsRweeOA-no_Hdu-02Lg-PWdnPD0W7ZtcVOtARrFzJpQ"
+              autocomplete="off"><input type="hidden" name="gender_interest" value="male" autocomplete="off"><input
+              type="hidden" name="query_string" value="" autocomplete="off"></form>
+        </div>
+      </div>
+      <div
+        class="md:px-9 xl:px-16 overflow-hidden relative max-w-7xl bg-cma-banner md:mb-0 my-6 md:my-10 border border-[#282828] rounded-xl border-solid mx-4 md:mx-auto">
+        <div class="">
+          <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+            <div class="flex flex-col items-stretch w-[97%] max-md:w-full">
+              <div class="grow max-md:max-w-full">
+                <div class="gap-5 flex max-md:items-stretch max-md:gap-0">
+                  <div class="flex flex-col items-stretch w-[55%] max-md:w-full md:py-5 z-10 p-5">
+                    <div class="items-start flex flex-col my-auto">
+                      <div class="items-start flex max-w-full flex-col">
+                        <h1
+                          class="text-primary text-lg sm:text-xl md:text-3xl font-medium md:font-bold md:leading-10 self-stretch">
+                          <span class="text-white block md:inline-block">Create your own</span>
+                          <span class="text-primary">AI Girlfriend</span>
+                        </h1>
+                        <h2
+                          class="text-neutral-200 text-sm font-medium leading-[171.43%] self-stretch w-full mr-px mt-2 hidden md:block">
+                          Your dream companion awaits! Create your AI Girlfriend, shape her look, personality, and bring
+                          her to life in one click. 100% powered by Artificial Intelligence.
+                        </h2>
+                      </div>
+                      <a href="/characters/new?from=discover"
+                        class="justify-center items-start primary-gradient flex w-[180px] max-w-full gap-2 mt-4 md:mt-10 px-5 py-3 rounded-xl">
+                        <img src="./icons/magic-wand.svg"
+                          class="aspect-square object-cover object-center w-5 overflow-hidden shrink-0">
+                        <div class="text-white text-sm font-semibold leading-[142.86%] self-stretch">
+                          Create your AI
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="relative flex-col items-stretch w-[56%] md:ml-5 max-md:w-full hidden min-[350px]:flex">
+                    <svg class="absolute w-[378px] left-[-40px] hidden md:block" xmlns="http://www.w3.org/2000/svg"
+                      width="528" height="313" viewBox="0 0 528 313" fill="none">
+                      <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M146.667 117.333C146.667 52.5319 199.199 0 264 0C328.801 0 381.333 52.5319 381.333 117.333V146.667H410.667C475.468 146.667 528 199.199 528 264C528 328.801 475.468 381.333 410.667 381.333H381.333V410.667C381.333 475.468 328.801 528 264 528C199.199 528 146.667 475.468 146.667 410.667V381.333H117.333C52.5319 381.333 0 328.801 0 264C0 199.199 52.5319 146.667 117.333 146.667H146.667V117.333ZM139.333 267.667C186.775 278.896 249.983 347.563 264 403.333C278.017 347.563 341.225 278.896 388.667 267.667C341.225 256.437 278.017 187.77 264 132C249.983 187.77 186.775 256.437 139.333 267.667Z"
+                        fill="url(#paint0_radial_6435_61112)"></path>
+                      <defs>
+                        <radialGradient id="paint0_radial_6435_61112" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                          gradientTransform="translate(264 264) rotate(90) scale(264)">
+                          <stop stop-color="white"></stop>
+                          <stop offset="0.457376" stop-color="white" stop-opacity="0.991115"></stop>
+                          <stop offset="1" stop-color="#131313"></stop>
+                        </radialGradient>
+                      </defs>
+                    </svg>
+                    <img fetchpriority="high"
+                      class="md:aspect-[1.9] absolute top-0 h-full object-cover md:object-contain object-center md:w-full overflow-hidden grow md:max-w-full right-10 md:right-auto"
+                      src="./images/banner-girl-1.webp">
+                    <img fetchpriority="high"
+                      class="md:aspect-[1.9] absolute top-0 h-full object-cover md:object-contain object-center md:w-full overflow-hidden grow md:max-w-full -right-[15px] md:right-[-150px]"
+                      src="./images/banner-girl-2.webp">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="hidden md:block absolute right-0 bottom-0 w-[269px] h-[238px] bg-pink-700 bg-opacity-60 rounded-full blur-[200px]">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-4 py-6">
+        <div class="mx-auto max-w-7xl">
+          <div class="w-full text-center">
+            <h2 class="text-xl font-semibold tracking-tight text-white md:text-3xl">
+              <div><span class="text-primary font-semibold">Explore</span><span class="text-white"> AI Characters</span>
+              </div>
+            </h2>
+          </div>
+          <div id="profiles">
+            <div class="mt-[20px] overflow-x-auto w-full h-11 justify-start sm:justify-center gap-2 inline-flex">
+              <a data-turbo-stream="true"
+                class="flex flex-0 whitespace-nowrap relative pl-4 py-2.5 rounded-lg justify-start items-center gap-2 bg-[#434343]"
+                data-method="get" href="/get_layout?filter=all">
+                <div class="text-white text-xs font-semibold leading-normal mr-4"> All Models</div>
+              </a> <a data-turbo-stream="true"
+                class="flex flex-0 whitespace-nowrap relative pl-4 py-2.5 rounded-lg justify-start items-center gap-2 bg-[#262626]"
+                data-method="get" href="/get_layout?filter=realistic">
+                <div class="text-white text-xs font-semibold leading-normal mr-4"> Realistic</div>
+              </a> <a data-turbo-stream="true"
+                class="flex flex-0 whitespace-nowrap relative pl-4 py-2.5 rounded-lg justify-start items-center gap-2 bg-[#262626]"
+                data-method="get" href="/get_layout?filter=anime">
+                <div class="text-white text-xs font-semibold leading-normal mr-4"> Anime</div>
+              </a>
+            </div>
+            <ul role="list"
+              class="mx-auto mt-6 md:mb-0 mb-10 grid max-w-2xl grid-cols-2 gap-5 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+              <turbo-frame class="h-full" id="pages-wrapper">
+                <a data-turbo-stream="true" class="flex flex-col flex-grow" data-method="get"
+                  href="/conversations/238a06c4-8818-46a8-9ea7-5c09cc0505de">
+                  <li>
+                    <div class="relative h-[400px] max-h-[400px] w-full profile-card">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/136696-4a3ea98e-d393-4022-9522-1417c85dd3af"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image first-image w-full object-cover h-[400px] max-h-[400px]">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/136696-da651c6e-bcab-4d7d-ad73-e0ce013c48f8"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image second-image w-full object-cover h-[400px] max-h-[400px] max-w-[300px]">
+
+                      <div
+                        class="z-10 w-10 h-10 shadow-lg absolute right-3 top-3 primary-gradient rounded-full backdrop-blur-lg">
+                        <img src="./icons/chat-profile.svg" class="absolute w-5 h-5 left-[10px] top-[10px]">
+                      </div>
+
+                      <div class="absolute bottom-0 px-3 md:px-4 py-3 font-medium z-20">
+                        <span class="text-white text-md font-semibold"> Rebecca </span><br>
+                        <span class="text-white font-normal text-xxs"> 51 years</span>
+                        <p class="text-gray-100 font-normal block text-sm md:text-sm opacity-[0.8] py-2">
+                          Active Yoga and fitness coach, healthy and concerne...
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </a></turbo-frame> <turbo-frame class="h-full" id="pages-wrapper">
+                <a data-turbo-stream="true" class="flex flex-col flex-grow" data-method="get"
+                  href="/conversations/alexis-ivyedge">
+                  <li>
+                    <div class="relative h-[400px] max-h-[400px] w-full profile-card">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/22-8026baed-b47a-4009-995d-c1890be18c35"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image first-image w-full object-cover h-[400px] max-h-[400px]">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/22-66958370-1c70-4dbc-8ef8-6f60a17094ef"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image second-image w-full object-cover h-[400px] max-h-[400px] max-w-[300px]">
+
+                      <div
+                        class="z-10 w-10 h-10 shadow-lg absolute right-3 top-3 primary-gradient rounded-full backdrop-blur-lg">
+                        <img src="./icons/chat-profile.svg" class="absolute w-5 h-5 left-[10px] top-[10px]">
+                      </div>
+
+                      <div class="absolute bottom-0 px-3 md:px-4 py-3 font-medium z-20">
+                        <span class="text-white text-md font-semibold"> Alexis </span><br>
+                        <span class="text-white font-normal text-xxs"> 25 years</span>
+                        <p class="text-gray-100 font-normal block text-sm md:text-sm opacity-[0.8] py-2">
+                          Digital muse and trendsetter, known as the perfect ...
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </a></turbo-frame> <turbo-frame class="h-full" id="pages-wrapper">
+                <a data-turbo-stream="true" class="flex flex-col flex-grow" data-method="get"
+                  href="/conversations/55df25e1-58ca-44b4-8d40-a0535c74121a">
+                  <li>
+                    <div class="relative h-[400px] max-h-[400px] w-full profile-card">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/2102327-743fdd1f-bf50-4233-811d-a4d09f081ddc"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image first-image w-full object-cover h-[400px] max-h-[400px]">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/2102327-7bc7009e-bdc2-4a72-bad8-1abcbb74a7f8"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image second-image w-full object-cover h-[400px] max-h-[400px] max-w-[300px]">
+
+                      <div
+                        class="z-10 w-10 h-10 shadow-lg absolute right-3 top-3 primary-gradient rounded-full backdrop-blur-lg">
+                        <img src="./icons/chat-profile.svg" class="absolute w-5 h-5 left-[10px] top-[10px]">
+                      </div>
+
+                      <div class="absolute bottom-0 px-3 md:px-4 py-3 font-medium z-20">
+                        <span class="text-white text-md font-semibold"> Yuna </span><br>
+                        <span class="text-white font-normal text-xxs"> 18 years</span>
+                        <p class="text-gray-100 font-normal block text-sm md:text-sm opacity-[0.8] py-2">
+                          Edgy art classmate, known for her sharp wit and bol...
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </a></turbo-frame> <turbo-frame class="h-full" id="pages-wrapper">
+                <a data-turbo-stream="true" class="flex flex-col flex-grow" data-method="get"
+                  href="/conversations/2788f6a0-831d-44a8-8406-eac00479d583">
+                  <li>
+                    <div class="relative h-[400px] max-h-[400px] w-full profile-card">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/2127253-79f31e7c-d675-4567-b215-10f32a3fce7f"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image first-image w-full object-cover h-[400px] max-h-[400px]">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/2127253-609848fb-4545-4821-8556-7983fa7c57cc"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image second-image w-full object-cover h-[400px] max-h-[400px] max-w-[300px]">
+
+                      <div
+                        class="z-10 w-10 h-10 shadow-lg absolute right-3 top-3 primary-gradient rounded-full backdrop-blur-lg">
+                        <img src="./icons/chat-profile.svg" class="absolute w-5 h-5 left-[10px] top-[10px]">
+                      </div>
+
+                      <div class="absolute bottom-0 px-3 md:px-4 py-3 font-medium z-20">
+                        <span class="text-white text-md font-semibold"> Alice </span><br>
+                        <span class="text-white font-normal text-xxs"> 28 years</span>
+                        <p class="text-gray-100 font-normal block text-sm md:text-sm opacity-[0.8] py-2">
+                          Alice, 28, is all about good wine, great food, and ...
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </a></turbo-frame> <turbo-frame class="h-full" id="pages-wrapper">
+                <a data-turbo-stream="true" class="flex flex-col flex-grow" data-method="get"
+                  href="/conversations/e7661a23-3e2a-4ed0-8f31-f0f9a76b6643">
+                  <li>
+                    <div class="relative h-[400px] max-h-[400px] w-full profile-card">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/3747248-5d5bb96f-c090-4dba-8655-a54b57c51fe1"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image first-image w-full object-cover h-[400px] max-h-[400px]">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/3747248-fb1ab8d5-72eb-4dec-be96-7fe62cde221f"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image second-image w-full object-cover h-[400px] max-h-[400px] max-w-[300px]">
+
+                      <div
+                        class="z-10 w-10 h-10 shadow-lg absolute right-3 top-3 primary-gradient rounded-full backdrop-blur-lg">
+                        <img src="./icons/chat-profile.svg" class="absolute w-5 h-5 left-[10px] top-[10px]">
+                      </div>
+
+                      <div class="absolute bottom-0 px-3 md:px-4 py-3 font-medium z-20">
+                        <span class="text-white text-md font-semibold"> Aleksandra </span><br>
+                        <span class="text-white font-normal text-xxs"> 24 years</span>
+                        <p class="text-gray-100 font-normal block text-sm md:text-sm opacity-[0.8] py-2">
+                          Fierce runway model, known for her fiery hair and e...
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </a></turbo-frame> <turbo-frame class="h-full" id="pages-wrapper">
+                <a data-turbo-stream="true" class="flex flex-col flex-grow" data-method="get"
+                  href="/conversations/78ef136a-8335-41f9-9401-5da4453364d5">
+                  <li>
+                    <div class="relative h-[400px] max-h-[400px] w-full profile-card">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/3747086-085b5b80-651a-4314-9df5-46b7876e5881"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image first-image w-full object-cover h-[400px] max-h-[400px]">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/3747086-1b6f83a1-5848-4c8e-91b3-fbf14cbd17eb"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image second-image w-full object-cover h-[400px] max-h-[400px] max-w-[300px]">
+
+                      <div
+                        class="z-10 w-10 h-10 shadow-lg absolute right-3 top-3 primary-gradient rounded-full backdrop-blur-lg">
+                        <img src="./icons/chat-profile.svg" class="absolute w-5 h-5 left-[10px] top-[10px]">
+                      </div>
+
+                      <div class="absolute bottom-0 px-3 md:px-4 py-3 font-medium z-20">
+                        <span class="text-white text-md font-semibold"> Brianna </span><br>
+                        <span class="text-white font-normal text-xxs"> 22 years</span>
+                        <p class="text-gray-100 font-normal block text-sm md:text-sm opacity-[0.8] py-2">
+                          Commanding presence behind the gas station counter,...
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </a></turbo-frame> <turbo-frame class="h-full" id="pages-wrapper">
+                <a data-turbo-stream="true" class="flex flex-col flex-grow" data-method="get"
+                  href="/conversations/4651e851-df1f-471a-9c45-753aca939190">
+                  <li>
+                    <div class="relative h-[400px] max-h-[400px] w-full profile-card">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/3746922-a5f9cc3a-2d24-4d7f-b4f4-77cc597e3d91"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image first-image w-full object-cover h-[400px] max-h-[400px]">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/3746922-f26353c4-8fad-4716-94c4-072b7f544ef2"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image second-image w-full object-cover h-[400px] max-h-[400px] max-w-[300px]">
+
+                      <div
+                        class="z-10 w-10 h-10 shadow-lg absolute right-3 top-3 primary-gradient rounded-full backdrop-blur-lg">
+                        <img src="./icons/chat-profile.svg" class="absolute w-5 h-5 left-[10px] top-[10px]">
+                      </div>
+
+                      <div class="absolute bottom-0 px-3 md:px-4 py-3 font-medium z-20">
+                        <span class="text-white text-md font-semibold"> Mina </span><br>
+                        <span class="text-white font-normal text-xxs"> 21 years</span>
+                        <p class="text-gray-100 font-normal block text-sm md:text-sm opacity-[0.8] py-2">
+                          Mina blends traditional Korean values with a reserv...
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </a></turbo-frame> <turbo-frame class="h-full" id="pages-wrapper">
+                <a data-turbo-stream="true" class="flex flex-col flex-grow" data-method="get"
+                  href="/conversations/ffde76d9-981f-46ca-a2dd-1846bf66ce9e">
+                  <li>
+                    <div class="relative h-[400px] max-h-[400px] w-full profile-card">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/2099592-c0029072-dc0f-4d96-93b3-64581b29f664"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image first-image w-full object-cover h-[400px] max-h-[400px]">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/2099592-c70dd0bd-205b-4a85-aae1-34463abd6432"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image second-image w-full object-cover h-[400px] max-h-[400px] max-w-[300px]">
+
+                      <div
+                        class="z-10 w-10 h-10 shadow-lg absolute right-3 top-3 primary-gradient rounded-full backdrop-blur-lg">
+                        <img src="./icons/chat-profile.svg" class="absolute w-5 h-5 left-[10px] top-[10px]">
+                      </div>
+
+                      <div class="absolute bottom-0 px-3 md:px-4 py-3 font-medium z-20">
+                        <span class="text-white text-md font-semibold"> Elizabeth </span><br>
+                        <span class="text-white font-normal text-xxs"> 55 years</span>
+                        <p class="text-gray-100 font-normal block text-sm md:text-sm opacity-[0.8] py-2">
+                          Intimidating yet intriguing professor, often spotte...
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </a></turbo-frame> <turbo-frame class="h-full" id="pages-wrapper">
+                <a data-turbo-stream="true" class="flex flex-col flex-grow" data-method="get"
+                  href="/conversations/ashley-williams">
+                  <li>
+                    <div class="relative h-[400px] max-h-[400px] w-full profile-card">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/9-77889ccf-250e-4209-b345-94d52625aa2b"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image first-image w-full object-cover h-[400px] max-h-[400px]">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/9-8d475b87-6fc0-493a-b5b1-84ddb3d12bfb"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image second-image w-full object-cover h-[400px] max-h-[400px] max-w-[300px]">
+
+                      <div
+                        class="z-10 w-10 h-10 shadow-lg absolute right-3 top-3 primary-gradient rounded-full backdrop-blur-lg">
+                        <img src="./icons/chat-profile.svg" class="absolute w-5 h-5 left-[10px] top-[10px]">
+                      </div>
+
+                      <div class="absolute bottom-0 px-3 md:px-4 py-3 font-medium z-20">
+                        <span class="text-white text-md font-semibold"> Asuna </span><br>
+                        <span class="text-white font-normal text-xxs"> 19 years</span>
+                        <p class="text-gray-100 font-normal block text-sm md:text-sm opacity-[0.8] py-2">
+                          Japanese waitress, manga lover and gamer...
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </a></turbo-frame> <turbo-frame class="h-full" id="pages-wrapper">
+                <a data-turbo-stream="true" class="flex flex-col flex-grow" data-method="get"
+                  href="/conversations/emily-caldwell">
+                  <li>
+                    <div class="relative h-[400px] max-h-[400px] w-full profile-card">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/12-908d871b-57da-4c96-a4f5-c05341873b42"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image first-image object-cover h-[400px] max-h-[400px] w-full max-w-[300px]">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/12-bf83f707-3e75-4a0c-87f4-4460511796cf"
+                        fetchpriority="high"
+                        class="rounded-lg profile-image second-image object-cover h-[400px] max-h-[400px] w-full max-w-[300px]">
+
+                      <div
+                        class="z-10 w-10 h-10 shadow-lg absolute right-3 top-3 primary-gradient rounded-full backdrop-blur-lg">
+                        <img src="./icons/chat-profile.svg" class="absolute w-5 h-5 left-[10px] top-[10px]">
+                      </div>
+
+                      <div class="absolute bottom-0 px-3 md:px-4 py-3 font-medium z-20">
+                        <span class="text-white text-md font-semibold"> Emily </span><br>
+                        <span class="text-white font-normal text-xxs"> 20 years</span>
+                        <p class="text-gray-100 font-normal block text-sm md:text-sm opacity-[0.8] py-2">
+                          Young law school student, you can call her Emy...
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </a></turbo-frame> <turbo-frame class="h-full" id="pages-wrapper">
+                <a data-turbo-stream="true" class="flex flex-col flex-grow" data-method="get"
+                  href="/conversations/amaya-nkosi">
+                  <li>
+                    <div class="relative h-[400px] max-h-[400px] w-full profile-card">
+                      <img src="./images/amaya-1.png" fetchpriority="high"
+                        class="rounded-lg profile-image first-image object-cover h-[400px] max-h-[400px] w-full max-w-[300px]">
+                      <img src="./images/amaya-2.png" fetchpriority="high"
+                        class="rounded-lg profile-image second-image object-cover h-[400px] max-h-[400px] w-full max-w-[300px]">
+
+                      <div
+                        class="z-10 w-10 h-10 shadow-lg absolute right-3 top-3 primary-gradient rounded-full backdrop-blur-lg">
+                        <img src="./icons/chat-profile.svg" class="absolute w-5 h-5 left-[10px] top-[10px]">
+                      </div>
+
+                      <div class="absolute bottom-0 px-3 md:px-4 py-3 font-medium z-20">
+                        <span class="text-white text-md font-semibold"> Amaya </span><br>
+                        <span class="text-white font-normal text-xxs"> 36 years</span>
+                        <p class="text-gray-100 font-normal block text-sm md:text-sm opacity-[0.8] py-2">
+                          Dominant housewife living in a calm and boring neig...
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </a></turbo-frame> <turbo-frame class="h-full" id="pages-wrapper">
+                <a data-turbo-stream="true" class="flex flex-col flex-grow" data-method="get"
+                  href="/conversations/1c25cda0-5f06-4715-b319-687fe3e210c4">
+                  <li>
+                    <div class="relative h-[400px] max-h-[400px] w-full profile-card">
+                      <img src="./images/ashley-1.png" fetchpriority="high"
+                        class="rounded-lg profile-image first-image object-cover h-[400px] max-h-[400px] w-full max-w-[300px]">
+                      <img src="./images/ashley-2.png" fetchpriority="high"
+                        class="rounded-lg profile-image second-image object-cover h-[400px] max-h-[400px] w-full max-w-[300px]">
+
+                      <div
+                        class="z-10 w-10 h-10 shadow-lg absolute right-3 top-3 primary-gradient rounded-full backdrop-blur-lg">
+                        <img src="./icons/chat-profile.svg" class="absolute w-5 h-5 left-[10px] top-[10px]">
+                      </div>
+
+                      <div class="absolute bottom-0 px-3 md:px-4 py-3 font-medium z-20">
+                        <span class="text-white text-md font-semibold">Ashley</span><br>
+                        <span class="text-white font-normal text-xxs"> 29 years</span>
+                        <p class="text-gray-100 font-normal block text-sm md:text-sm opacity-[0.8] py-2">
+                          Ashley, 29, is a glamorous model who adores luxury....
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </a></turbo-frame>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col overflow-hidden mx-5 xl:mx-auto py-[34px] md:py-[60px] relative max-w-7xl bg-cma-banner mt-6 border border-[color:var(--Pop-Up-Stroke,#282828)] rounded-xl rounded-br-[50px] md:rounded-br-[100px] border-solid">
+        <div class="flex max-md:flex-col max-md:items-stretch z-10">
+          <div class="flex flex-col flex-1 items-center text-center justify-center">
+            <div class="items-start flex max-w-full flex-col">
+              <h2 class="text-primary text-xl md:text-3xl font-bold leading-10 self-stretch">
+                <span class="text-white">Craft the </span>
+                <span class="text-primary">AI Girlfriend</span><br>
+                <span class="text-white">of Your Dreams</span>
+              </h2>
+            </div>
+            <a href="/characters/new?from=discover"
+              class="justify-center items-start primary-gradient flex w-[180px] max-w-full gap-2 mt-10 px-5 py-3 rounded-xl">
+              <img src="./icons/magic-wand.svg"
+                class="aspect-square object-cover object-center w-5 overflow-hidden shrink-0">
+              <div class="text-white text-sm font-semibold leading-[142.86%] self-stretch">
+                Try for Free
+              </div>
+            </a>
+          </div>
+        </div>
+        <svg class="absolute mx-auto z-0 scale-150 left-0 right-0 -top-4" xmlns="http://www.w3.org/2000/svg" width="528"
+          height="313" viewBox="0 0 528 313" fill="none">
+          <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd"
+            d="M146.667 117.333C146.667 52.5319 199.199 0 264 0C328.801 0 381.333 52.5319 381.333 117.333V146.667H410.667C475.468 146.667 528 199.199 528 264C528 328.801 475.468 381.333 410.667 381.333H381.333V410.667C381.333 475.468 328.801 528 264 528C199.199 528 146.667 475.468 146.667 410.667V381.333H117.333C52.5319 381.333 0 328.801 0 264C0 199.199 52.5319 146.667 117.333 146.667H146.667V117.333ZM139.333 267.667C186.775 278.896 249.983 347.563 264 403.333C278.017 347.563 341.225 278.896 388.667 267.667C341.225 256.437 278.017 187.77 264 132C249.983 187.77 186.775 256.437 139.333 267.667Z"
+            fill="url(#paint0_radial_6435_61112)"></path>
+          <defs>
+            <radialGradient id="paint0_radial_6435_61112" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(264 264) rotate(90) scale(264)">
+              <stop stop-color="white"></stop>
+              <stop offset="0.457376" stop-color="white" stop-opacity="0.991115"></stop>
+              <stop offset="1" stop-color="#131313"></stop>
+            </radialGradient>
+          </defs>
+        </svg>
+        <div class="absolute right-0 bottom-0 w-[269px] h-[238px] bg-pink-700 bg-opacity-60 rounded-full blur-[200px]">
+        </div>
+      </div>
+      <div class="flex flex-col mt-8 md:mt-32 max-w-7xl mx-5 xl:mx-auto">
+        <div class="relative flex flex-col items-center">
+          <h2 class="text-primary md:text-3xl text-xl text-center font-bold leading-10 self-stretch">
+            <span class="text-white">Frequently Asked</span>
+            <span class="text-primary">Questions</span>
+          </h2>
+        </div>
+        <div class="relative flex flex-col items-stretch">
+          <div class="flex flex-col gap-7 items-center w-full mt-10">
+            <div
+              class="w-full border border-[#282828] bg-zinc-900 relative transition-all duration-500 rounded-[10px] px-3 from-[#4D1D28] to-[#1F1F1F]">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full text-left transition-all ease-in cursor-pointer rounded-t-1 group text-white md:text-[20px] text-[16px] font-medium leading-8 self-stretch grow shrink basis-auto py-5 max-md:max-w-full"
+                  data-collapse-target="collapse-1">
+                  <span class="inline-block pr-8">
+                    How does an AI girlfriend work?
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="absolute right-0 h-5 w-5 text-gray-500 group-open:rotate-180" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+              </h6>
+              <div data-collapse="collapse-1" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="py-3 text-neutral-400 md:text-base text-sm font-medium w-full leading-relaxed">
+                  <p>
+                    At Candy.ai, it’s all about making realistic yet fantasy-fueled relationships. We use advanced
+                    artificial intelligence technology to enable you to create your ideal AI girlfriend according to
+                    your
+                    preferences—whether that’s a sweet and innocent petite princess or an older and more dominant woman.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-full border border-[#282828] bg-zinc-900 relative transition-all duration-500 rounded-[10px] px-3 from-[#4D1D28] to-[#1F1F1F]">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full text-left transition-all ease-in cursor-pointer rounded-t-1 group text-white md:text-[20px] text-[16px] font-medium leading-8 self-stretch grow shrink basis-auto py-5 max-md:max-w-full"
+                  data-collapse-target="collapse-2">
+                  <span class="inline-block pr-8">
+                    How do people interact with their AI girlfriends?
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="absolute right-0 h-5 w-5 text-gray-500 group-open:rotate-180" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+              </h6>
+              <div data-collapse="collapse-2" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="py-3 text-neutral-400 md:text-base text-sm font-medium w-full leading-relaxed">
+                  <p class="mb-3">
+                    Through our smart system and cutting-edge machine learning, you can interact and get intimate with
+                    your AI girlfriend. You can expect her to listen to you, respond quickly to your messages, and even
+                    follow photo requests like the good girl she is.
+                  </p>
+                  <p>Every moment can be a genuine and realistic experience, and you’ll always be the one in control
+                    (unless you tell her otherwise).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-full border border-[#282828] bg-zinc-900 relative transition-all duration-500 rounded-[10px] px-3 from-[#4D1D28] to-[#1F1F1F]">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full text-left transition-all ease-in cursor-pointer rounded-t-1 group text-white md:text-[20px] text-[16px] font-medium leading-8 self-stretch grow shrink basis-auto py-5 max-md:max-w-full"
+                  data-collapse-target="collapse-3">
+                  <span class="inline-block pr-8">
+                    How are privacy and data security handled when it comes to AI girlfriends?
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="absolute right-0 h-5 w-5 text-gray-500 group-open:rotate-180" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+              </h6>
+              <div data-collapse="collapse-3" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="py-3 text-neutral-400 md:text-base text-sm font-medium w-full leading-relaxed">
+                  <p class="mb-3">Rest assured that your secrets are in good hands when you use our <a
+                      href="https://candy.ai/nsfw-ai-chat" class="underline" target="_blank">NSFW AI chat</a>. Your
+                    privacy is our top priority </p>
+                  <p class="mb-3">Here at Candy.ai, we have state-of-the-art secure data storage, making sure that every
+                    seductive
+                    selfie, flirtatious text, and gentle whisper is kept private between you and your passionate
+                    partner.
+                  </p>
+                  <p class="mb-3">We also celebrate your kinks without judgement, and we give you the freedom to fully
+                    embrace your
+                    urges privately. Not everyone gets turned on when someone watches, and that’s why you can rest
+                    assured that only you (and your digital partner) can access the chats.
+                  </p>
+                  <p>With your AI girlfriend, you can have someone who knows exactly what you want—the perfect partner
+                    who’ll satisfy your personal needs excitedly and privately.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-full border border-[#282828] bg-zinc-900 relative transition-all duration-500 rounded-[10px] px-3 from-[#4D1D28] to-[#1F1F1F]">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full text-left transition-all ease-in cursor-pointer rounded-t-1 group text-white md:text-[20px] text-[16px] font-medium leading-8 self-stretch grow shrink basis-auto py-5 max-md:max-w-full"
+                  data-collapse-target="collapse-4">
+                  <span class="inline-block pr-8">
+                    How can I design my own AI girlfriend?
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="absolute right-0 h-5 w-5 text-gray-500 group-open:rotate-180" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+              </h6>
+              <div data-collapse="collapse-4" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="py-3 text-neutral-400 md:text-base text-sm font-medium w-full leading-relaxed">
+                  <p class="mb-3">In just three simple steps, you can enjoy an intimate experience with the AI girl of
+                    your dreams:
+                  </p>
+                  <p class="mb-3"><strong>Step 1: Awaken Your Fantasies.</strong>
+                  </p>
+                  <p class="mb-3">Bring your dream girl to life by choosing her body type, personality, and clothes. You
+                    can even take things up a notch and enjoy a polyamorous setup with multiple characters—it’s all up
+                    to you!
+                  </p>
+                  <p class="mb-3"><strong>Step 2: Let Your Imagination Run Wild.
+                    </strong>
+                  <p>Whether you’re in the mood for a slow and seductive build-up with romantic messages or start things
+                    off hot right away with some spicy talk, your AI girlfriend will not disappoint.
+                  </p>
+                  <p class="mb-3"><strong>Step 3: Enjoy the Show.
+                    </strong>
+                  </p>
+                  <p>Have a specific fantasy? Or want to experiment with different situations? From your girl’s poses
+                    and clothes, to the location, you’re in the driver’s seat. Just enter your requests and enjoy.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-full border border-[#282828] bg-zinc-900 relative transition-all duration-500 rounded-[10px] px-3 from-[#4D1D28] to-[#1F1F1F]">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full text-left transition-all ease-in cursor-pointer rounded-t-1 group text-white md:text-[20px] text-[16px] font-medium leading-8 self-stretch grow shrink basis-auto py-5 max-md:max-w-full"
+                  data-collapse-target="collapse-5">
+                  <span class="inline-block pr-8">
+                    Can you customize your AI girlfriend’s behavior?
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="absolute right-0 h-5 w-5 text-gray-500 group-open:rotate-180" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+              </h6>
+              <div data-collapse="collapse-5" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="py-3 text-neutral-400 md:text-base text-sm font-medium w-full leading-relaxed">
+                  <p class="mb-3">Only you know what you really want, and that’s why you can customize your entire
+                    digital girlfriend experience—from her curves and contours all the way to her personality traits and
+                    adorable little quirks.
+                  </p>
+                  <p>
+                    Want a naughty chat with a feisty partner? Looking to have a slow and sensual relationship with a
+                    nice, sweet girlfriend? Our realistic <a href="https://candy.ai/nsfw-ai-generator" class="underline"
+                      target="_blank">NSFW AI generator</a> and <a href="https://candy.ai/nsfw-ai-chatbot"
+                      class="underline" target="_blank">NSFW AI chatbot</a> capabilities can satisfy your heart’s
+                    deepest desires.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-full border border-[#282828] bg-zinc-900 relative transition-all duration-500 rounded-[10px] px-3 from-[#4D1D28] to-[#1F1F1F]">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full text-left transition-all ease-in cursor-pointer rounded-t-1 group text-white md:text-[20px] text-[16px] font-medium leading-8 self-stretch grow shrink basis-auto py-5 max-md:max-w-full"
+                  data-collapse-target="collapse-6">
+                  <span class="inline-block pr-8">
+                    Can I ask for pictures?
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="absolute right-0 h-5 w-5 text-gray-500 group-open:rotate-180" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+              </h6>
+              <div data-collapse="collapse-6" class="h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="py-3 text-neutral-400 md:text-base text-sm font-medium w-full leading-relaxed">
+                  <p>It’s only normal to long for more than just conversations and roleplay. That’s why at Candy.ai,
+                    your
+                    AI chatbot girlfriend can send you uncensored selfies and other flirtatious pictures. Compared to
+                    other AI girlfriend app options, ours brings you the full experience—an uncensored
+                    <a href="https://candy.ai/character-ai-alternative" class="underline" target="_blank">Character AI
+                      alternative</a> that lets you drool over every beautifully bare detail of your AI girlfriend.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col mt-8 md:mt-32 max-w-7xl mx-5 xl:mx-auto bg-popup p-8 rounded-[10px] mb-8 border border-[#282828]">
+        <h2 class="text-primary md:text-3xl text-xl font-bold leading-10 self-stretch mb-6">
+          <span class="text-white">Find Your Perfect </span>
+          <span class="text-primary">AI Girlfriend Match</span>
+        </h2>
+        <div class="text-[#A4A4A4] font-sm md:text-[16px] text-sm">
+          <p>Let your AI girlfriend take care of your needs, no matter how personal they may be. </p><br>
+          <p>With our AI chat and advanced deep-learning technology, you can have a heartfelt and passionate
+            relationship with the girl of your dreams. </p><br>
+          <p>The choice will always be yours at Candy.ai, so you can either live out a unique romantic saga with a
+            dedicated partner or perhaps even have various exciting encounters with different lovers—all in a realistic
+            dating simulation.</p><br>
+          <p>Selecting your ideal match is effortless, and if you’re making your ideal <a
+              href="https://candy.ai/ai-girlfriend" class="underline" target="_blank"> AI Girlfriend</a>, you can choose
+            from a variety of physical features, personality traits, and charming quirks. In a couple of clicks, your
+            tailor-made AI companion comes to life, eager to engage in stimulating, personal messaging.</p><br>
+          <p>There’ll also be more than enough room for flexibility and openness, and that’s because your partner learns
+            more about you through your interactions. Easily set the pace of the conversation and ramp up the passion
+            from playful flirting to intense <a href="https://candy.ai/ai-sexting" class="underline" target="_blank">ai
+              sexting</a>.</p><br>
+          <p>The best part: you can ask her to show you photos or even tempting selfies with all the revealing outfits
+            you’re drawn to. Our cutting-edge <br><a href="https://candy.ai/ai-girl-generator" class="underline"
+              target="_blank">AI girl generator</a> even means that your partner will have the same cute and seductive
+            face, regardless of how creative your custom requests are.</p><br>
+          <p>Your perfect companion is waiting for you; all you have to do is create her.</p><br>
+          <p>Try Candy.ai for free today!</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="flex footer-bg-banner mb-10 lg:mt-10 lg:mb-0 justify-between w-full">
+        <div
+          class="flex flex-1 flex-col-reverse text-center lg:text-start lg:flex-row lg:gap-[86px] gap-[35px] max-w-7xl mx-auto lg:px-5 md:px-10 text-white py-10 px-5 ">
+          <div class="flex lg:max-w-[427px]">
+            <div class="flex flex-col lg:flex-1 lg:gap-7 w-full gap-10 md:mb-0 mb-5">
+              <div class="flex lg:flex-none flex-1">
+                <div class="flex flex-col lg:items-start items-center gap-6 flex-1">
+                  <img src="./icons/candyai-navbar.svg" class="object-cover object-center w-[120px]">
+                  <p class="text-[#E1E1E1] text-sm lg:text-start text-center">Candy.ai powers immersive experiences that
+                    feel real, allowing users to generate images and create AI characters.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1  lg:flex-none flex-1">
+                <div class="text-grey-default text-sm font-medium leading-6">Contacts:</div>
+                <p class="text-sm text-grey-light leading-6 font-medium lg:text-start text-cente">
+                  EverAI Limited, Nr. C107181 56 Central Business Centre, Triq Is-Soll, Santa Venera SVR 1833, Malta
+                </p>
+              </div>
+              <div class="flex lg:justify-start justify-center">
+                <span class="text-grey-default text-sm font-medium leading-6">
+                  © 2024 Candy.ai. All Rights Reserved -
+                  <a class="underline" href="/sitemap">Sitemap</a> <br>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="flex lg:w-full justify-between lg:flex-nowrap flex-wrap">
+            <div class="flex justify-between lg:max-w-[300px] w-full md:mb-0 mb-5">
+              <div class="flex flex-col min-w-[100px] text-start gap-5">
+                <div class="text-grey-default text-sm block">Features</div>
+                <a class="cursor-pointer whitespace-nowrap text-white text-sm font-medium"
+                  href="/generate-image">Generate Image</a>
+                <a class="cursor-pointer text-white text-sm font-medium" href="/conversations/emily-caldwell">Chat</a>
+                <a class="cursor-pointer whitespace-nowrap text-white text-sm font-medium" href="/characters/new">Create
+                  Character</a>
+                <a class="cursor-pointer text-white text-sm font-medium" href="/gallery">Gallery</a>
+                <a class="cursor-pointer text-white text-sm font-medium" href="/characters">My AI</a>
+              </div>
+              <div class="flex flex-col text-start  min-w-[100px] gap-5 lg:pl-2">
+                <div class="text-grey-default text-sm block">Popular</div>
+                <a class="cursor-pointer whitespace-nowrap text-white text-sm font-medium"
+                  href="https://candy.ai/ai-girlfriend">AI Girlfriend</a>
+                <a class="cursor-pointer whitespace-nowrap text-white text-sm font-medium"
+                  href="https://candy.ai/nsfw-ai-chat">NSFW AI Chat</a>
+                <a class="cursor-pointer whitespace-nowrap text-white text-sm font-medium"
+                  href="https://candy.ai/ai-hentai">AI Hentai</a>
+                <a class="cursor-pointer whitespace-nowrap text-white text-sm font-medium"
+                  href="https://candy.ai/ai-boyfriend">AI Boyfriend</a>
+                <a class="cursor-pointer whitespace-nowrap text-white text-sm font-medium"
+                  href="https://candy.ai/talk-dirty-ai">Talk Dirty AI</a>
+              </div>
+            </div>
+            <div class="flex lg:flex-col lg:w-auto w-full justify-between  md:mb-0 mb-5">
+              <div class="flex flex-col text-start gap-5">
+                <div class="text-grey-default text-sm block">Legal</div>
+                <a class="cursor-pointer text-white text-sm font-medium whitespace-nowrap"
+                  href="/legal-information">Terms and Policies</a>
+              </div>
+              <div class="flex flex-col  min-w-[100px] text-start gap-5 lg:relative lg:botton-[12px]">
+                <div class="text-grey-default text-sm block">Social</div>
+                <div class="flex gap-7 relative md:bottom-3">
+                  <a href="https://discord.com/invite/candyai" target="_blank" rel="nofollow">
+                    <img src="./icons/discord.svg" class="object-cover object-center w-6 h-6">
+                  </a>
+                  <a href="https://twitter.com/trycandyai" target="_blank" rel="nofollow">
+                    <img src="./icons/x.svg" class="object-cover object-center w-6 h-6">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col justify-between lg:min-w-[180px] lg:pl-5">
+              <div class="flex flex-col text-start gap-5">
+                <div class="text-grey-default text-sm block">Company</div>
+                <a class="cursor-pointer text-white text-sm font-medium"
+                  href="https://apply.workable.com/candyai/">We’re hiring</a>
+              </div>
+              <div class="flex gap-5 lg:mt-0 mt-10">
+                <img class="w-[80px] h-[45px]" src="./icons/visa.svg">
+                <img class="w-[76px] h-[45px]" src="./icons/mastercard.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const hamburger = document.querySelector("#nav-hamburger");
+    const mainSidebarOpened = document.querySelector("#mainSidebarOpened");
+    const mainSidebarClosed = document.querySelector("#mainSidebarClosed");
+    const mainMobileSidebar = document.querySelector("#mainMobileSidebar");
+    const mainContent = document.querySelector("#main-content");
+
+    hamburger.addEventListener("click", function () {
+      mainSidebarOpened.classList.toggle("-translate-x-full");
+      mainSidebarClosed.classList.toggle("-translate-x-full");
+      mainMobileSidebar.classList.toggle("-translate-x-full");
+      mainMobileSidebar.classList.toggle("backdrop-blur-sm");
+      if (mainSidebarOpened.classList.contains("-translate-x-full")) {
+        mainContent.classList.add("lg:pl-[100px]");
+        mainContent.classList.remove("lg:pl-[220px]");
+      } else {
+        mainContent.classList.add("lg:pl-[220px]");
+        mainContent.classList.remove("lg:pl-[100px]");
+      }
+
+      if (!mainMobileSidebar.classList.contains("-translate-x-full") && window.innerWidth < 1024) {
+        document.body.addEventListener("touchmove", preventDefaultScroll, {
+          passive: false,
+        });
+        document.body.addEventListener("wheel", preventDefaultScroll, {
+          passive: false,
+        });
+      } else {
+        document.body.removeEventListener("touchmove", preventDefaultScroll);
+        document.body.removeEventListener("wheel", preventDefaultScroll);
+      }
+    })
+
+    function preventDefaultScroll(event) {
+      event.preventDefault();
+    }
+
+    const triggers = document.querySelectorAll("[data-collapse-target]");
+    const collapses = document.querySelectorAll("[data-collapse]");
+
+    function openDefaultFAQs(defaultFAQIds) {
+      defaultFAQIds.forEach(function (faqId) {
+        const collapse = document.querySelector("[data-collapse='" + faqId + "']");
+        if (collapse) {
+          collapse.style.height = "".concat(
+            collapse.children[0].clientHeight,
+            "px",
+          );
+          collapse.style.overflow = "visible";
+          const correspondingTrigger = document.querySelector(
+            "[data-collapse-target='" + faqId + "']",
+          );
+          if (correspondingTrigger) {
+            correspondingTrigger.setAttribute("open", "");
+          }
+        }
+      });
+    }
+
+    function initializeFAQs() {
+      if (triggers && collapses) {
+        Array.from(triggers).forEach(function (trigger) {
+          return Array.from(collapses).forEach(function (collapse) {
+            if (trigger.dataset.collapseTarget === collapse.dataset.collapse) {
+              trigger.addEventListener("click", function () {
+                if (collapse.style.height && collapse.style.height !== "0px") {
+                  collapse.style.height = 0;
+                  collapse.style.overflow = "hidden";
+                  trigger.removeAttribute("open");
+                  trigger.parentElement.parentElement.classList.add("bg-zinc-900");
+                  trigger.parentElement.parentElement.classList.remove("bg-gradient-to-r");
+                } else {
+                  collapse.style.height = "".concat(
+                    collapse.children[0].clientHeight,
+                    "px",
+                  );
+                  collapse.style.overflow = "visible";
+                  trigger.setAttribute("open", "");
+                  trigger.parentElement.parentElement.classList.add("bg-gradient-to-r");
+                  trigger.parentElement.parentElement.classList.remove("bg-zinc-900");
+                }
+              });
+            }
+          });
+        });
+      }
+    }
+
+    // openDefaultFAQs(["collapse-1", "collapse-2"]);
+    initializeFAQs();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Candy.ai - Enjoy The Ultimate AI Girlfriend Experience</title>
+  <link rel="stylesheet" href="dist/output.css" />
+</head>
+
+<body>
+  <div
+    class="bg-main fixed w-full top-0 z-40 flex h-16 shrink-0 items-center border-b border-[#363636] sm:px-4 px-2 shadow-sm sm:gap-x-2 lg:px-8">
+    <button id="nav-hamburger" type="button" class="py-2 sm:mr-0 md:mr-[10px] mr-0 text-gray-700 nav-hamburger">
+      <span class="sr-only">Open sidebar</span>
+      <svg class="nav-hamburger h-8 w-8 mr-1 text-white" data-action="click->sidebar#handleMenuClick" fill="none"
+        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </button>
+    <a href="/">
+      <img src="./icons/candyai-navbar.svg" class="h-[30px] md:h-[30px] w-[115px]">
+    </a>
+    <!-- Separator -->
+    <div class="h-6 w-px bg-gray-900/10 lg:hidden" aria-hidden="true"></div>
+
+    <div class="flex flex-1 self-stretch lg:gap-x-6 bg-main">
+      <form class="relative flex flex-1" action="#" method="GET"></form>
+      <div class="hidden min-[350px]:flex items-center gap-x-4 lg:gap-x-6">
+        <a href="/subscriptions?from=discover"
+          class="justify-center items-center primary-gradient flex max-w-full gap-2 px-2 py-1.5 rounded-xl">
+          <img src="./icons/premium.svg" class="object-cover object-center w-5 overflow-hidden shrink-0">
+          <div class="text-white text-xs font-semibold self-stretch">
+            Subscribe 75% OFF
+          </div>
+        </a>
+      </div>
+      <div class="hidden lg:flex items-center gap-x-4 lg:gap-x-6">
+        <!-- Separator -->
+        <div class="lg:block lg:h-6 lg:w-px lg:bg-gray-900/10" aria-hidden="true"></div>
+        <!-- Profile dropdown -->
+        <div x-data="{ open: false }" @keydown.escape="open = false" @click.away="open = false" class="w-fit relative ">
+          <button type="button" class="-m-1.5 flex items-center p-1.5 " id="user-menu-button" @click="open = !open"
+            aria-expanded="false" :aria-expanded="open.toString()">
+            <span class="sr-only">Open user menu</span>
+            <img src="./icons/man.svg" class="h-8 w-8 rounded-full">
+            <span class="hidden lg:flex lg:items-center">
+              <span class="ml-4 text-sm font-semibold leading-6 text-white" aria-hidden="true">My Profile</span>
+              <svg class="ml-2 h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="open" @keydown.arrow-up.prevent="" @keydown.arrow-down.prevent="" @keydown.tab="open = false"
+            @keydown.enter.prevent="open = false"
+            class="absolute right-0 z-10 mt-2.5 origin-top-right rounded-lg shadow-lg focus:outline-none"
+            style="display: none;">
+            <a class="w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+              href="/subscriptions?from=dropdown">
+              <div class="w-5 h-5 relative"><img
+                  src="/assets/sidebar-icons/premium-bef4c0d01b6b99b6f2764cf40b755bd97debc307331857ca26f97628c6a38eec.svg">
+              </div>
+              <div class="text-white text-sm font-semibold leading-normal">
+                Subscription</div>
+            </a> <a
+              class="w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+              href="/settings">
+              <div class="w-5 h-5 relative"><img
+                  src="/assets/settings-087d65eb2d9a7508f04c379467f39735f971ac6299872f159da8e6c1d735a710.svg">
+              </div>
+              <div class="text-white text-sm font-semibold leading-normal">
+                Settings</div>
+            </a>
+            <form class="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method"
+                value="delete" autocomplete="off"><button data-turbo="false"
+                class="rounded-b-lg w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+                type="submit">
+                <div class="w-5 h-5 relative"><img
+                    src="/assets/logout-c5bab4efa12211db16618320220423a09cf3d7f5b562be32cdd5110df2a21c18.svg">
+                </div>
+                <div class="text-white text-sm font-semibold leading-normal">
+                  Logout</div>
+              </button><input type="hidden" name="authenticity_token"
+                value="oePBzbXcRPhgaxtuI43gp0eUExak7RltguVJo6RLNV5L3hPaxXJJTjyo4SQRewXWiwO_cSTE0QMxIxec8vJWCA"
+                autocomplete="off"></form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="hidden lg:pt-[63px] lg:z-20 lg:block lg:overflow-y-auto lg:overflow-x-hidden bg-g1 lg:fixed z-20 border-[#363636] border-r border-t lg:inset-y-0 lg:left-0 lg:w-[220px] lg:pb-5 w-[220px] fixed top-0 left-0 h-full webkit-transition-sidebar"
+    id="mainSidebarOpened">
+    <nav class="flex flex-col justify-between h-full ">
+      <ul role="list"
+        class="py-8 lg:py-6 flex flex-col gap-2 items-center justify-start px-6 overflow-y-auto  overflow-x-auto">
+        <li class="relative w-full">
+          <a href="/"
+            class="h-[40px] w-full  hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-4 h-4" src="./icons/explore.svg">
+            <span class="text-start text-grey-medium text-xxs font-medium leading-4">Explore</span>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/conversations/emily-caldwell"
+            class="h-[40px] w-full  hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-4 h-4" src="./icons/chat.svg">
+            <span class="text-start text-grey-medium text-xxs font-medium leading-4">Chat</span>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/gallery"
+            class="h-[40px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/gallery.svg">
+            <div class="text-start text-grey-medium text-xxs font-medium leading-4">
+              Gallery</div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/generate-image?from=sidebar" class="relative
+            h-[40px] hover:bg-zinc-700  rounded-[10px] border
+            border-white border-opacity-10 justify-start px-3 items-center
+            gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/generate.svg">
+            <div class="text-start text-grey-medium text-xxs font-medium leading-none">
+              Generate Image
+            </div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/characters/new"
+            class="relative h-[40px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/magic-wand.svg">
+            <div class="text-start  text-grey-medium text-xxs font-medium leading-none">
+              Create Character</div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/characters"
+            class="h-[40px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/love-lady.svg">
+            <div class="text-start text-grey-medium text-xxs font-medium leading-none">
+              My AI
+            </div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/subscriptions"
+            class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/premium1.svg">
+            <div class="text-start text-pink-default text-xxs font-medium leading-none">
+              Become Premium
+            </div>
+          </a>
+        </li>
+      </ul>
+      <ul role="list" class="flex flex-col gap-2 pt-6 px-6 border-[#363636] border-t items-center justify-end">
+        <li class="relative w-full">
+          <a href="https://discord.gg/candyai" target="_blank"
+            class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-4 h-4" src="./icons/discord1.svg">
+            <div class="text-start text-grey-medium text-xs font-medium leading-4">
+              Discord</div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <div data-action="click->sidebar#openContactUs"
+            class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-4 h-4" src="./icons/contact.svg">
+            <div class="text-start sidebar-text  text-grey-medium text-xs font-medium leading-4" @click="">Contact Us
+            </div>
+          </div>
+        </li>
+        <li class="relative w-full">
+          <a target="_blank" class="" href="https://forms.gle/ngh58ASCF15TKWYG7">
+            <div
+              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+              <img class="w-4 h-4" src="./icons/trophy.svg">
+              <div class="text-start  text-grey-medium text-xs font-medium leading-4">
+                Affiliate Program</div>
+            </div>
+          </a>
+        </li>
+        <li class="text-[8px] flex text-grey-medium pt-3 w-full">
+          <a class="leading-none mr-2" href="/privacy-policy">Privacy Policy</a>
+          <ul class="list-none">
+            <li class="flex items-center mr-2">
+              <span class="bg-white h-1 w-1 rounded-full mr-2"></span>
+              <a class="leading-none" href="/legal-information">Terms of
+                Service</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="mainSidebarClosed"
+    class="lg:fixed lg:pt-[63px] z-20 border-[#363636] border-r border-t lg:inset-y-0 lg:left-0 lg:w-[100px] lg:pb-5 w-[100px] fixed top-0 left-0 h-full webkit-transition-sidebar hidden lg:block -translate-x-full"
+    style="background: linear-gradient(0deg, #131313 0%, #131313 100%); max-height: 100vh">
+    <span class="tooltip-containers absolute" data-sidebar-target="tooltipContainer">
+      <div id="tooltip-explore" role="tooltip"
+        class="relative z-100 invisible px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 30px);"
+        data-popper-placement="right">
+        Explore
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-chat" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 86px);"
+        data-popper-placement="right">
+        Chat
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-gallery" role="tooltip"
+        class="absolute z-100 whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm tooltip tooltip-sidebar dark:bg-gray-700 opacity-0 invisible"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 142px);"
+        data-popper-placement="right">
+        Gallery
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-image" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 198px);"
+        data-popper-placement="right">
+        Generate Image
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-character" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 254px);"
+        data-popper-placement="right">
+        Create Character
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-my-ai" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 310px);"
+        data-popper-placement="right">
+        My AI
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-tokens" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700">
+        Buy Tokens
+        <div class="tooltip-arrow" data-popper-arrow=""></div>
+      </div>
+      <div id="tooltip-premium" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 366px);"
+        data-popper-placement="right">
+        Become Premium
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+    </span>
+    <nav class="flex flex-col justify-between h-full ">
+      <ul role="list"
+        class="py-8 lg:py-6 flex flex-col gap-2 items-center justify-start px-6 overflow-y-auto  overflow-x-auto">
+        <li class="relative w-full" data-tooltip-target="tooltip-explore" data-tooltip-placement="right">
+          <a href="/"
+            class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-6 h-6" src="./icons/explore.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-chat" data-tooltip-placement="right">
+          <a href="/conversations/emily-caldwell"
+            class="h-[48px] w-[52px]  hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-6 h-6" src="./icons/chat.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-gallery" data-tooltip-placement="right">
+          <a href="/gallery"
+            class="h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/gallery.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-image" data-tooltip-placement="right">
+          <a href="/generate-image?from=sidebar" class="relative
+            h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border
+            border-white border-opacity-10 justify-start px-3 items-center
+            gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/generate.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-character" data-tooltip-placement="right">
+          <a href="/characters/new"
+            class="relative h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/magic-wand.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-my-ai" data-tooltip-placement="right">
+          <a href="/characters"
+            class="h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/love-lady.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-premium" data-tooltip-placement="right">
+          <a href="/subscriptions"
+            class="h-[48px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/premium1.svg">
+          </a>
+        </li>
+      </ul>
+      <ul role="list" class="flex flex-col gap-2 pt-6 px-6 border-[#363636] border-t items-center justify-end">
+        <li class="relative w-full" data-tooltip-target="tooltip-discord" data-tooltip-placement="right">
+          <div id="tooltip-discord" role="tooltip"
+            class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(59px, 6px);"
+            data-popper-placement="right">
+            Discord
+            <div class="tooltip-arrow" data-popper-arrow=""
+              style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+            </div>
+          </div>
+          <a href="https://discord.gg/candyai" target="_blank"
+            class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-6 h-6" src="./icons/discord1.svg">
+          </a>
+        </li>
+        <li class="relative w-full toggle-popup" data-tooltip-target="tooltip-contact" data-tooltip-placement="right">
+          <div id="tooltip-contact" role="tooltip"
+            class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(59px, 6px);"
+            data-popper-placement="right">
+            Contact Us
+            <div class="tooltip-arrow" data-popper-arrow=""
+              style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+            </div>
+          </div>
+          <div data-action="click->sidebar#openContactUs"
+            class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-6 h-6" src="./icons/contact.svg">
+          </div>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-affiliate" data-tooltip-placement="right">
+          <a target="_blank" class="" href="https://forms.gle/ngh58ASCF15TKWYG7">
+            <div id="tooltip-affiliate" role="tooltip"
+              class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+              style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(59px, 6px);"
+              data-popper-placement="right">
+              Affiliate Program
+              <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+              </div>
+            </div>
+            <div
+              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+              <img class="w-6 h-6" src="./icons/trophy.svg">
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="mainMobileSidebar" data-action="click->sidebar#toggleMobileSidebar"
+    class="inset-y-0 w-[100vw] mt-[64px] z-[100] pr-[40vw] no-scroll fixed left-0 webkit-transition-sidebar block lg:hidden -translate-x-full">
+    <nav class="flex flex-col justify-between h-full w-[240px] mobile-sidebar-list-item"
+      style="background: linear-gradient(0deg, #131313 0%, #131313 100%)"
+      data-action="click->sidebar#setMobileSidebarValueToDefault">
+      <nav class="flex flex-col justify-between h-full" data-action="click->sidebar#setMobileSidebarValueToDefault">
+        <ul role="list"
+          class="flex flex-col items-center justify-start px-5 bg-zinc-900 h-screen overflow-auto mobile-sidebar-list-item">
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <!-- Profile dropdown -->
+            <div x-data="{ open: false }" @keydown.escape="open = false" @click.away="open = false">
+              <button type="button" class="w-full flex text-xs leading-5" id="user-menu-button" @click="open = !open"
+                aria-expanded="false" :aria-expanded="open.toString()">
+                <img src="./icons/man.svg" class="h-5 w-5 rounded-full mobile-sidebar-list-item">
+                <div class="flex items-center justify-between w-full mobile-sidebar-list-item">
+                  <div class="ml-2 text-xs font-semibold leading-5 text-grey-medium mobile-sidebar-list-item"
+                    aria-hidden="true">
+                    My Profile</div>
+                  <svg class="ml-2 h-4 w-4 text-white mobile-sidebar-list-item" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path class="mobile-sidebar-list-item" fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd">
+                    </path>
+                  </svg>
+                </div>
+              </button>
+              <div x-show="open" @keydown.arrow-up.prevent="" @keydown.arrow-down.prevent="" @keydown.tab="open = false"
+                @keydown.enter.prevent="open = false"
+                class="relative right-0 z-10 mt-2.5 origin-top-right rounded-lg shadow-lg focus:outline-none w-full bg-zinc-900 mobile-sidebar-list-item"
+                style="display: none;">
+                <a class="w-full mt-4 justify-start items-center gap-2 inline-flex" href="/subscriptions?from=dropdown">
+                  <div class="relative"><img class="w-5 h-5 mobile-sidebar-list-item"
+                      src="/assets/sidebar-icons/premium-bef4c0d01b6b99b6f2764cf40b755bd97debc307331857ca26f97628c6a38eec.svg">
+                  </div>
+                  <div class=" text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item">
+                    Subscription
+                  </div>
+                </a> <a class="w-full mt-4 justify-start items-center gap-2 inline-flex mobile-sidebar-list-item"
+                  href="/settings">
+                  <div class="relative"><img class="w-5 h-5 mobile-sidebar-list-item"
+                      src="/assets/settings-087d65eb2d9a7508f04c379467f39735f971ac6299872f159da8e6c1d735a710.svg">
+                  </div>
+                  <div class=" text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item">
+                    Settings</div>
+                </a>
+                <form class="button_to" method="post" action="/users/sign_out">
+                  <input type="hidden" name="_method" value="delete" autocomplete="off"><button data-turbo="false"
+                    class="rounded-b-lg w-full mt-4 justify-start items-center gap-2 inline-flex mobile-sidebar-list-item"
+                    type="submit">
+                    <div class="relative">
+                      <img class="w-5 h-5 mobile-sidebar-list-item"
+                        src="/assets/logout-c5bab4efa12211db16618320220423a09cf3d7f5b562be32cdd5110df2a21c18.svg">
+                    </div>
+                    <div class=" text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item">
+                      Logout
+                    </div>
+                  </button><input type="hidden" name="authenticity_token"
+                    value="u71Y5G-UzK0Mq0h8RIESa1ppjXKi_OTKW4ZAFOed-SRRgIrzHzrBG1BosjZ2d_calv4hFSLVLKToQB4rsSSacg"
+                    autocomplete="off">
+                </form>
+              </div>
+            </div>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/" class="w-full flex justify-start items-center gap-2  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/explore.svg">
+              <span
+                class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item">Explore</span>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/conversations/emily-caldwell"
+              class="w-full justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/chat.svg">
+              <div class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item">
+                Chat
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/gallery" class="justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/gallery.svg">
+              <div class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item">
+                Gallery
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/generate-image?from=sidebar" class="relative
+            justify-start items-center
+            gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/generate.svg">
+              <div class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item">
+                Generate Image
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/characters/new"
+              class="relative justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/magic-wand.svg">
+              <div class="text-start  text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item">
+                Create
+                Character</div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/characters" class="justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/love-lady.svg">
+              <div class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item">
+                My AI
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/subscriptions" class=" justify-start items-center gap-2 flex mx-auto mobile-sidebar-list-item">
+              <img class="w-5 h-5  mobile-sidebar-list-item" src="./icons/premium1.svg">
+              <div class="text-start text-pink-default text-xs font-medium leading-none mobile-sidebar-list-item">
+                Become Premium
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="p-5 bg-[#1A1A1A] flex-col justify-end items-start gap-[17px] inline-flex mobile-sidebar-list-item">
+          <div class="justify-start items-start gap-5 inline-flex mobile-sidebar-list-item">
+            <div
+              class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item">
+              <div
+                class="w-[70px] text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item">
+                <a href="https://discord.gg/candyai" class="mobile-sidebar-list-item" target="_blank"> Discord</a>
+              </div>
+            </div>
+            <div data-action="click->sidebar#openContactUs"
+              class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex">
+              <div
+                class="w-[70px] text-center text-neutral-200 text-xs font-semibold whitespace-nowrap leading-tight relative">
+                Contact Us
+              </div>
+            </div>
+          </div>
+          <div class="justify-start items-start gap-5 inline-flex mobile-sidebar-list-item">
+            <div
+              class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex  mobile-sidebar-list-item">
+              <a target="_blank" class="mobile-sidebar-list-item" href="https://forms.gle/ngh58ASCF15TKWYG7">
+                <div
+                  class="w-[70px] text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item">
+                  Affiliate</div>
+              </a>
+            </div>
+          </div>
+          <div class="justify-start items-center gap-2 inline-flex mobile-sidebar-list-item">
+            <a class="text-neutral-300 text-[8px] font-medium leading-[14px] mobile-sidebar-list-item"
+              href="/privacy-policy">Privacy Policy</a>
+            <div class="w-1 h-1 bg-zinc-300 rounded-full mobile-sidebar-list-item">
+            </div>
+            <a class="text-neutral-300 text-[8px] font-medium leading-[14px] mobile-sidebar-list-item"
+              href="/legal-information">Terms of Service</a>
+          </div>
+        </div>
+      </nav>
+    </nav>
+  </div>
+
+  <div
+    class="flex px-5 py-2 justify-between w-full h-[56px] fixed bottom-0 z-50 border-t border-white border-opacity-20 bg-[#131313] lg:hidden">
+    <!-- Discover Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/explore.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Explore</span>
+    </a>
+    <!-- Generate Image Icon -->
+    <a href="#" class="flex flex-col items-center relative">
+      <img src="./icons/generate.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Generate</span>
+    </a>
+    <!-- Create AI Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/magic-wand.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Create</span>
+    </a>
+    <!-- Chat Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/chat.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Chat</span>
+    </a>
+    <!-- Premium Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/premium.svg" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Premium</span>
+    </a>
+  </div>
+
+  <div class="pt-16 lg:pl-[220px] trasnition-all duration-300 ease-in-out" id="main-content">
+    <div class="pb-20 px-5" id="generate-image-container"
+      x-data="{ isLoginModalOpen: false, isCharacterModalOpen: false, isGeneratedImageModalOpen: false, selectedImage: '',activeSlide: 0,isPremiumSubscriptionModalOpen: false }">
+      <div class="flex items-center justify-center mb-7 ">
+        <img class="w-7 h-7" src="./icons/generate-ai.svg">
+        <h1 class="text-3xl text-white font-bold leading-10 ml-3">Generate Image</h1>
+      </div>
+      <div class="flex flex-row items-stretch justify-center xl:h-[708px] 2xl:h-[856px]"
+        data-controller="generate-image" data-generate-image-user-gender-interest="female"
+        data-generate-image-selected-character-gender="female" data-generate-image-selected-character-name=""
+        data-generate-image-selected-character-id="" data-generate-image-is-free-user="true"
+        data-generate-image-has-user-generated-image="false" data-generate-image-selected-number-value="1"
+        data-generate-image-target="mainContainer" data-generate-image-selected-character-gender-value="female"
+        data-generate-image-selected-character-id-value="" data-generate-image-confirmed-character-id-value=""
+        data-generate-image-selected-character-name-value="" data-generate-image-is-free-user-value="true"
+        data-generate-image-has-user-generated-image-value="false"
+        data-generate-image-user-gender-interest-value="female">
+        <div
+          class="hidden mr-0 xl:mr-7 xl:flex xl:flex-col xl:flex-initial xl:w-[478px] 2xl:w-[580px] xl:items-center xl:justify-center bg-black-dark xl:border border-grey-dark rounded-[10px] mb-5 xl:mb-0"
+          data-generate-image-target="generatedImage">
+          <turbo-cable-stream-source channel="Turbo::StreamsChannel"
+            signed-stream-name="IloybGtPaTh2WTJoaGRDMWphR0YwTDFWelpYSXZNVGN5TVRRek5nOmltYWdlX2dlbmVyYXRpb24i--9a995335c6b7d5e205eadaaff628d8ccefd948de63bf5e0f269d0b2620399324"></turbo-cable-stream-source>
+          <div id="image-loader-container">
+            <div class="flex flex-col items-center" data-generate-image-target="generateInstructions">
+              <img class="w-20 h-20" src="./icons/generate-image-ai.svg">
+              <span class="text-[20px] text-grey-light text-center font-semibold mt-4">Enter a prompt and click
+                "Generate"</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="flex flex-col flex-1 w-full xl:w-2/3">
+          <div
+            class="flex flex-0 items-center flex-col rounded-[10px] bg-black-dark border border-grey-dark w-full p-5 2xl:p-7"
+            data-generate-image-target="chooseCharacterContainer">
+            <span class="text-sm leading-[30px] text-grey-light  font-bold sm:text-[20px] sm:font-semibold">Choose
+              Character*</span>
+            <div data-generate-image-target="notSelectedCharacter"
+              class="flex flex-col w-full justify-between mt-5 sm:flex-row ">
+              <button @click="isCharacterModalOpen = true"
+                class="flex flex-1 justify-center bg-black-dark py-3 text-sm text-white font-semibold rounded-[10px] border-2 border-black-light mb-4 sm:mr-[22px] sm:mb-0">
+                <img class="w-5 h-5 mr-2"
+                  src="/assets/user-icons/woman-white-0cb5d8049e2b4886ede2ce63b53ecb4828ca11d09d0880576b5c0203d1b38f95.svg">Existing
+                Character
+              </button>
+              <a href="/characters/new?from=generate-image"
+                class="flex flex-1 justify-center bg-black-dark px-4 py-3 text-sm text-white font-semibold rounded-[10px] border-2 border-black-light">
+                <img class="w-5 h-5 mr-2"
+                  src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">Create
+                New Character
+              </a>
+            </div>
+            <div data-generate-image-target="selectedCharacter"
+              class="flex flex-col items-center justify-between sm:flex-row w-full p-0 sm:p-2 sm:pr-3 mt-4 sm:border-grey-default sm:border-opacity-20 sm:rounded-[10px] sm:bg-black-medium hidden">
+              <div
+                class="flex flex-1 items-center cursor-pointer font-semibold text-sm sm:text-[20px] text-white w-full border-grey-default border-opacity-20 rounded-[10px] bg-black-medium p-2 sm:border-none sm:bg-none sm:p-0"
+                @click="isCharacterModalOpen = true">
+                <img class="w-[50px] h-[50px] mr-3 object-cover object-top rounded-full"
+                  data-generate-image-target="selectedCharacterImage" src="">
+                <span data-generate-image-target="selectedCharacterName"></span>
+              </div>
+              <div class="flex flex-1 justify-center mt-3 w-full sm:w-auto sm:mt-0 sm:justify-end">
+                <button
+                  class="flex items-center justify-center w-full sm:w-auto py-2 sm:px-2 sm:py-1  text-sm font-semibold text-pink-default rounded-[10px] border-2 border-pink-default"
+                  data-action="click->generate-image#changeCharacterView">
+                  <img class="w-5 h-5 mr-2"
+                    src="/assets/refresh-7a7f443b31928192231882251737283c6d2f6b69cd9c720d771cb466d5a17f64.svg"> Change
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-1 items-left flex-col rounded-[10px] bg-black-dark border border-grey-dark w-full mt-7 p-5 md:p-7 md:py-5">
+            <div class="flex flex-col mb-[10px]">
+              <label for="message" class="text-sm font-semibold text-grey-default">Enter prompt*</label>
+              <textarea data-generate-image-target="textarea" data-action="generate-image#checkIfPromptInputIsEmpty"
+                id="message" name="message" rows="4"
+                class="mt-1 w-full p-4 text-white text-sm bg-black-medium border border-black-light rounded-[10px] shadow-sm resize-none placeholder-grey-light placeholder:text-sm focus:outline-0 focus:ring-0 focus:border-grey-default focus:border-opacity-40 2xl:h-[130px] md:h-[90px]"
+                placeholder="Enter an image description">wearing a pencil dress, sitting at the dinner table in a fancy restaurant at night with dim lights</textarea>
+            </div>
+            <div class="flex flex-col relative h-full">
+              <div data-generate-image-target="suggestedFemalePrompts" class="flex flex-wrap mb-9 md:mb-4 2xl:mb-9">
+                <div data-action="click->generate-image#replaceWithChip"
+                  data-prompt="Wearing shorts and a crop top shirt, portrait picture, looking at the viewer"
+                  class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                  <img class="w-[14px] h-[14px] mr-1"
+                    src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"> Cute
+                  Picture
+                </div>
+                <div data-action="click->generate-image#replaceWithChip"
+                  data-prompt="Wearing a long sundress, walking on the beach by the sea waves and the palm trees"
+                  class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                  <img class="w-[14px] h-[14px] mr-1"
+                    src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                  Walking on the beach
+                </div>
+                <div data-action="click->generate-image#replaceWithChip"
+                  data-prompt="Wearing a pencil dress, sitting at the dinner table in a fancy restaurant at night with dim lights"
+                  class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                  <img class="w-[14px] h-[14px] mr-1"
+                    src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"> Out
+                  for dinner
+                </div>
+
+              </div>
+              <div data-generate-image-target="suggestedMalePrompts"
+                class="flex flex-wrap mb-9 md:mb-4 2xl:mb-9 hidden">
+                <div data-action="click->generate-image#replaceWithChip"
+                  data-prompt="Wearing a polo shirt and chino pants, sitting at a café, outside, sunny day"
+                  class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                  <img class="w-[14px] h-[14px] mr-1"
+                    src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"> Cute
+                  Picture
+                </div>
+                <div data-action="click->generate-image#replaceWithChip"
+                  data-prompt="Wearing swimshorts, walking on the beach by the sea waves and the palm trees"
+                  class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                  <img class="w-[14px] h-[14px] mr-1"
+                    src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                  Walking on the beach
+                </div>
+                <div data-action="click->generate-image#replaceWithChip"
+                  data-prompt="Wearing a suit and shirt, sitting at the dinner table in a fancy restaurant at night with dim lights"
+                  class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                  <img class="w-[14px] h-[14px] mr-1"
+                    src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"> Out
+                  for dinner
+                </div>
+
+              </div>
+              <!-- Tab navigations -->
+              <ul data-generate-image-target="additionalSuggestedFemalePromptTabs"
+                class="tabs grid grid-cols-3 remove-border-3rd md:flex md:flex-wrap md:justify-between mb-4 bg-black-medium rounded-xl p-[2px] gap-y-2.5 md:gap-0">
+                <li
+                  class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1 border-r-[0.5px] active bg-[#616161] text-white font-semibold rounded-lg"
+                  data-tab-target="1" data-action="click->generate-image#changeTab" data-generate-image-target="tab">
+                  Action
+                </li>
+                <li
+                  class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1 border-r-[0.5px]"
+                  data-tab-target="2" data-action="click->generate-image#changeTab" data-generate-image-target="tab">
+                  Body
+                </li>
+                <li
+                  class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1 border-r-[0.5px]"
+                  data-tab-target="3" data-action="click->generate-image#changeTab" data-generate-image-target="tab">
+                  Clothing
+                </li>
+                <li
+                  class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1 border-r-[0.5px]"
+                  data-tab-target="4" data-action="click->generate-image#changeTab" data-generate-image-target="tab">
+                  Scene
+                </li>
+                <li
+                  class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1 border-r-[0.5px]"
+                  data-tab-target="5" data-action="click->generate-image#changeTab" data-generate-image-target="tab">
+                  Accessories
+                </li>
+                <li
+                  class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1"
+                  data-tab-target="6" data-action="click->generate-image#changeTab" data-generate-image-target="tab">
+                  View
+                </li>
+              </ul>
+              <ul data-generate-image-target="additionalSuggestedMalePromptTabs"
+                class="tabs grid grid-cols-3 remove-border-3rd md:flex md:flex-wrap md:justify-between mb-4 bg-black-medium rounded-xl p-[2px] gap-y-2.5 md:gap-0 !hidden">
+                <li
+                  class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1"
+                  data-tab-target="1" data-action="click->generate-image#changeTab" data-generate-image-target="tab">
+                  Action
+                </li>
+                <li
+                  class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1"
+                  data-tab-target="2" data-action="click->generate-image#changeTab" data-generate-image-target="tab">
+                  Body
+                </li>
+                <li
+                  class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1"
+                  data-tab-target="3" data-action="click->generate-image#changeTab" data-generate-image-target="tab">
+                  Clothing
+                </li>
+                <li
+                  class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1"
+                  data-tab-target="4" data-action="click->generate-image#changeTab" data-generate-image-target="tab">
+                  Scene
+                </li>
+                <li
+                  class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1"
+                  data-tab-target="5" data-action="click->generate-image#changeTab" data-generate-image-target="tab">
+                  Accessories
+                </li>
+                <li
+                  class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1"
+                  data-tab-target="6" data-action="click->generate-image#changeTab" data-generate-image-target="tab">
+                  View
+                </li>
+              </ul>
+              <!-- Tabs contents -->
+              <div data-generate-image-target="additionalSuggestedFemalePromptTabContent">
+                <div id="1" class="tab-content active" data-generate-image-target="tabContent">
+                  <div data-action="click->generate-image#addChip" data-prompt="Standing"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Standing
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="Sitting"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Sitting
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="Squatting"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Squatting
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="Lying Down"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Lying down
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="Working Out in the gym"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Working out
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="Swimming in a pool"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Swimming
+                  </div>
+
+                </div>
+                <div id="2" class="tab-content" data-generate-image-target="tabContent">
+                  <div data-action="click->generate-image#addChip" data-prompt="Back view"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Back
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="Front View"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Front
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="Full Body picture"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Full body
+                  </div>
+
+                </div>
+                <div id="3" class="tab-content" data-generate-image-target="tabContent">
+                  <div data-action="click->generate-image#addChip"
+                    data-prompt="wearing a long summer dress in a park with trees and flowers"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Summer Dress
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing a bikini at the beach"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Bikini
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing a skirt and a shirt"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Skirt
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing jeans and a crop top"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Jeans
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing a white lab coat and a shirt"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"> Lab
+                    Coat
+                  </div>
+                  <div data-action="click->generate-image#addChip"
+                    data-prompt="wearing a pencil skirt with a blazer and a shirt, teaching in front of the class"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Teacher
+                  </div>
+                  <div data-action="click->generate-image#addChip"
+                    data-prompt="wearing comfy pyjamas, sitting on the bed"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Pyjamas
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing a tank top and shorts"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Tank Top
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing a sport outfit, in a gym"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Sport
+                  </div>
+
+                </div>
+                <div id="4" class="tab-content" data-generate-image-target="tabContent">
+                  <div data-action="click->generate-image#addChip" data-prompt="in a flower garden"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Garden
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="in a gym"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"> Gym
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="in the forest"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Forest
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="at the beach"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Beach
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="sitting in a taxi"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Taxi
+                  </div>
+
+                </div>
+                <div id="5" class="tab-content" data-generate-image-target="tabContent">
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing an elegant necklace"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Necklace
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing stylish glasses"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Glasses
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="a room lit with aromatic candles"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Candles
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing a colorful scarf"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Scarf
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing a baseball cap outdoors"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Baseball Cap
+                  </div>
+
+                </div>
+                <div id="6" class="tab-content" data-generate-image-target="tabContent">
+                  <div data-action="click->generate-image#addChip" data-prompt="Close up view"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Close up
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="view from above"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    From above
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="view from behind"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    From behind
+                  </div>
+
+                </div>
+
+              </div>
+              <div data-generate-image-target="additionalSuggestedMalePromptTabContent" class="!hidden">
+                <div id="1" class="tab-content " data-generate-image-target="tabContent">
+                  <div data-action="click->generate-image#addChip" data-prompt="Standing"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Standing
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="Sitting"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Sitting
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="Squatting"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Squatting
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="Lying Down"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Lying down
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="Working Out in the gym"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Working out
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="Swimming in a pool"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Swimming
+                  </div>
+
+                </div>
+                <div id="2" class="tab-content " data-generate-image-target="tabContent">
+                  <div data-action="click->generate-image#addChip" data-prompt="Back view"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Back
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="Front View"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Front
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="Full Body picture"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Full body
+                  </div>
+
+                </div>
+                <div id="3" class="tab-content " data-generate-image-target="tabContent">
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing Jeans and T-Shirt"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Jeans
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing Chinos and Shirt"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Chino
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing Bermuda and Polo"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Polo
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing Tracksuit"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Tracksuit
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing Leather vest and Jeans"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Leather Vest
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing Suit and Shirt"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Suit
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing Turtleneck and Trousers"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Turtleneck
+                  </div>
+                  <div data-action="click->generate-image#addChip"
+                    data-prompt="wearing a tight sports t-shirt and shorts, at the gym"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Sport
+                  </div>
+                  <div data-action="click->generate-image#addChip"
+                    data-prompt="wearing swimshorts, laying down at the beach"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Swimshorts
+                  </div>
+
+                </div>
+                <div id="4" class="tab-content " data-generate-image-target="tabContent">
+                  <div data-action="click->generate-image#addChip" data-prompt="in a flower garden"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Garden
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="in a gym"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"> Gym
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="in the forest"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Forest
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="at the beach"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Beach
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="sitting in a taxi"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Taxi
+                  </div>
+
+                </div>
+                <div id="5" class="tab-content " data-generate-image-target="tabContent">
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing jewelry"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Jewelry
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing glasses"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Glasses
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing headphones"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Headphones
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing a bow tie"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"> Bow
+                    tie
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="wearing a baseball cap"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Baseball Cap
+                  </div>
+
+                </div>
+                <div id="6" class="tab-content " data-generate-image-target="tabContent">
+                  <div data-action="click->generate-image#addChip" data-prompt="Close up view"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    Close up
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="view from above"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    From above
+                  </div>
+                  <div data-action="click->generate-image#addChip" data-prompt="view from behind"
+                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2">
+                    <img class="w-[14px] h-[14px] mr-1"
+                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg">
+                    From behind
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="flex flex-col justify-between h-full">
+                <div class="mt-4 2xl:mt-8 mb-6 md:mb-16 xl:mb-0">
+                  <span class="text-grey-default text-sm font-semibold">Number of images *</span>
+                  <!-- Hidden input to store the selected number -->
+                  <div class="flex flex-1 flex-wrap mt-2 gap-2.5">
+                    <div data-action="click->generate-image#numberOfImages" data-generate-image-target="numberedImage"
+                      class="flex items-center justify-center relative bg-black-dark text-[20px] text-grey-light text-center px-7 py-5 w-[72px] min-w-[72px] max-w-[72px] overflow-hidden rounded-[10px] cursor-pointer border border-[#4A4A4A] outline outline-1 outline-pink-default bg-pink-medium border-none">
+                      <div class="number-container">
+                        1
+                      </div>
+                    </div>
+                    <div data-action="click->generate-image#numberOfImages" data-generate-image-target="numberedImage"
+                      class="flex items-center justify-center relative bg-black-dark text-[20px] text-grey-light text-center px-7 py-5 w-[72px] min-w-[72px] max-w-[72px] overflow-hidden rounded-[10px] cursor-pointer border border-[#4A4A4A]">
+                      <div
+                        class="absolute -right-[1px] top-0 bg-[#AD314E] rounded-bl-[10px] rounded-tr-[10px] px-[3px] text-[11px]">
+                        Premium</div>
+                      <div class="number-container">
+                        4
+                      </div>
+                    </div>
+                    <div data-action="click->generate-image#numberOfImages" data-generate-image-target="numberedImage"
+                      class="flex items-center justify-center relative bg-black-dark text-[20px] text-grey-light text-center px-7 py-5 w-[72px] min-w-[72px] max-w-[72px] overflow-hidden rounded-[10px] cursor-pointer border border-[#4A4A4A]">
+                      <div
+                        class="absolute -right-[1px] top-0 bg-[#AD314E] rounded-bl-[10px] rounded-tr-[10px] px-[3px] text-[11px]">
+                        Premium</div>
+                      <div class="number-container">
+                        9
+                      </div>
+                    </div>
+                    <div data-action="click->generate-image#numberOfImages" data-generate-image-target="numberedImage"
+                      class="flex items-center justify-center relative bg-black-dark text-[20px] text-grey-light text-center px-7 py-5 w-[72px] min-w-[72px] max-w-[72px] overflow-hidden rounded-[10px] cursor-pointer border border-[#4A4A4A]">
+                      <div
+                        class="absolute -right-[1px] top-0 bg-[#AD314E] rounded-bl-[10px] rounded-tr-[10px] px-[3px] text-[11px]">
+                        Premium</div>
+                      <div class="number-container">
+                        16
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div>
+                  <form class="w-full" action="/generate-image" accept-charset="UTF-8" method="post"><input
+                      type="hidden" name="authenticity_token"
+                      value="l7Gcuds-Zfy--3zRwUhhtUlxdexrDtlcjC98zBMqH4fLbswGobhFp6_eo44sJNGharhxW0wowIKb__XYEQ3pKw"
+                      autocomplete="off">
+                    <input data-generate-image-target="characterIdInput" autocomplete="off" type="hidden"
+                      name="image_prompt[profile_id]" id="image_prompt_profile_id">
+                    <input data-generate-image-target="promptInput" autocomplete="off" type="hidden"
+                      name="image_prompt[input_text]" id="image_prompt_input_text">
+                    <input data-generate-image-target="numberOfImagesInput" autocomplete="off" type="hidden"
+                      name="image_prompt[number_of_images]" id="image_prompt_number_of_images">
+                    <button id="image-generation-submit-button"
+                      class="disabled:opacity-50 disabled:cursor-not-allowed relative flex justify-center bg-pink-dark w-full px-4 py-3 rounded-[10px] text-sm text-white font-semibold text-center"
+                      data-action="click->generate-image#submit" data-generate-image-target="generateButton">
+                      Generate
+                      <img class="w-5 h-5 mx-1 pointer-events-none"
+                        src="/assets/arrow-east-811274d2d7e43a5ccbdd000c6e0c680496b0940f372163dfd9bbff1642fb7b05.svg">
+                      <div
+                        class="absolute flex items-center p-[1px] bg-black-default bg-opacity-20 rounded-bl-[10px] right-0 top-0">
+                        <div
+                          class="w-[85px] h-5 px-2 py-[3px] bg-pink-800 flex rounded-bl-[10px] justify-center items-center gap-[3px] absolute right-0 top-0">
+                          <div class="text-white text-[15px] font-normal items-center">
+                            Free Trial
+                          </div>
+                        </div>
+                      </div>
+                    </button>
+
+
+                  </form>
+                  <div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div x-show="isCharacterModalOpen" @click="if ($event.target === $el) isCharacterModalOpen = false"
+              x-init="$watch('isCharacterModalOpen', toggleOverflow)"
+              class="fixed inset-0 backdrop-filter backdrop-blur-md bg-black-default bg-opacity-50 flex justify-center items-center z-50"
+              style="display: none;">
+              <div
+                class="absolute top-3 md:relative flex flex-col justify-between bg-black-dark p-3 md:p-6 border border-grey-dark rounded-[10px] shadow-xl w-11/12 z-50 md:max-w-2xl md:w-full h-[88%] md:h-[710px]">
+                <div class="flex-0">
+                  <h6 class="text-md font-bold text-white">Choose character</h6>
+                </div>
+                <div class="flex flex-col flex-0 flex-wrap justify-between mt-4 pb-5 md:flex-row gap-1 md:gap-0">
+                  <ul
+                    class="flex flex-0 flex-wrap border-r-[1px] gap-2 border-r-[#4A4A4A] p-1 md:p-0 md:pr-4 bg-[#2D2D2D] md:bg-transparent rounded-[10px] md:rounded-none">
+                    <li
+                      class="flex items-center text-sm font-semibold text-grey-light px-3 py-1 md:py-2 rounded-[10px] cursor-pointer border border-[#4A4A4A] flex-1 md:flex-initial justify-center md:justify-start border-pink-default bg-pink-medium"
+                      data-action="click->generate-image#selectCharacterLocation" data-id="system"
+                      data-generate-image-target="characterLocation">
+                      <img class="w-[14px] h-[14px] mr-1"
+                        src="/assets/sidebar-icons/explore-3a4a39d3c6126c743969aa14b3a4841763f5b600e0f77e317a32d7c30afbcc13.svg">
+                      Discover
+                    </li>
+                    <li
+                      class="flex items-center text-sm font-semibold text-grey-light px-3 py-1 md:py-2 rounded-[10px] cursor-pointer border border-[#4A4A4A] flex-1 md:flex-initial justify-center md:justify-start"
+                      data-action="click->generate-image#selectCharacterLocation" data-id="user"
+                      data-generate-image-target="characterLocation">
+                      <img class="w-[14px] h-[14px] mr-1"
+                        src="/assets/sidebar-icons/love-lady-760605daa886b7e49e77d5d26c1047bc0f815c005a978a5c76810db20bc355dd.svg">
+                      My AI's
+                    </li>
+                  </ul>
+                  <ul
+                    class="flex flex-1 flex-wrap justify-center gap-2 border-r-[1px] border-r-[#4A4A4A] p-1 md:p-0 bg-[#2D2D2D] md:bg-transparent rounded-[10px] md:rounded-none">
+                    <li
+                      class="flex items-center text-sm font-semibold text-grey-light px-3 py-1 md:py-2 rounded-[10px] cursor-pointer border border-[#4A4A4A] flex-1 md:flex-initial justify-center md:justify-start"
+                      data-action="click->generate-image#selectedCharacterType" data-id="anime"
+                      data-generate-image-target="characterType">
+                      Anime
+                    </li>
+                    <li
+                      class="flex items-center text-sm font-semibold text-grey-light px-3 py-1 md:py-2 rounded-[10px] cursor-pointer border border-[#4A4A4A] flex-1 md:flex-initial justify-center md:justify-start"
+                      data-action="click->generate-image#selectedCharacterType" data-id="realistic"
+                      data-generate-image-target="characterType">
+                      Realistic
+                    </li>
+                  </ul>
+                  <ul
+                    class="flex flex-1 flex-wrap justify-end gap-2 p-1 md:p-0 bg-[#2D2D2D] md:bg-transparent rounded-[10px] md:rounded-none">
+                    <li
+                      class="flex items-center text-sm font-semibold text-grey-light px-3 py-1 md:py-2 rounded-[10px] cursor-pointer border border-[#4A4A4A] flex-1 md:flex-initial justify-center md:justify-start"
+                      data-action="click->generate-image#selectedCharacterGender" data-id="male"
+                      data-generate-image-target="characterGender">
+                      <img class="w-[14px] h-[14px] mr-1"
+                        src="/assets/gender/male-169307dadb46f1a0ddbaf64ae581a551e68d764556b17a40874764e4312b84ac.svg">
+                      Male
+                    </li>
+                    <li
+                      class="flex items-center text-sm font-semibold text-grey-light px-3 py-1 md:py-2 rounded-[10px] cursor-pointer border border-[#4A4A4A] flex-1 md:flex-initial justify-center md:justify-start border-pink-default bg-pink-medium"
+                      data-action="click->generate-image#selectedCharacterGender" data-id="female"
+                      data-generate-image-target="characterGender">
+                      <img class="w-[14px] h-[14px] mr-1"
+                        src="/assets/gender/female-c36802f6224c0db225b7693320a07087928799c14f94e5c9b1306eb081b64bed.svg">
+                      Female
+                    </li>
+                  </ul>
+                </div>
+
+
+                <div id="modal-character-list-container"
+                  class="pb-2.5 flex flex-1 flex-col md:max-h-[530px] overflow-x-hidden overflow-y-auto">
+                  <div id="modal-character-list" class="p-[2px] grid grid-cols-2 md:grid-cols-3 gap-5  ">
+                    <div data-action="click->generate-image#selectCharacter" id="136696"
+                      class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                      data-generate-image-target="characterItem"
+                      data-generate-image-confirmed-character-gender="female">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/136696-4a3ea98e-d393-4022-9522-1417c85dd3af"
+                        class="rounded-[10px] object-cover w-full h-full">
+                      <span class="font-semibold text-sm text-white absolute bottom-3 text-center w-full">Rebecca
+                        Green</span>
+                    </div>
+                    <div data-action="click->generate-image#selectCharacter" id="22"
+                      class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                      data-generate-image-target="characterItem"
+                      data-generate-image-confirmed-character-gender="female">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/22-8026baed-b47a-4009-995d-c1890be18c35"
+                        class="rounded-[10px] object-cover w-full h-full">
+                      <span class="font-semibold text-sm text-white absolute bottom-3 text-center w-full">Alexis
+                        Ivyedge</span>
+                    </div>
+                    <div data-action="click->generate-image#selectCharacter" id="2102327"
+                      class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                      data-generate-image-target="characterItem"
+                      data-generate-image-confirmed-character-gender="female">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/2102327-743fdd1f-bf50-4233-811d-a4d09f081ddc"
+                        class="rounded-[10px] object-cover w-full h-full">
+                      <span class="font-semibold text-sm text-white absolute bottom-3 text-center w-full">Yuna
+                        Kim</span>
+                    </div>
+                    <div data-action="click->generate-image#selectCharacter" id="2127253"
+                      class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                      data-generate-image-target="characterItem"
+                      data-generate-image-confirmed-character-gender="female">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/2127253-79f31e7c-d675-4567-b215-10f32a3fce7f"
+                        class="rounded-[10px] object-cover w-full h-full">
+                      <span class="font-semibold text-sm text-white absolute bottom-3 text-center w-full">Alice
+                        Wild</span>
+                    </div>
+                    <div data-action="click->generate-image#selectCharacter" id="3747248"
+                      class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                      data-generate-image-target="characterItem"
+                      data-generate-image-confirmed-character-gender="female">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/3747248-5d5bb96f-c090-4dba-8655-a54b57c51fe1"
+                        class="rounded-[10px] object-cover w-full h-full">
+                      <span class="font-semibold text-sm text-white absolute bottom-3 text-center w-full">Aleksandra
+                        Kowalski</span>
+                    </div>
+                    <div data-action="click->generate-image#selectCharacter" id="3747086"
+                      class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                      data-generate-image-target="characterItem"
+                      data-generate-image-confirmed-character-gender="female">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/3747086-085b5b80-651a-4314-9df5-46b7876e5881"
+                        class="rounded-[10px] object-cover w-full h-full">
+                      <span class="font-semibold text-sm text-white absolute bottom-3 text-center w-full">Brianna
+                        Edwards</span>
+                    </div>
+                    <div data-action="click->generate-image#selectCharacter" id="3746922"
+                      class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                      data-generate-image-target="characterItem"
+                      data-generate-image-confirmed-character-gender="female">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/3746922-a5f9cc3a-2d24-4d7f-b4f4-77cc597e3d91"
+                        class="rounded-[10px] object-cover w-full h-full">
+                      <span class="font-semibold text-sm text-white absolute bottom-3 text-center w-full">Mina
+                        Kim-Ji</span>
+                    </div>
+                    <div data-action="click->generate-image#selectCharacter" id="2099592"
+                      class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                      data-generate-image-target="characterItem"
+                      data-generate-image-confirmed-character-gender="female">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/2099592-c0029072-dc0f-4d96-93b3-64581b29f664"
+                        class="rounded-[10px] object-cover w-full h-full">
+                      <span class="font-semibold text-sm text-white absolute bottom-3 text-center w-full">Elizabeth
+                        Morgan</span>
+                    </div>
+                    <div data-action="click->generate-image#selectCharacter" id="9"
+                      class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                      data-generate-image-target="characterItem"
+                      data-generate-image-confirmed-character-gender="female">
+                      <img
+                        src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/9-77889ccf-250e-4209-b345-94d52625aa2b"
+                        class="rounded-[10px] object-cover w-full h-full">
+                      <span class="font-semibold text-sm text-white absolute bottom-3 text-center w-full">Asuna
+                        Saito</span>
+                    </div>
+
+                  </div>
+
+                  <turbo-frame loading="lazy" id="pagination"
+                    src="/generate-image/characters?from=sidebar&amp;gender=female&amp;page=2"></turbo-frame>
+
+                </div>
+
+
+
+                <div class="flex flex-0">
+                  <button
+                    class="flex-0 mr-8 mt-4 md:mt-8 justify-center border-2 text-pink-default border-pink-default w-full px-4 py-1.5 md:py-3 rounded-[10px] relative text-sm font-semibold text-center"
+                    @click="isCharacterModalOpen = false">
+                    Cancel
+                  </button>
+                  <button
+                    class="flex-0 mt-4 md:mt-8 justify-center text-white bg-pink-dark w-full px-4 py-1.5 md:py-3 rounded-[10px] relative text-sm font-semibold text-center disabled:opacity-40 cursor-not-allowed"
+                    data-action="generate-image#confirmCharacterSelection"
+                    data-generate-image-target="confirmCharacterButton" @click="isCharacterModalOpen = false"
+                    disabled="">
+                    Select
+                  </button>
+                </div>
+                <button @click="isCharacterModalOpen = false"
+                  class="text-wite leading-none hover:text-gray-600 w- absolute top-2 right-2">
+                  <img class="w-5 h-5 mx-1"
+                    src="/assets/close-ec898236eb501d13f4d1343d4a90ed1c0afec71efde2ed1e606916d52f2c5331.svg">
+                </button>
+              </div>
+            </div>
+
+            <div id="image-generation-error-container">
+            </div>
+            <div data-generate-image-target="toast" id="choose-character-error"
+              class="hidden fixed bg-[#C23934] w-80 z-10 rounded-lg top-[70px] left-0 right-0 mx-auto my-0 lg:right-[40px] lg:left-[initial] text-white flex gap-3 px-4 py-3 justify-center items-start animate-slideFromRight duration-300 lg:mx-0">
+              <img
+                src="/assets/create-char/crossed_circle-4248764afe392ec6862750722104a2ca280f995d373b5c53165b91391c4d5ca3.svg">
+              <div class="flex flex-col">
+                <p class="leading-[24px] font-medium text-[16px]">Choose a character</p>
+                <p class="font-normal leading-[20px] text-[13px]">You need to choose a character to continue</p>
+              </div>
+              <button data-action="click->generate-image#closeToast" class="w-6 h-6">
+                <img
+                  src="/assets/create-char/close_error-d4ec52d2c48c0b4ccde2f4e9b204ce06649bbbaa185dcfc4802a1cdf721ea2ba.svg">
+              </button>
+            </div>
+
+            <div id="image-generation-modal-container"></div>
+            <div x-show="isPremiumSubscriptionModalOpen"
+              class="fixed inset-0 backdrop-filter border-[10px] backdrop-blur-md bg-black-default bg-opacity-50 flex justify-center items-center z-50"
+              style="display: none;">
+              <div class="relative w-full h-full md:w-[740px]">
+                <div class="justify-center p-4 flex items-center min-h-screen text-center sm:items-center sm:p-0">
+                  <div
+                    class="relative border border-black-light rounded-[10px]  transform overflow-hidden text-left shadow-xl transition-all bubble-wrapper">
+                    <button @click="isPremiumSubscriptionModalOpen = false"
+                      class="z-20 text-wite leading-none hover:text-gray-600 absolute top-2 right-2">
+                      <img class="w-5 h-5 mx-1"
+                        src="/assets/close-ec898236eb501d13f4d1343d4a90ed1c0afec71efde2ed1e606916d52f2c5331.svg">
+                    </button>
+                    <div class="flex flex-col md:flex-row justify-end gradient-subscription-wrapper relative">
+                      <div class="flex flex-1 w-full md:w-1/2 md:h-auto custom-max-height">
+                        <img class="object-cover w-full h-full custom-obj-position"
+                          src="/assets/generate-images/premium/female-desktop-64f8fe7fc57063426248bbb96429206e0dd11e7cb71070d2968e870f7a8f6ca2.webp">
+                      </div>
+                      <div
+                        class="flex flex-1 z-10 flex-col items-start gap-16 px-6 py-10 md:py-6 bg-black-dark w-full h-1/2 md:w-1/2 md:h-full rounded-r-[10px]">
+                        <div class="text-white md:text-3xl text-xl font-bold leading-[34px]">
+                          Become Premium to
+                          <span class="text-primary">Generate</span>
+                          more!
+                        </div>
+                        <div class="mt-5 mb-2.5 flex text-[#A4A4A4] text-sm italic font-medium">With subscription you
+                          can:</div>
+                        <div class="flex flex-col gap-5">
+                          <div class="justify-start items-center gap-3 inline-flex">
+                            <div class="text-white text-sm font-medium leading-tight flex"><img
+                                src="/assets/subscription/check_circle-8bef1807002524e283a697e23b0d49f656c8479fd4e1c273f584a6162da8ead1.svg"
+                                class="mr-2"> Generate as many AI's as you want</div>
+                          </div>
+                          <div class="justify-start items-center gap-3 inline-flex">
+                            <div class="text-white text-sm font-medium leading-tight flex"><img
+                                src="/assets/subscription/check_circle-8bef1807002524e283a697e23b0d49f656c8479fd4e1c273f584a6162da8ead1.svg"
+                                class="mr-2"> Generate the most spicy photos</div>
+                          </div>
+                          <div class="justify-start items-center gap-3 inline-flex">
+                            <div class="text-white text-sm font-medium leading-tight flex"><img
+                                src="/assets/subscription/check_circle-8bef1807002524e283a697e23b0d49f656c8479fd4e1c273f584a6162da8ead1.svg"
+                                class="mr-2"> Remove image blur</div>
+                          </div>
+                        </div>
+                        <div class="flex flex-col gap-y-2 mt-6">
+                          <a href="/subscriptions?from=generate-image"
+                            class=" z-50 px-4 py-3 primary-gradient rounded-[10px] justify-center items-center gap-2 inline-flex">
+                            <img class="h-5 w-5"
+                              src="/assets/navbar-icons/premium-white-bd87bee579b4129d7997c488c36bc0fe3fcbb2a5874e4c8d248a08311c5304f3.svg">
+                            <div class="text-white text-sm font-semibold leading-tight">Become Premium</div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div x-show="isLoginModalOpen" class="relative" style="display: none;">
+              <div
+                class="fixed top-0 left-0 right-0 bottom-0 z-50 bg-black bg-opacity-50 backdrop-blur-sm email-modal modal-backdrop feedback-modal">
+              </div>
+              <div class="fixed inset-0 z-50 overflow-y-auto">
+                <div
+                  class="items-end justify-center p-4 flex items-center min-h-screen text-center sm:items-center sm:p-0">
+                  <div
+                    class="relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all sm:my-8 bubble-wrapper">
+                    <div class="absolute right-0 top-0 pr-4 pt-4 sm:block z-20">
+                      <button @click="isLoginModalOpen = false" type="button"
+                        class="rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                        <span class="sr-only">Close</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                          aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      class="flex justify-end rounded-lg border border-neutral-700 w-[320px] h-[478px] md:w-[740px] gradient-wrapper relative">
+                      <img
+                        srcset="/assets/create-char/registration-modal-mobile-female-db1b87b7c9cc7bcc18021e5286db193be614104c7260d4be2689da3f66cdb901.png 300w, /assets/create-char/registration-modal-desktop-female-3e052793ac495e06fcec24252b22ec4f2d92bd7c843737dca7ee6ae9c2a98a72.png 768w"
+                        sizes="(max-width: 767px) 300px, 768px"
+                        class="left-0 absolute w-full lg:w-[70%] md:w-[70%] md:h-[100%] object-cover h-[65%] lg:h-full"
+                        src="/assets/create-char/registration-modal-mobile-female-db1b87b7c9cc7bcc18021e5286db193be614104c7260d4be2689da3f66cdb901.png">
+                      <div
+                        class="bg-transparent md:bg-stone-900 lg:bg-transparent bg-premium-opacity-50 flex z-10 justify-end flex-col items-start md:justify-center lg:gap-10 p-5 lg:p-6 lg:py-12 bg-stone-900 w-full md:w-1/2 h-full rounded-r-lg">
+                        <div>
+                          <div class="text-white md:text-3xl text-xl font-bold leading-[34px]">
+                            <span class="text-primary">Members</span>
+                            Only
+                          </div>
+                          <div class="flex justify-center text-[#E1E1E1] text-sm font-medium">Please login or register
+                            in order to use this feature</div>
+                        </div>
+                        <div class="flex gap-x-4 justify-between mb-5 mt-4 lg:flex-col gap-y-2 w-full">
+                          <a href="/users/sign_up" data-generate-image-target="registrationModalSignupButton"
+                            class="px-4 flex-grow py-3 primary-gradient rounded-lg justify-center items-center gap-2 inline-flex registration_button_ga">
+                            <div class="text-white text-sm font-semibold leading-tight">Register</div>
+                          </a>
+                          <a href="/users/sign_in" data-generate-image-target="registrationModalSigninButton"
+                            type="button"
+                            class="cursor-pointer flex-grow px-4 py-3 border-[#E75275] border text-[#E75275] rounded-lg justify-center items-center gap-2 inline-flex">
+                            <div class="text-sm font-semibold leading-tight">Login</div>
+                          </a>
+                        </div>
+                        <div class="flex justify-center w-full">
+                          <div
+                            class="w-[223px] h-8 px-2 py-1 bg-white bg-opacity-20 rounded-[10px] justify-start items-center gap-1 inline-flex">
+                            <img class="w-4 h-4 relative"
+                              src="/assets/floppy-disk-a1a8d583b87a0cd68de534497f4a775deec49761b9b04d312d8162a0b28d3559.svg">
+                            <div class="text-neutral-200 text-sm font-semibold leading-normal">Your choices will be
+                              saved</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <script>
+              var registrationButton = document.querySelector('.registration_button_ga');
+              if (registrationButton) {
+                registrationButton.addEventListener('click', function () {
+                  mixpanel.track('Clicked Register GA');
+                })
+              }
+            </script>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const hamburger = document.querySelector("#nav-hamburger");
+    const mainSidebarOpened = document.querySelector("#mainSidebarOpened");
+    const mainSidebarClosed = document.querySelector("#mainSidebarClosed");
+    const mainMobileSidebar = document.querySelector("#mainMobileSidebar");
+    const mainContent = document.querySelector("#main-content");
+
+    hamburger.addEventListener("click", function () {
+      mainSidebarOpened.classList.toggle("-translate-x-full");
+      mainSidebarClosed.classList.toggle("-translate-x-full");
+      mainMobileSidebar.classList.toggle("-translate-x-full");
+      mainMobileSidebar.classList.toggle("backdrop-blur-sm");
+      if (mainSidebarOpened.classList.contains("-translate-x-full")) {
+        mainContent.classList.add("lg:pl-[100px]");
+        mainContent.classList.remove("lg:pl-[220px]");
+      } else {
+        mainContent.classList.add("lg:pl-[220px]");
+        mainContent.classList.remove("lg:pl-[100px]");
+      }
+
+      if (!mainMobileSidebar.classList.contains("-translate-x-full") && window.innerWidth < 1024) {
+        document.body.addEventListener("touchmove", preventDefaultScroll, {
+          passive: false,
+        });
+        document.body.addEventListener("wheel", preventDefaultScroll, {
+          passive: false,
+        });
+      } else {
+        document.body.removeEventListener("touchmove", preventDefaultScroll);
+        document.body.removeEventListener("wheel", preventDefaultScroll);
+      }
+    })
+
+    function preventDefaultScroll(event) {
+      event.preventDefault();
+    }
+
+    const triggers = document.querySelectorAll("[data-collapse-target]");
+    const collapses = document.querySelectorAll("[data-collapse]");
+
+    function openDefaultFAQs(defaultFAQIds) {
+      defaultFAQIds.forEach(function (faqId) {
+        const collapse = document.querySelector("[data-collapse='" + faqId + "']");
+        if (collapse) {
+          collapse.style.height = "".concat(
+            collapse.children[0].clientHeight,
+            "px",
+          );
+          collapse.style.overflow = "visible";
+          const correspondingTrigger = document.querySelector(
+            "[data-collapse-target='" + faqId + "']",
+          );
+          if (correspondingTrigger) {
+            correspondingTrigger.setAttribute("open", "");
+          }
+        }
+      });
+    }
+
+    function initializeFAQs() {
+      if (triggers && collapses) {
+        Array.from(triggers).forEach(function (trigger) {
+          return Array.from(collapses).forEach(function (collapse) {
+            if (trigger.dataset.collapseTarget === collapse.dataset.collapse) {
+              trigger.addEventListener("click", function () {
+                if (collapse.style.height && collapse.style.height !== "0px") {
+                  collapse.style.height = 0;
+                  collapse.style.overflow = "hidden";
+                  trigger.removeAttribute("open");
+                  trigger.parentElement.parentElement.classList.add("bg-zinc-900");
+                  trigger.parentElement.parentElement.classList.remove("bg-gradient-to-r");
+                } else {
+                  collapse.style.height = "".concat(
+                    collapse.children[0].clientHeight,
+                    "px",
+                  );
+                  collapse.style.overflow = "visible";
+                  trigger.setAttribute("open", "");
+                  trigger.parentElement.parentElement.classList.add("bg-gradient-to-r");
+                  trigger.parentElement.parentElement.classList.remove("bg-zinc-900");
+                }
+              });
+            }
+          });
+        });
+      }
+    }
+
+    // openDefaultFAQs(["collapse-1", "collapse-2"]);
+    initializeFAQs();
+  </script>
+</body>
+
+</html>

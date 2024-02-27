@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Candy.ai - Enjoy The Ultimate AI Girlfriend Experience</title>
+  <link rel="stylesheet" href="dist/output.css" />
+</head>
+
+<body>
+  <div
+    class="bg-main fixed w-full top-0 z-40 flex h-16 shrink-0 items-center border-b border-[#363636] sm:px-4 px-2 shadow-sm sm:gap-x-2 lg:px-8">
+    <button id="nav-hamburger" type="button" class="py-2 sm:mr-0 md:mr-[10px] mr-0 text-gray-700 nav-hamburger">
+      <span class="sr-only">Open sidebar</span>
+      <svg class="nav-hamburger h-8 w-8 mr-1 text-white" data-action="click->sidebar#handleMenuClick" fill="none"
+        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </button>
+    <a href="/">
+      <img src="./icons/candyai-navbar.svg" class="h-[30px] md:h-[30px] w-[115px]">
+    </a>
+    <!-- Separator -->
+    <div class="h-6 w-px bg-gray-900/10 lg:hidden" aria-hidden="true"></div>
+
+    <div class="flex flex-1 self-stretch lg:gap-x-6 bg-main">
+      <form class="relative flex flex-1" action="#" method="GET"></form>
+      <div class="hidden min-[350px]:flex items-center gap-x-4 lg:gap-x-6">
+        <a href="/subscriptions?from=discover"
+          class="justify-center items-center primary-gradient flex max-w-full gap-2 px-2 py-1.5 rounded-xl">
+          <img src="./icons/premium.svg" class="object-cover object-center w-5 overflow-hidden shrink-0">
+          <div class="text-white text-xs font-semibold self-stretch">
+            Subscribe 75% OFF
+          </div>
+        </a>
+      </div>
+      <div class="hidden lg:flex items-center gap-x-4 lg:gap-x-6">
+        <!-- Separator -->
+        <div class="lg:block lg:h-6 lg:w-px lg:bg-gray-900/10" aria-hidden="true"></div>
+        <!-- Profile dropdown -->
+        <div x-data="{ open: false }" @keydown.escape="open = false" @click.away="open = false" class="w-fit relative ">
+          <button type="button" class="-m-1.5 flex items-center p-1.5 " id="user-menu-button" @click="open = !open"
+            aria-expanded="false" :aria-expanded="open.toString()">
+            <span class="sr-only">Open user menu</span>
+            <img src="./icons/man.svg" class="h-8 w-8 rounded-full">
+            <span class="hidden lg:flex lg:items-center">
+              <span class="ml-4 text-sm font-semibold leading-6 text-white" aria-hidden="true">My Profile</span>
+              <svg class="ml-2 h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="open" @keydown.arrow-up.prevent="" @keydown.arrow-down.prevent="" @keydown.tab="open = false"
+            @keydown.enter.prevent="open = false"
+            class="absolute right-0 z-10 mt-2.5 origin-top-right rounded-lg shadow-lg focus:outline-none"
+            style="display: none;">
+            <a class="w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+              href="/subscriptions?from=dropdown">
+              <div class="w-5 h-5 relative"><img
+                  src="/assets/sidebar-icons/premium-bef4c0d01b6b99b6f2764cf40b755bd97debc307331857ca26f97628c6a38eec.svg">
+              </div>
+              <div class="text-white text-sm font-semibold leading-normal">
+                Subscription</div>
+            </a> <a
+              class="w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+              href="/settings">
+              <div class="w-5 h-5 relative"><img
+                  src="/assets/settings-087d65eb2d9a7508f04c379467f39735f971ac6299872f159da8e6c1d735a710.svg">
+              </div>
+              <div class="text-white text-sm font-semibold leading-normal">
+                Settings</div>
+            </a>
+            <form class="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method"
+                value="delete" autocomplete="off"><button data-turbo="false"
+                class="rounded-b-lg w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+                type="submit">
+                <div class="w-5 h-5 relative"><img
+                    src="/assets/logout-c5bab4efa12211db16618320220423a09cf3d7f5b562be32cdd5110df2a21c18.svg">
+                </div>
+                <div class="text-white text-sm font-semibold leading-normal">
+                  Logout</div>
+              </button><input type="hidden" name="authenticity_token"
+                value="oePBzbXcRPhgaxtuI43gp0eUExak7RltguVJo6RLNV5L3hPaxXJJTjyo4SQRewXWiwO_cSTE0QMxIxec8vJWCA"
+                autocomplete="off"></form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="hidden lg:pt-[63px] lg:z-20 lg:block lg:overflow-y-auto lg:overflow-x-hidden bg-g1 lg:fixed z-20 border-[#363636] border-r border-t lg:inset-y-0 lg:left-0 lg:w-[220px] lg:pb-5 w-[220px] fixed top-0 left-0 h-full webkit-transition-sidebar"
+    id="mainSidebarOpened">
+    <nav class="flex flex-col justify-between h-full ">
+      <ul role="list"
+        class="py-8 lg:py-6 flex flex-col gap-2 items-center justify-start px-6 overflow-y-auto  overflow-x-auto">
+        <li class="relative w-full">
+          <a href="/"
+            class="h-[40px] w-full  hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-4 h-4" src="./icons/explore.svg">
+            <span class="text-start text-grey-medium text-xxs font-medium leading-4">Explore</span>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/conversations/emily-caldwell"
+            class="h-[40px] w-full  hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-4 h-4" src="./icons/chat.svg">
+            <span class="text-start text-grey-medium text-xxs font-medium leading-4">Chat</span>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/gallery"
+            class="h-[40px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/gallery.svg">
+            <div class="text-start text-grey-medium text-xxs font-medium leading-4">
+              Gallery</div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/generate-image?from=sidebar" class="relative
+            h-[40px] hover:bg-zinc-700  rounded-[10px] border
+            border-white border-opacity-10 justify-start px-3 items-center
+            gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/generate.svg">
+            <div class="text-start text-grey-medium text-xxs font-medium leading-none">
+              Generate Image
+            </div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/characters/new"
+            class="relative h-[40px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/magic-wand.svg">
+            <div class="text-start  text-grey-medium text-xxs font-medium leading-none">
+              Create Character</div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/characters"
+            class="h-[40px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/love-lady.svg">
+            <div class="text-start text-grey-medium text-xxs font-medium leading-none">
+              My AI
+            </div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/subscriptions"
+            class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/premium1.svg">
+            <div class="text-start text-pink-default text-xxs font-medium leading-none">
+              Become Premium
+            </div>
+          </a>
+        </li>
+      </ul>
+      <ul role="list" class="flex flex-col gap-2 pt-6 px-6 border-[#363636] border-t items-center justify-end">
+        <li class="relative w-full">
+          <a href="https://discord.gg/candyai" target="_blank"
+            class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-4 h-4" src="./icons/discord1.svg">
+            <div class="text-start text-grey-medium text-xs font-medium leading-4">
+              Discord</div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <div data-action="click->sidebar#openContactUs"
+            class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-4 h-4" src="./icons/contact.svg">
+            <div class="text-start sidebar-text  text-grey-medium text-xs font-medium leading-4" @click="">Contact Us
+            </div>
+          </div>
+        </li>
+        <li class="relative w-full">
+          <a target="_blank" class="" href="https://forms.gle/ngh58ASCF15TKWYG7">
+            <div
+              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+              <img class="w-4 h-4" src="./icons/trophy.svg">
+              <div class="text-start  text-grey-medium text-xs font-medium leading-4">
+                Affiliate Program</div>
+            </div>
+          </a>
+        </li>
+        <li class="text-[8px] flex text-grey-medium pt-3 w-full">
+          <a class="leading-none mr-2" href="/privacy-policy">Privacy Policy</a>
+          <ul class="list-none">
+            <li class="flex items-center mr-2">
+              <span class="bg-white h-1 w-1 rounded-full mr-2"></span>
+              <a class="leading-none" href="/legal-information">Terms of
+                Service</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="mainSidebarClosed"
+    class="lg:fixed lg:pt-[63px] z-20 border-[#363636] border-r border-t lg:inset-y-0 lg:left-0 lg:w-[100px] lg:pb-5 w-[100px] fixed top-0 left-0 h-full webkit-transition-sidebar hidden lg:block -translate-x-full"
+    style="background: linear-gradient(0deg, #131313 0%, #131313 100%); max-height: 100vh">
+    <span class="tooltip-containers absolute" data-sidebar-target="tooltipContainer">
+      <div id="tooltip-explore" role="tooltip"
+        class="relative z-100 invisible px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 30px);"
+        data-popper-placement="right">
+        Explore
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-chat" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 86px);"
+        data-popper-placement="right">
+        Chat
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-gallery" role="tooltip"
+        class="absolute z-100 whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm tooltip tooltip-sidebar dark:bg-gray-700 opacity-0 invisible"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 142px);"
+        data-popper-placement="right">
+        Gallery
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-image" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 198px);"
+        data-popper-placement="right">
+        Generate Image
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-character" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 254px);"
+        data-popper-placement="right">
+        Create Character
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-my-ai" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 310px);"
+        data-popper-placement="right">
+        My AI
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-tokens" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700">
+        Buy Tokens
+        <div class="tooltip-arrow" data-popper-arrow=""></div>
+      </div>
+      <div id="tooltip-premium" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 366px);"
+        data-popper-placement="right">
+        Become Premium
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+    </span>
+    <nav class="flex flex-col justify-between h-full ">
+      <ul role="list"
+        class="py-8 lg:py-6 flex flex-col gap-2 items-center justify-start px-6 overflow-y-auto  overflow-x-auto">
+        <li class="relative w-full" data-tooltip-target="tooltip-explore" data-tooltip-placement="right">
+          <a href="/"
+            class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-6 h-6" src="./icons/explore.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-chat" data-tooltip-placement="right">
+          <a href="/conversations/emily-caldwell"
+            class="h-[48px] w-[52px]  hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-6 h-6" src="./icons/chat.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-gallery" data-tooltip-placement="right">
+          <a href="/gallery"
+            class="h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/gallery.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-image" data-tooltip-placement="right">
+          <a href="/generate-image?from=sidebar" class="relative
+            h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border
+            border-white border-opacity-10 justify-start px-3 items-center
+            gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/generate.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-character" data-tooltip-placement="right">
+          <a href="/characters/new"
+            class="relative h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/magic-wand.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-my-ai" data-tooltip-placement="right">
+          <a href="/characters"
+            class="h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/love-lady.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-premium" data-tooltip-placement="right">
+          <a href="/subscriptions"
+            class="h-[48px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/premium1.svg">
+          </a>
+        </li>
+      </ul>
+      <ul role="list" class="flex flex-col gap-2 pt-6 px-6 border-[#363636] border-t items-center justify-end">
+        <li class="relative w-full" data-tooltip-target="tooltip-discord" data-tooltip-placement="right">
+          <div id="tooltip-discord" role="tooltip"
+            class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(59px, 6px);"
+            data-popper-placement="right">
+            Discord
+            <div class="tooltip-arrow" data-popper-arrow=""
+              style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+            </div>
+          </div>
+          <a href="https://discord.gg/candyai" target="_blank"
+            class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-6 h-6" src="./icons/discord1.svg">
+          </a>
+        </li>
+        <li class="relative w-full toggle-popup" data-tooltip-target="tooltip-contact" data-tooltip-placement="right">
+          <div id="tooltip-contact" role="tooltip"
+            class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(59px, 6px);"
+            data-popper-placement="right">
+            Contact Us
+            <div class="tooltip-arrow" data-popper-arrow=""
+              style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+            </div>
+          </div>
+          <div data-action="click->sidebar#openContactUs"
+            class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-6 h-6" src="./icons/contact.svg">
+          </div>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-affiliate" data-tooltip-placement="right">
+          <a target="_blank" class="" href="https://forms.gle/ngh58ASCF15TKWYG7">
+            <div id="tooltip-affiliate" role="tooltip"
+              class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+              style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(59px, 6px);"
+              data-popper-placement="right">
+              Affiliate Program
+              <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+              </div>
+            </div>
+            <div
+              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+              <img class="w-6 h-6" src="./icons/trophy.svg">
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="mainMobileSidebar" data-action="click->sidebar#toggleMobileSidebar"
+    class="inset-y-0 w-[100vw] mt-[64px] z-[100] pr-[40vw] no-scroll fixed left-0 webkit-transition-sidebar block lg:hidden -translate-x-full">
+    <nav class="flex flex-col justify-between h-full w-[240px] mobile-sidebar-list-item"
+      style="background: linear-gradient(0deg, #131313 0%, #131313 100%)"
+      data-action="click->sidebar#setMobileSidebarValueToDefault">
+      <nav class="flex flex-col justify-between h-full" data-action="click->sidebar#setMobileSidebarValueToDefault">
+        <ul role="list"
+          class="flex flex-col items-center justify-start px-5 bg-zinc-900 h-screen overflow-auto mobile-sidebar-list-item">
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <!-- Profile dropdown -->
+            <div x-data="{ open: false }" @keydown.escape="open = false" @click.away="open = false">
+              <button type="button" class="w-full flex text-xs leading-5" id="user-menu-button" @click="open = !open"
+                aria-expanded="false" :aria-expanded="open.toString()">
+                <img src="./icons/man.svg" class="h-5 w-5 rounded-full mobile-sidebar-list-item">
+                <div class="flex items-center justify-between w-full mobile-sidebar-list-item">
+                  <div class="ml-2 text-xs font-semibold leading-5 text-grey-medium mobile-sidebar-list-item"
+                    aria-hidden="true">
+                    My Profile</div>
+                  <svg class="ml-2 h-4 w-4 text-white mobile-sidebar-list-item" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path class="mobile-sidebar-list-item" fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd">
+                    </path>
+                  </svg>
+                </div>
+              </button>
+              <div x-show="open" @keydown.arrow-up.prevent="" @keydown.arrow-down.prevent="" @keydown.tab="open = false"
+                @keydown.enter.prevent="open = false"
+                class="relative right-0 z-10 mt-2.5 origin-top-right rounded-lg shadow-lg focus:outline-none w-full bg-zinc-900 mobile-sidebar-list-item"
+                style="display: none;">
+                <a class="w-full mt-4 justify-start items-center gap-2 inline-flex" href="/subscriptions?from=dropdown">
+                  <div class="relative"><img class="w-5 h-5 mobile-sidebar-list-item"
+                      src="/assets/sidebar-icons/premium-bef4c0d01b6b99b6f2764cf40b755bd97debc307331857ca26f97628c6a38eec.svg">
+                  </div>
+                  <div class=" text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item">
+                    Subscription
+                  </div>
+                </a> <a class="w-full mt-4 justify-start items-center gap-2 inline-flex mobile-sidebar-list-item"
+                  href="/settings">
+                  <div class="relative"><img class="w-5 h-5 mobile-sidebar-list-item"
+                      src="/assets/settings-087d65eb2d9a7508f04c379467f39735f971ac6299872f159da8e6c1d735a710.svg">
+                  </div>
+                  <div class=" text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item">
+                    Settings</div>
+                </a>
+                <form class="button_to" method="post" action="/users/sign_out">
+                  <input type="hidden" name="_method" value="delete" autocomplete="off"><button data-turbo="false"
+                    class="rounded-b-lg w-full mt-4 justify-start items-center gap-2 inline-flex mobile-sidebar-list-item"
+                    type="submit">
+                    <div class="relative">
+                      <img class="w-5 h-5 mobile-sidebar-list-item"
+                        src="/assets/logout-c5bab4efa12211db16618320220423a09cf3d7f5b562be32cdd5110df2a21c18.svg">
+                    </div>
+                    <div class=" text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item">
+                      Logout
+                    </div>
+                  </button><input type="hidden" name="authenticity_token"
+                    value="u71Y5G-UzK0Mq0h8RIESa1ppjXKi_OTKW4ZAFOed-SRRgIrzHzrBG1BosjZ2d_calv4hFSLVLKToQB4rsSSacg"
+                    autocomplete="off">
+                </form>
+              </div>
+            </div>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/" class="w-full flex justify-start items-center gap-2  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/explore.svg">
+              <span
+                class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item">Explore</span>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/conversations/emily-caldwell"
+              class="w-full justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/chat.svg">
+              <div class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item">
+                Chat
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/gallery" class="justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/gallery.svg">
+              <div class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item">
+                Gallery
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/generate-image?from=sidebar" class="relative
+            justify-start items-center
+            gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/generate.svg">
+              <div class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item">
+                Generate Image
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/characters/new"
+              class="relative justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/magic-wand.svg">
+              <div class="text-start  text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item">
+                Create
+                Character</div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/characters" class="justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/love-lady.svg">
+              <div class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item">
+                My AI
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/subscriptions" class=" justify-start items-center gap-2 flex mx-auto mobile-sidebar-list-item">
+              <img class="w-5 h-5  mobile-sidebar-list-item" src="./icons/premium1.svg">
+              <div class="text-start text-pink-default text-xs font-medium leading-none mobile-sidebar-list-item">
+                Become Premium
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="p-5 bg-[#1A1A1A] flex-col justify-end items-start gap-[17px] inline-flex mobile-sidebar-list-item">
+          <div class="justify-start items-start gap-5 inline-flex mobile-sidebar-list-item">
+            <div
+              class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item">
+              <div
+                class="w-[70px] text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item">
+                <a href="https://discord.gg/candyai" class="mobile-sidebar-list-item" target="_blank"> Discord</a>
+              </div>
+            </div>
+            <div data-action="click->sidebar#openContactUs"
+              class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex">
+              <div
+                class="w-[70px] text-center text-neutral-200 text-xs font-semibold whitespace-nowrap leading-tight relative">
+                Contact Us
+              </div>
+            </div>
+          </div>
+          <div class="justify-start items-start gap-5 inline-flex mobile-sidebar-list-item">
+            <div
+              class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex  mobile-sidebar-list-item">
+              <a target="_blank" class="mobile-sidebar-list-item" href="https://forms.gle/ngh58ASCF15TKWYG7">
+                <div
+                  class="w-[70px] text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item">
+                  Affiliate</div>
+              </a>
+            </div>
+          </div>
+          <div class="justify-start items-center gap-2 inline-flex mobile-sidebar-list-item">
+            <a class="text-neutral-300 text-[8px] font-medium leading-[14px] mobile-sidebar-list-item"
+              href="/privacy-policy">Privacy Policy</a>
+            <div class="w-1 h-1 bg-zinc-300 rounded-full mobile-sidebar-list-item">
+            </div>
+            <a class="text-neutral-300 text-[8px] font-medium leading-[14px] mobile-sidebar-list-item"
+              href="/legal-information">Terms of Service</a>
+          </div>
+        </div>
+      </nav>
+    </nav>
+  </div>
+
+  <div
+    class="flex px-5 py-2 justify-between w-full h-[56px] fixed bottom-0 z-50 border-t border-white border-opacity-20 bg-[#131313] lg:hidden">
+    <!-- Discover Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/explore.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Explore</span>
+    </a>
+    <!-- Generate Image Icon -->
+    <a href="#" class="flex flex-col items-center relative">
+      <img src="./icons/generate.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Generate</span>
+    </a>
+    <!-- Create AI Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/magic-wand.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Create</span>
+    </a>
+    <!-- Chat Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/chat.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Chat</span>
+    </a>
+    <!-- Premium Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/premium.svg" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Premium</span>
+    </a>
+  </div>
+
+  <div class="pt-16 lg:pl-[220px] trasnition-all duration-300 ease-in-out" id="main-content">
+    <div class="flex flex-row gap-5 px-4 pb-[56px] lg:pb-0 overflow-auto" data-controller="gallery"
+      id="gallery-container">
+      <div class="hidden lg:flex h-full">
+        <div
+          class="flex-0 border-none lg:border border-grey-dark rounded-[10px] bg-transparent lg:bg-black-dark px-0 lg:px-7 pt-3 pb-4 lg:py-5 w-full lg:w-[224px] h-full">
+          <span class="hidden lg:flex font-semibold text-grey-light mb-2">Character Filter</span>
+          <div
+            class="flex lg:hidden relative items-center justify-between bg-[#252525] px-4 py-2.5 mb-1 rounded-[10px] border border-black-light cursor-pointer"
+            data-action="click->gallery#toggleCharacterViewForMobile">
+            <span class="text-white text-sm">Character Filter</span>
+            <img src="./icons/arrow-down.svg" class="w-5 h-5 absolute right-0"
+              data-gallery-target="characterViewDesktopArrowDown">
+            <img src="/assets/arrow-up-7bded9f69566b6b04e036a2126fb84af892b508b97313b2147327021c134600f.svg"
+              class="hidden w-5 h-5 absolute right-0" data-gallery-target="characterViewDesktopArrowUp">
+          </div>
+          <div
+            class="hidden lg:flex flex-col p-4 lg:p-0 bg-black-dark lg:bg-transparent border border-black-stroke lg:border-none rounded-[10px]"
+            data-gallery-target="characterViewDesktopDropdown">
+            <div class="relative bg-[#252525] rounded-[10px]">
+              <input placeholder="Search" autocomplete="off"
+                class="pl-9 pr-4 py-2.5 bg-transparent border-black-light rounded-[10px] placeholder-[#E0E0E0] text-white text-sm no-focus-border w-full"
+                type="text" data-gallery-target="searchInputCharacterViewDesktop"
+                data-action="input->gallery#searchCharacter">
+              <img src="./icons/search.svg" class="w-5 h-5 absolute top-3 bottom-0 left-2">
+              <img src="/assets/cross-ec898236eb501d13f4d1343d4a90ed1c0afec71efde2ed1e606916d52f2c5331.svg"
+                class="hidden cursor-pointer w-5 h-5 absolute top-3 bottom-0 right-2"
+                data-gallery-target="inputCrossCharacterViewDesktop" data-action="click->gallery#clearInput">
+            </div>
+            <div class="max-h-[calc(100vh-250px)] overflow-auto">
+              <ul class="flex flex-col gap-2 list-none p-0 m-0 mt-2">
+                <div id="characters_list_characterViewDesktop" class="flex flex-col gap-2">
+                  <a href="/gallery/load_profile_photos">
+                    <li
+                      class="text-white text-sm px-3 py-2.5 rounded-[10px] border border-grey-dark bg-black-medium cursor-pointer !bg-[#F97187] !bg-opacity-60"
+                      data-action="click->gallery#selectedCharacterStyles" data-gallery-target="character">
+                      All Characters
+                      <span class="text-grey-default text-white"></span>
+                    </li>
+                  </a>
+                  <a href="/gallery/load_profile_photos?character=alexis-ivyedge">
+                    <li
+                      class="text-white text-sm px-3 py-2.5 rounded-[10px] border border-grey-dark bg-black-medium cursor-pointer"
+                      data-action="click->gallery#selectedCharacterStyles" data-character-id="22"
+                      data-gallery-target="character">
+                      Alexis
+                      <span class="text-grey-default">( 3 )</span>
+                    </li>
+                  </a>
+
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="flex flex-1 flex-col">
+        <div class="flex justify-between mb-0 lg:mb-4 relative">
+          <span class="text-white text-[24px] font-bold leading-[34px]">Gallery</span>
+          <div id="sort_dropdowns">
+            <div data-action="click->gallery#toggleSort"
+              class="flex relative items-center justify-between cursor-pointer px-4 py-2 text-white rounded-md">
+              <span class="text-sm font-semibold mr-1">Sort by</span>
+              <img src="./icons/sort.svg" alt="sort" class="w-4 h-4">
+            </div>
+            <div data-gallery-target="sortImagesMenu"
+              class="hidden absolute right-0 top-8 bg-[#1D1D1E] text-white rounded-[10px] z-10">
+              <a href="/gallery/load_profile_photos?sort_by=asc">
+                <div
+                  class="flex pl-4 pr-4 py-3 items-center rounded-tl-[10px] rounded-tr-[10px] hover:bg-gray-700 cursor-pointer border-b border-black-light">
+                  <div class="w-4 h-4 mr-1">
+                  </div>
+                  <span class="text-sm font-semibold">Earliest</span>
+                </div>
+              </a> <a href="/gallery/load_profile_photos?sort_by=desc">
+                <div
+                  class="flex pl-4 pr-4 py-3 items-center rounded-bl-[10px] rounded-br-[10px] hover:bg-gray-700 cursor-pointer">
+                  <div class="w-4 h-4 mr-1">
+                    <img src="/assets/done-pink-2d7bb079035ef1515c434a11bd273aac18bb81b6230474db46179d0d5035833b.svg"
+                      alt="selectedIcon" class="w-4 h-4">
+                  </div>
+                  <span class="text-sm font-semibold">Latest</span>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="flex lg:hidden w-full">
+          <div
+            class="flex-0 border-none lg:border border-grey-dark rounded-[10px] bg-transparent lg:bg-black-dark px-0 lg:px-7 pt-3 pb-4 lg:py-5 w-full lg:w-[224px] h-full">
+            <span class="hidden lg:flex font-semibold text-grey-light mb-2">Character Filter</span>
+            <div
+              class="flex lg:hidden relative items-center justify-between bg-[#252525] px-4 py-2.5 mb-1 rounded-[10px] border border-black-light cursor-pointer"
+              data-action="click->gallery#toggleCharacterViewForMobile">
+              <span class="text-white text-sm">Character Filter</span>
+              <img src="./icons/arrow-down.svg" class="w-5 h-5 absolute right-0"
+                data-gallery-target="characterViewMobileArrowDown">
+              <img src="/assets/arrow-up-7bded9f69566b6b04e036a2126fb84af892b508b97313b2147327021c134600f.svg"
+                class="w-5 h-5 absolute right-0 hidden" data-gallery-target="characterViewMobileArrowUp">
+            </div>
+            <div
+              class="lg:flex flex-col p-4 lg:p-0 bg-black-dark lg:bg-transparent border border-black-stroke lg:border-none rounded-[10px] hidden"
+              data-gallery-target="characterViewMobileDropdown">
+              <div class="relative bg-[#252525] rounded-[10px]">
+                <input placeholder="Search" autocomplete="off"
+                  class="pl-9 pr-4 py-2.5 bg-transparent border-black-light rounded-[10px] placeholder-[#E0E0E0] text-white text-sm no-focus-border w-full"
+                  type="text" data-gallery-target="searchInputCharacterViewMobile"
+                  data-action="input->gallery#searchCharacter">
+                <img src="/assets/search-ad075407f6e869bfd0c930f8ae7b0923d1bd906e4adcadaa4c9f70debdf27140.svg"
+                  class="w-5 h-5 absolute top-3 bottom-0 left-2">
+                <img src="/assets/cross-ec898236eb501d13f4d1343d4a90ed1c0afec71efde2ed1e606916d52f2c5331.svg"
+                  class="hidden cursor-pointer w-5 h-5 absolute top-3 bottom-0 right-2"
+                  data-gallery-target="inputCrossCharacterViewMobile" data-action="click->gallery#clearInput">
+              </div>
+              <div class="max-h-[calc(100vh-250px)] overflow-auto">
+                <ul class="flex flex-col gap-2 list-none p-0 m-0 mt-2">
+                  <div id="characters_list_characterViewMobile" class="flex flex-col gap-2">
+                    <a href="/gallery/load_profile_photos">
+                      <li
+                        class="text-white text-sm px-3 py-2.5 rounded-[10px] border border-grey-dark bg-black-medium cursor-pointer"
+                        data-action="click->gallery#selectedCharacterStyles" data-gallery-target="character">
+                        All Characters
+                        <span class="text-grey-default"></span>
+                      </li>
+                    </a>
+                    <a href="/gallery/load_profile_photos?character=alexis-ivyedge">
+                      <li
+                        class="text-white text-sm px-3 py-2.5 rounded-[10px] border border-grey-dark bg-black-medium cursor-pointer"
+                        data-action="click->gallery#selectedCharacterStyles" data-character-id="22"
+                        data-gallery-target="character">
+                        Alexis
+                        <span class="text-grey-default">( 3 )</span>
+                      </li>
+                    </a>
+
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <ul id="character_photos" class="grid grid-cols-2 lg:grid-cols-4 gap-5 relative pb-8">
+          <a id="image-7192223" href="/show_image/7192223">
+            <li>
+              <img class="rounded-lg object-cover"
+                src="https://res-5.cloudinary.com/dcp9dwff4/image/private/s--ZjOU6I1k--/t_webp/kftqlygqcquozolfazmr">
+            </li>
+          </a><a id="image-3029269" href="/show_image/3029269">
+            <li>
+              <img class="rounded-lg object-cover"
+                src="https://res-4.cloudinary.com/dcp9dwff4/image/private/t_900_blur/fyfukepvdwd5dkomutqb">
+            </li>
+          </a><a id="image-3029199" href="/show_image/3029199">
+            <li>
+              <img class="rounded-lg object-cover"
+                src="https://res-2.cloudinary.com/dcp9dwff4/image/private/s--goycME02--/t_webp/st4c1morjnu2fmnczwgk">
+            </li>
+          </a>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const hamburger = document.querySelector("#nav-hamburger");
+    const mainSidebarOpened = document.querySelector("#mainSidebarOpened");
+    const mainSidebarClosed = document.querySelector("#mainSidebarClosed");
+    const mainMobileSidebar = document.querySelector("#mainMobileSidebar");
+    const mainContent = document.querySelector("#main-content");
+
+    hamburger.addEventListener("click", function () {
+      mainSidebarOpened.classList.toggle("-translate-x-full");
+      mainSidebarClosed.classList.toggle("-translate-x-full");
+      mainMobileSidebar.classList.toggle("-translate-x-full");
+      mainMobileSidebar.classList.toggle("backdrop-blur-sm");
+      if (mainSidebarOpened.classList.contains("-translate-x-full")) {
+        mainContent.classList.add("lg:pl-[100px]");
+        mainContent.classList.remove("lg:pl-[220px]");
+      } else {
+        mainContent.classList.add("lg:pl-[220px]");
+        mainContent.classList.remove("lg:pl-[100px]");
+      }
+
+      if (!mainMobileSidebar.classList.contains("-translate-x-full") && window.innerWidth < 1024) {
+        document.body.addEventListener("touchmove", preventDefaultScroll, {
+          passive: false,
+        });
+        document.body.addEventListener("wheel", preventDefaultScroll, {
+          passive: false,
+        });
+      } else {
+        document.body.removeEventListener("touchmove", preventDefaultScroll);
+        document.body.removeEventListener("wheel", preventDefaultScroll);
+      }
+    })
+
+    function preventDefaultScroll(event) {
+      event.preventDefault();
+    }
+
+    const triggers = document.querySelectorAll("[data-collapse-target]");
+    const collapses = document.querySelectorAll("[data-collapse]");
+
+    function openDefaultFAQs(defaultFAQIds) {
+      defaultFAQIds.forEach(function (faqId) {
+        const collapse = document.querySelector("[data-collapse='" + faqId + "']");
+        if (collapse) {
+          collapse.style.height = "".concat(
+            collapse.children[0].clientHeight,
+            "px",
+          );
+          collapse.style.overflow = "visible";
+          const correspondingTrigger = document.querySelector(
+            "[data-collapse-target='" + faqId + "']",
+          );
+          if (correspondingTrigger) {
+            correspondingTrigger.setAttribute("open", "");
+          }
+        }
+      });
+    }
+
+    function initializeFAQs() {
+      if (triggers && collapses) {
+        Array.from(triggers).forEach(function (trigger) {
+          return Array.from(collapses).forEach(function (collapse) {
+            if (trigger.dataset.collapseTarget === collapse.dataset.collapse) {
+              trigger.addEventListener("click", function () {
+                if (collapse.style.height && collapse.style.height !== "0px") {
+                  collapse.style.height = 0;
+                  collapse.style.overflow = "hidden";
+                  trigger.removeAttribute("open");
+                  trigger.parentElement.parentElement.classList.add("bg-zinc-900");
+                  trigger.parentElement.parentElement.classList.remove("bg-gradient-to-r");
+                } else {
+                  collapse.style.height = "".concat(
+                    collapse.children[0].clientHeight,
+                    "px",
+                  );
+                  collapse.style.overflow = "visible";
+                  trigger.setAttribute("open", "");
+                  trigger.parentElement.parentElement.classList.add("bg-gradient-to-r");
+                  trigger.parentElement.parentElement.classList.remove("bg-zinc-900");
+                }
+              });
+            }
+          });
+        });
+      }
+    }
+
+    // openDefaultFAQs(["collapse-1", "collapse-2"]);
+    initializeFAQs();
+  </script>
+</body>
+
+</html>

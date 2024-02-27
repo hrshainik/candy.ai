@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candy.ai - Enjoy The Ultimate AI Girlfriend Experience</title>
+    <link rel="stylesheet" href="dist/output.css" />
+  </head>
+  <body>
+    <div
+      class="bg-main fixed w-full top-0 z-40 flex h-16 shrink-0 items-center border-b border-solid border-[#363636] px-4 shadow-sm sm:gap-x-2 sm:px-6 lg:px-8"
+    >
+      <button type="button" class="-m-2.5 p-2.5 text-gray-700 hidden">
+        <span class="sr-only">Open sidebar</span>
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          ></path>
+        </svg>
+      </button>
+      <a href="/">
+        <img
+          src="https://candy.ai/assets/logos/candyai-navbar-d321c31d58617371f7caf9e34a4e3f9624dce580afcceb6fecdf48c78beafd83.svg"
+          class="h-[30px] md:h-[30px] w-[115px]"
+        />
+      </a>
+      <!-- Separator -->
+      <div class="h-6 w-px bg-gray-900/10 lg:hidden" aria-hidden="true"></div>
+      <div class="flex flex-1 self-stretch lg:gap-x-6 bg-main">
+        <form class="relative flex flex-1" action="#" method="GET"></form>
+        <div class="flex items-center gap-x-4 lg:gap-x-6"></div>
+        <div class="flex items-center gap-x-4 lg:gap-x-6">
+          <!-- Separator -->
+          <div
+            class="lg:block lg:h-6 lg:w-px lg:bg-gray-900/10"
+            aria-hidden="true"
+          ></div>
+          <!-- Profile dropdown -->
+          <div
+            x-data="{ open: false }"
+            @keydown.escape="open = false"
+            @click.away="open = false"
+            class="w-fit relative"
+          >
+            <button
+              type="button"
+              class="-m-1.5 flex items-center p-1.5"
+              id="user-menu-button"
+              @click="open = !open"
+              aria-expanded="false"
+              :aria-expanded="open.toString()"
+            >
+              <span class="sr-only">Open user menu</span>
+              <img
+                src="https://candy.ai/assets/user-icons/man-f06d242ecbaa154c05843d8e91f779c41dbef390319247606b1919b87169c74a.svg"
+                class="h-8 w-8 rounded-full"
+              />
+              <span class="hidden lg:flex lg:items-center">
+                <span
+                  class="ml-4 text-sm font-semibold leading-6 text-white"
+                  aria-hidden="true"
+                  >My Profile</span
+                >
+                <svg
+                  class="ml-2 h-5 w-5 text-white"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+            </button>
+            <div
+              class="absolute right-0 z-10 mt-2.5 origin-top-right rounded-lg shadow-lg focus:outline-none hidden"
+            >
+              <a
+                class="rounded-t-lg w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+                href="#"
+              >
+                <div class="w-5 h-5 relative">
+                  <img
+                    src="https://candy.ai/assets/sidebar-icons/gallery-b83c72cb24c980d5e254daba38d4e3690f281b07c3e5665a052e0f76fff031b8.svg"
+                  />
+                </div>
+                <div class="text-white text-sm font-semibold leading-normal">
+                  Gallery
+                </div>
+              </a>
+              <a
+                class="rounded-t-lg w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+                href="/characters.html"
+              >
+                <img
+                  src="https://candy.ai/assets/sidebar-icons/love-lady-760605daa886b7e49e77d5d26c1047bc0f815c005a978a5c76810db20bc355dd.svg"
+                />
+                <div class="text-white text-sm font-semibold leading-normal">
+                  My Ai
+                </div>
+              </a>
+              <a
+                class="w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+                href="#"
+              >
+                <div class="w-5 h-5 relative">
+                  <img
+                    src="https://candy.ai/assets/sidebar-icons/premium-bef4c0d01b6b99b6f2764cf40b755bd97debc307331857ca26f97628c6a38eec.svg"
+                  />
+                </div>
+                <div class="text-white text-sm font-semibold leading-normal">
+                  Subscription
+                </div>
+              </a>
+              <a
+                target="_blank"
+                class="w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+                href="#"
+              >
+                <div class="w-5 h-5 relative">
+                  <img
+                    src="https://candy.ai/assets/sidebar-icons/affiliate-93625c9b9b296306968fead95262bd26b5b833f8b7715b9a2037529327a4c0f8.svg"
+                  />
+                </div>
+                <div class="text-white text-sm font-semibold leading-normal">
+                  Affiliate
+                </div>
+              </a>
+              <a
+                class="w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+                href="#"
+              >
+                <div class="w-5 h-5 relative">
+                  <img
+                    src="https://candy.ai/assets/settings-087d65eb2d9a7508f04c379467f39735f971ac6299872f159da8e6c1d735a710.svg"
+                  />
+                </div>
+                <div class="text-white text-sm font-semibold leading-normal">
+                  Settings
+                </div>
+              </a>
+              <div
+                class="w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex cursor-pointer toggle-popup"
+                data-modal="feedback-modal"
+              >
+                <div class="w-5 h-5 relative">
+                  <img
+                    src="https://candy.ai/assets/sidebar-icons/chat-1f356f466c9023c851a3a185fd1e607229737246758457a3f49b82e17bc5d82b.svg"
+                  />
+                </div>
+                <div class="text-white text-sm font-semibold leading-normal">
+                  Contact
+                </div>
+              </div>
+              <form class="button_to" method="post" action="/users/sign_out">
+                <input
+                  type="hidden"
+                  name="_method"
+                  value="delete"
+                  autocomplete="off"
+                /><button
+                  data-turbo="false"
+                  class="rounded-b-lg w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+                  type="submit"
+                >
+                  <div class="w-5 h-5 relative">
+                    <img
+                      src="https://candy.ai/assets/logout-c5bab4efa12211db16618320220423a09cf3d7f5b562be32cdd5110df2a21c18.svg"
+                    />
+                  </div>
+                  <div class="text-white text-sm font-semibold leading-normal">
+                    Logout
+                  </div></button
+                ><input
+                  type="hidden"
+                  name="authenticity_token"
+                  value=""
+                  autocomplete="off"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="hidden lg:fixed lg:top-[65px] border-[#363636] border-r lg:inset-y-0 lg:left-0 lg:z-50 lg:block lg:overflow-y-auto lg:pb-4 lg:w-[100px] bg-g1"
+    >
+      <nav class="mt-8 lg:mt-5">
+        <ul
+          role="list"
+          class="flex flex-col items-center space-y-1 lg:pb-5 pb-8"
+        >
+          <li>
+            <a
+              href="/"
+              class="h-[70px] w-[70px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex-col justify-center items-center gap-2 flex mx-auto cursor-pointer"
+            >
+              <img
+                src="https://candy.ai/assets/sidebar-icons/explore-3a4a39d3c6126c743969aa14b3a4841763f5b600e0f77e317a32d7c30afbcc13.svg"
+              />
+              <div
+                class="text-center text-white text-xxs font-medium leading-tight"
+              >
+                Explore
+              </div>
+            </a>
+          </li>
+          <li class="pt-3 lg:!mt-0">
+            <a
+              href="#"
+              class="pt-3 h-[70px] w-[70px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex-col justify-center items-center gap-2 flex mx-auto cursor-pointer"
+            >
+              <img
+                src="https://candy.ai/assets/sidebar-icons/chat-1f356f466c9023c851a3a185fd1e607229737246758457a3f49b82e17bc5d82b.svg"
+              />
+              <div
+                class="text-center text-white text-xxs font-medium leading-tight"
+              >
+                Chat
+              </div>
+            </a>
+          </li>
+          <li class="pt-3 lg:!mt-0">
+            <a
+              href="#"
+              class="h-[70px] w-[70px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex-col justify-center items-center gap-2 flex mx-auto cursor-pointer"
+            >
+              <img
+                src="https://candy.ai/assets/sidebar-icons/gallery-b83c72cb24c980d5e254daba38d4e3690f281b07c3e5665a052e0f76fff031b8.svg"
+              />
+              <div
+                class="text-center text-white text-xxs font-medium leading-tight"
+              >
+                Gallery
+              </div>
+            </a>
+          </li>
+          <li class="pt-3 lg:!mt-0">
+            <a
+              href="#"
+              class="relative h-[70px] w-[70px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex-col justify-center items-center gap-2 flex mx-auto cursor-pointer"
+            >
+              <img
+                src="https://candy.ai/assets/home/generate-33f95391d5d800565b7ea9ba3f6effa0a3d0a2b2eeafdba4ccc526aef7ae3498.svg"
+              />
+              <div
+                class="w-16 text-center text-white text-xxs font-medium leading-none"
+              >
+                Generate Image
+              </div>
+              <span
+                class="absolute right-0 top-0 bg-[#AD314E] text-white text-[12px] font-medium px-[4px] py-[3px] rounded-[10px] h-[13px] leading-[14px] flex items-center justify-center"
+                >New</span
+              >
+            </a>
+          </li>
+          <li class="pt-3 lg:!mt-0">
+            <a
+              href="/index.html"
+              class="relative h-[70px] w-[70px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex-col justify-center items-center gap-2 flex mx-auto cursor-pointer"
+            >
+              <img
+                src="https://candy.ai/assets/home/magic-wand-bc43a2a37c108cc6308370c0e6fada5385fd848143063f66116694fd9aa075b7.svg"
+              />
+              <div
+                class="w-16 text-center text-white text-xxs font-medium leading-none"
+              >
+                Create
+              </div>
+            </a>
+          </li>
+          <li class="pt-3 lg:!mt-0">
+            <a
+              href="/characters.html"
+              class="h-[70px] w-[70px] hover:bg-zinc-700 bg-[#303030] rounded-[10px] border border-white border-opacity-10 flex-col justify-center items-center gap-2 flex mx-auto cursor-pointer"
+            >
+              <img
+                src="https://candy.ai/assets/sidebar-icons/love-lady-760605daa886b7e49e77d5d26c1047bc0f815c005a978a5c76810db20bc355dd.svg"
+              />
+              <div
+                class="w-16 text-center text-white text-xxs font-medium leading-none"
+              >
+                My AI
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div
+          class="left-[15px] bottom-[20px] absolute flex-col justify-start items-start gap-2 inline-flex"
+        >
+          <a
+            href="https://discord.gg/id"
+            target="_blank"
+            class="py-2 w-[70px] hover:bg-gray-700 rounded-[10px] border border-white border-opacity-10 flex-col justify-center items-center gap-2 flex mx-auto cursor-pointer"
+          >
+            <div
+              class="text-center text-white text-xs font-medium leading-tight"
+            >
+              Discord
+            </div>
+          </a>
+          <div
+            class="py-2 w-[70px] hover:bg-gray-700 rounded-[10px] border border-white border-opacity-10 flex-col justify-center items-center gap-2 flex mx-auto cursor-pointer toggle-popup"
+            data-modal="feedback-modal"
+          >
+            <div
+              class="text-center text-white text-xs font-medium leading-tight"
+            >
+              Contact
+            </div>
+          </div>
+          <a target="_blank" class="" href="#">
+            <div
+              class="mb-2 py-2 w-[70px] hover:bg-gray-700 rounded-[10px] border border-white border-opacity-10 flex-col justify-center items-center gap-2 flex mx-auto cursor-pointer toggle-popup"
+            >
+              <div
+                class="text-center text-white text-xs font-medium leading-tight"
+              >
+                Affiliate
+              </div>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="w-[70px] flex-col justify-center items-center gap-2 flex mx-auto cursor-pointer"
+          >
+            <div
+              class="text-center text-white text-[8px] font-medium leading-[14px]"
+            >
+              Terms and Policies
+            </div>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div
+      class="flex px-5 py-2 justify-between w-full h-[56px] fixed bottom-0 z-50 border-t border-white border-opacity-20 bg-[#131313] lg:hidden"
+    >
+      <!-- Discover Icon -->
+      <a href="#" class="flex flex-col items-center">
+        <img
+          src="https://candy.ai/assets/bottom-nav-icons/explore-271b6507dab3d31b26d45e198ec8046b2b8f148862ca272167fb8ce5455002e8.svg"
+          ,=""
+          class="w-6 h-6"
+        />
+        <span class="text-[#A1A1A1] text-[10px] mt-1">Explore</span>
+      </a>
+      <!-- Generate Image Icon -->
+      <a href="#" class="flex flex-col items-center relative">
+        <img
+          src="https://candy.ai/assets/bottom-nav-icons/generate-e0a4445659c35cbc82e7046cf089cf881179d55eaa82d4bf32dae229a06666c1.svg"
+          class="w-6 h-6"
+        />
+        <span class="text-[#A1A1A1] text-[10px] mt-1">Generate</span>
+        <span
+          class="absolute top-0 right-[-10px] bg-[#AD314E] text-white text-[10px] font-medium px-[4px] py-[3px] rounded-[10px] h-[13px] leading-[14px] flex items-center justify-center"
+          >New</span
+        >
+      </a>
+      <!-- Create AI Icon -->
+      <a href="/characters.html" class="flex flex-col items-center">
+        <img
+          src="https://candy.ai/assets/sidebar-icons/mobile-magic-wand-d445265367be8ddfbfe1c22810893d0ea4dbdaf1eadd7c4496861113d5388d78.svg"
+          class="w-6 h-6"
+        />
+        <span class="text-[#A1A1A1] text-[10px] mt-1">Create</span>
+      </a>
+      <!-- Chat Icon -->
+      <a href="#" class="flex flex-col items-center">
+        <img
+          src="https://candy.ai/assets/bottom-nav-icons/chat-dbf86a760f2ab098a3a5d34346fb0a7c8619ed5050e90bd062c835416f510a0f.svg"
+          class="w-6 h-6"
+        />
+        <span class="text-[#A1A1A1] text-[10px] mt-1">Chat</span>
+      </a>
+      <!-- Premium Icon -->
+      <a href="#" class="flex flex-col items-center">
+        <img
+          src="https://candy.ai/assets/sidebar-icons/premium-bef4c0d01b6b99b6f2764cf40b755bd97debc307331857ca26f97628c6a38eec.svg"
+        />
+        <span class="text-[#A1A1A1] text-[10px] mt-1">Premium</span>
+      </a>
+    </div>
+
+    <div
+      class="mt-16 overflow-y-auto pb-[80px] md:pl-[100px]"
+      id="main-wrapper"
+    >
+      <div class="px-4 py-6">
+        <div class="">
+          <div class="mx-auto max-w-7xl">
+            <div class="w-full text-center">
+              <h2
+                class="text-xl font-semibold tracking-tight text-white md:text-3xl"
+              >
+                <div>
+                  <span class="text-white font-semibold">My</span
+                  ><span class="text-primary"> AI</span>
+                </div>
+              </h2>
+            </div>
+            <ul
+              id="all_characters"
+              role="list"
+              class="mx-auto mt-6 md:mb-0 mb-10 grid max-w-2xl grid-cols-1 gap-5 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4"
+            >
+              <turbo-frame class="h-full" id="pages-wrapper">
+                <a class="flex flex-col flex-grow" href="/">
+                  <li>
+                    <div
+                      class="relative rounded-lg md:h-[400px] h-[90px] bg-g4 flex justify-center items-center"
+                    >
+                      <div class="">
+                        <img
+                          src="https://candy.ai/assets/plus-rounded-white-bebb15f70d46db2462ca2b78f069273208b9e3863d4f9d0cba9251ee69abc12b.svg"
+                          class="w-full h-7 md:h-12"
+                        />
+                        <div
+                          class="text-white md:text-md text-[18px] font-semibold mt-3"
+                        >
+                          Create new AI
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </a></turbo-frame
+              >
+              <div
+                class="h-full"
+                x-data="{ contextMenu: false, confirmModal: false }"
+              >
+                <div class="fixed inset-0 z-50 overflow-y-auto hidden">
+                  <div
+                    class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0"
+                  >
+                    <div
+                      class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-40 hidden"
+                    ></div>
+                    <div
+                      class="bg-gray-900 text-white w-full max-w-xl p-8 my-20 overflow-hidden text-left transition-all transform rounded-lg shadow-xl 2xl:max-w-2xl hidden"
+                    >
+                      <div class="flex items-center justify-between space-x-4">
+                        <button
+                          @click.prevent.stop="confirmModal = false"
+                          class="text-gray-600 focus:outline-none hover:text-gray-700"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-6 h-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <h1 class="text-md font-medium text-white text-center">
+                        Removing Hayley Kirlin
+                      </h1>
+                      <div class="mt-10 flex flex-col gap-4 justify-center">
+                        <div
+                          class="text-center text-[#E1E1E1] text-sm font-medium"
+                        >
+                          Are you sure you want to delete this character? This
+                          action is irreversible, and the character will be
+                          permanently deleted.
+                        </div>
+                        <div
+                          class="text-center text-[#E1E1E1] text-sm font-medium"
+                        >
+                          As a gesture of gratitude for joining us during our
+                          beta phase, we will credit 3 tokens back to your
+                          account upon deletion. Kindly note that this token
+                          refund is exclusive to our beta phase.
+                        </div>
+                      </div>
+                      <div
+                        class="flex gap-x-4 justify-between mb-5 mt-4 flex-col gap-y-2 w-full"
+                      >
+                        <div>
+                          <form
+                            class="button_to"
+                            method="post"
+                            action="/characters/1839512"
+                          >
+                            <input
+                              type="hidden"
+                              name="_method"
+                              value="delete"
+                              autocomplete="off"
+                            /><button
+                              class="h-11 px-4 py-3 w-full justify-center bg-gradient-to-l from-rose-400 to-rose-500 rounded-[10px] items-center gap-2 inline-flex text-white text-sm font-semibold leading-tight"
+                              data-controller="loading-button-cma"
+                              data-loading-button-cma-target="submit"
+                              type="submit"
+                            >
+                              <div>Delete</div></button
+                            ><input
+                              type="hidden"
+                              name="authenticity_token"
+                              value=""
+                              autocomplete="off"
+                            />
+                          </form>
+                        </div>
+                        <div>
+                          <button
+                            @click.prevent.stop="confirmModal = false"
+                            class="h-11 px-4 py-3 inline-flex w-full justify-center rounded-md border-2 border-rose-400 rounded-[10px] justify-center items-center gap-2 inline-flex text-rose-400 text-sm font-semibold leading-tight"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <a
+                  href="#"
+                  data-turbo-stream="true"
+                  class="flex flex-col flex-grow"
+                >
+                  <li>
+                    <div
+                      class="relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:right-0 before:h-[45%] before:bg-g5 before:pointer-events-none before:z-[1]-my-ai md:h-[400px] h-[500px]"
+                    >
+                      <div class="absolute z-10"></div>
+                      <img
+                        class="rounded-lg profile-image object-top first-image w-full object-cover md:h-[400px] h-[500px]"
+                        src="https://res-3.cloudinary.com/dcp9dwff4/image/private/s--mAvw87t0--/zutjpvajf0ez5wuuv5mf"
+                      />
+                      <div
+                        class="z-[3] w-10 h-10 shadow-lg absolute right-3 top-3 bg-g4 rounded-full shadow backdrop-blur-lg"
+                      >
+                        <img
+                          src="https://candy.ai/assets/chat-profile-3188fc1c14a3a8e68784875dddbb03c5badf6d0ef632680a80f0c65d692104fc.svg"
+                          class="absolute w-5 h-5 left-[10px] top-[10px]"
+                        />
+                      </div>
+                      <div
+                        class="absolute bottom-0 px-3 md:px-4 py-3 font-medium z-[3]"
+                      >
+                        <h1 class="text-white text-md font-semibold">
+                          Hayley Kirlin
+                        </h1>
+                        <h1 class="text-white font-medium text-xxs">
+                          29 years
+                        </h1>
+                        <p
+                          class="text-gray-200 font-medium block text-sm md:text-sm opacity-[0.8] py-2"
+                        ></p>
+                      </div>
+                    </div>
+                  </li>
+                </a>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="image-loader-container"
+        data-controller="percentage-counter"
+        class="flex justify-center items-center h-screen mx-auto md:w-[760px] w-fit mt-6 md:mb-6 mb-[72px] max-w-2xl lg:max-w-none relative bg-zinc-900 rounded-lg border border-zinc-800"
+      >
+        <div class="mx-12">
+          <div class="w-24 h-24 m-auto relative">
+            <svg
+              class="image-loader"
+              xmlns="http://www.w3.org/2000/svg"
+              width="98"
+              height="98"
+              viewBox="0 0 98 98"
+              fill="none"
+            >
+              <path
+                d="M3.675 49C1.64535 49 -0.0143422 50.6477 0.137726 52.6716C0.768717 61.0698 3.55614 69.1861 8.25799 76.2229C13.6422 84.2809 21.2949 90.5614 30.2485 94.2701C39.2021 97.9788 49.0544 98.9492 58.5594 97.0585C68.0645 95.1678 76.7955 90.501 83.6482 83.6482C90.501 76.7955 95.1678 68.0645 97.0585 58.5594C98.9492 49.0544 97.9788 39.2021 94.2701 30.2485C90.5614 21.2949 84.281 13.6422 76.2229 8.25799C69.1861 3.55615 61.0698 0.768719 52.6716 0.137727C50.6477 -0.0143419 49 1.64535 49 3.675C49 5.70465 50.6486 7.33316 52.6704 7.51201C59.613 8.12617 66.3118 10.4754 72.1395 14.3693C78.9888 18.9459 84.3272 25.4507 87.4796 33.0612C90.632 40.6718 91.4568 49.0462 89.8497 57.1255C88.2426 65.2048 84.2759 72.6261 78.451 78.451C72.6261 84.2759 65.2048 88.2426 57.1255 89.8497C49.0462 91.4568 40.6718 90.632 33.0612 87.4796C25.4507 84.3272 18.9458 78.9888 14.3693 72.1395C10.4754 66.3118 8.12617 59.613 7.51201 52.6703C7.33316 50.6486 5.70465 49 3.675 49Z"
+                fill="url(#paint0_angular_4678_15737)"
+              ></path>
+              <defs>
+                <radialGradient
+                  id="paint0_angular_4678_15737"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(49 49) rotate(164.055) scale(44.5907 41.6811)"
+                >
+                  <stop stop-color="#E75275"></stop>
+                  <stop offset="0.302083" stop-color="#E75275"></stop>
+                </radialGradient>
+              </defs>
+            </svg>
+            <div
+              data-percentage-counter-target="display"
+              class="text-center left-0 right-0 top-[25px] text-rose-400 text-md font-semibold leading-loose m-auto absolute justify-center items-center"
+            >
+              96%
+            </div>
+          </div>
+          <div class="flex-col justify-center items-center gap-2 flex mt-5">
+            <div class="text-white text-base font-semibold leading-relaxed">
+              Please wait!
+            </div>
+            <div class="text-neutral-200 text-sm font-medium leading-tight">
+              This might take a few minutes
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="relative z-50 min-h-screen w-full"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="absolute inset-0 min-h-screen w-fullbg-opacity-75 transition-opacity"
+      ></div>
+      <div class="absolute inset-0 min-h-screen w-full overflow-y-auto">
+        <div
+          class="flex min-h-full items-end justify-center p-4 text-center sm:items-center"
+        >
+          <div
+            class="relative transform overflow-hidden rounded-[10px] bg-main text-left shadow-xl transition-all sm:my-8"
+          >
+            <div
+              class="hidden md:flex border border-[color:var(--Pop-Up-Stroke,#282828)] bg-zinc-900 flex-col rounded-xl border-solid"
+            >
+              <header
+                class="absolute w-full bg-[linear-gradient(268deg,#FC768A_-14.8%,#E65073_102.08%)] self-stretch flex flex-col max-md:max-w-full"
+              >
+                <div
+                  class="flex-row justify-end overflow-hidden relative flex min-h-[210px] grow max-md:max-w-full"
+                >
+                  <img
+                    class="absolute h-full w-full object-cover object-center"
+                    src="https://candy.ai/assets/create-char/summary/desktop-heart-pattern-1e7f4e66a189529724e406c12cbd22a353265152d4e86e98da66e4378fffb759.png"
+                  />
+                  <div
+                    class="relative flex max-w-full flex-col mb-3.5 w-1/2 pl-6 z-10"
+                  >
+                    <div
+                      class="absolute right-0 top-0 pr-4 pt-4 sm:block cursor-pointer"
+                    >
+                      <a
+                        href="#"
+                        class="rounded-md text-white focus:outline-none"
+                      >
+                        <span class="sr-only">Close</span>
+                        <svg
+                          class="h-6 w-6"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
+                    <div
+                      class="mt-14 mr-6 flex flex-col justify-start items-start gap-2 inline-flex"
+                    >
+                      <div id="character-name" class="w-full">
+                        <form
+                          data-turbo="true"
+                          class="w-full"
+                          id="edit_profile_1871361"
+                          action="/characters/1871361/update_name"
+                          accept-charset="UTF-8"
+                          method="post"
+                        >
+                          <input
+                            type="hidden"
+                            name="_method"
+                            value="patch"
+                            autocomplete="off"
+                          /><input
+                            type="hidden"
+                            name="authenticity_token"
+                            value=""
+                            autocomplete="off"
+                          />
+                          <div class="text-white text-sm font-semibold mb-2">
+                            Enter a new name
+                          </div>
+                          <div
+                            class="justify-start w-full items-start gap-2 inline-flex"
+                          >
+                            <div
+                              class="h-11 bg-rose-400 rounded-[10px] grow shrink border border-rose-300 justify-start items-center gap-2.5 flex"
+                            >
+                              <input
+                                value="Tricia Dach"
+                                class="no-focus-border grow shrink basis-0 text-white text-sm font-medium bg-transparent border-0 outline-none py-2 px-3"
+                                type="text"
+                                name="profile[name]"
+                                id="profile_name"
+                              />
+                            </div>
+                            <div
+                              class="w-11 h-11 px-2 py-1 rounded-[10px] border-2 border-white border-opacity-50 justify-center items-center flex"
+                            >
+                              <button
+                                name="button"
+                                type="submit"
+                                class="w-12 h-12 relative"
+                              >
+                                <img
+                                  class="w-12 h-12 relative"
+                                  src="https://candy.ai/assets/create-char/summary/done-a33c8caf89f6c76a3159a61444e2a174bb8b827afde075b77d01671526f55eed.svg"
+                                />
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                        <div class="text-red-100 text-xs font-medium mt-2">
+                          You can change it only once
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </header>
+              <div class="self-center z-[1] max-w-full px-5 mt-6">
+                <div
+                  class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0"
+                >
+                  <div class="flex flex-col items-stretch w-6/12 max-md:w-full">
+                    <div class="flex grow flex-col w-[380px] max-md:mt-6">
+                      <div class="relative">
+                        <img
+                          class="object-top rounded-[10px] aspect-[0.79] object-cover object-center w-full overflow-hidden self-stretch"
+                          src="https://res-4.cloudinary.com/dcp9dwff4/image/private/s--FiVaMGg9--/yly6hbg0wdlxhmmweyl4"
+                        />
+                        <div
+                          id="character-feedback-1871361-desktop"
+                          class="w-fit h-9 absolute inline-flex right-0 bottom-3"
+                        >
+                          <div class="w-9 h-9 relative mr-2">
+                            <div
+                              class="w-9 h-9 left-0 top-0 absolute bg-[#CFCFCF] opacity-70 rounded-full"
+                            ></div>
+                            <a
+                              data-turbo-stream="true"
+                              data-method="get"
+                              href="#"
+                            >
+                              <img
+                                class="w-5 h-5 left-[8px] top-[8px] absolute cursor-pointer"
+                                src="https://candy.ai/assets/create-char/summary/thumb-down-pink-6cb526c3591f5eda7c227f8870f7898d908b46a130f30ac6aa4ff1b7e82fd2d8.svg"
+                              />
+                            </a>
+                          </div>
+                          <div class="w-9 h-9 relative mr-2">
+                            <div
+                              class="w-9 h-9 left-0 top-0 absolute bg-[#CFCFCF] opacity-70 rounded-full"
+                            ></div>
+                            <form
+                              data-turbo-stream="true"
+                              action="/character_feedbacks"
+                              accept-charset="UTF-8"
+                              method="post"
+                            >
+                              <input
+                                type="hidden"
+                                name="authenticity_token"
+                                value=""
+                                autocomplete="off"
+                              />
+                              <input
+                                value="desktop"
+                                autocomplete="off"
+                                type="hidden"
+                                name="character_feedback[platform]"
+                                id="character_feedback_platform"
+                              />
+                              <input
+                                value="1871361"
+                                autocomplete="off"
+                                type="hidden"
+                                name="character_feedback[profile_id]"
+                                id="character_feedback_profile_id"
+                              />
+                              <input
+                                value="liked"
+                                autocomplete="off"
+                                type="hidden"
+                                name="character_feedback[response]"
+                                id="character_feedback_response"
+                              />
+                              <button name="button" type="submit">
+                                <img
+                                  class="w-5 h-5 left-[8px] top-[8px] absolute cursor-pointer"
+                                  src="https://candy.ai/assets/create-char/summary/thumb-up-pink-bbcfdbd15e61704d851dabb5fddc53fab4270939ee337a4d466d5767f4e3433b.svg"
+                                />
+                              </button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="justify-center items-center bg-white bg-opacity-10 flex w-full flex-col mt-5 px-5 py-2 rounded-xl"
+                      >
+                        <div
+                          class="self-center flex max-w-full items-start gap-1"
+                        >
+                          <img
+                            class="aspect-square object-cover object-center w-[13px] justify-center items-center overflow-hidden self-center shrink-0 my-auto"
+                            src="https://candy.ai/assets/create-char/summary/lock-704be077b2ea96c0486506c5c2cbc0a06e0e664996940c72ffe833a4c079aab4.svg"
+                          />
+                          <div
+                            class="text-neutral-200 text-xs font-semibold leading-[133.33%] self-stretch grow shrink-0 basis-auto"
+                          >
+                            Your AI will remain private. Only you will see it
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-stretch w-6/12 max-md:w-full">
+                    <div class="flex flex-col mt-40 max-md:mt-12">
+                      <div
+                        class="items-start bg-neutral-800 flex w-48 max-w-full gap-3 pl-2 pr-3 py-2 rounded-3xl max-md:justify-center"
+                      >
+                        <div
+                          class="flex-col justify-center items-center overflow-hidden relative flex aspect-square w-8 shrink-0"
+                        >
+                          <div
+                            data-audio-target="wrapper"
+                            class="toggle-play-button button-transform cursor-pointer w-[32px] h-[32px] p-1 justify-center items-center inline-flex rounded-full bg-white"
+                            data-controller="audio"
+                            data-action="click->audio#togglePlay"
+                          >
+                            <div class="relative">
+                              <div
+                                data-audio-target="playIcon"
+                                class="w-[17px] h-[17px]"
+                              >
+                                <img
+                                  class="w-[17px] h-[17px]"
+                                  src="https://candy.ai/assets/create-char/summary/speaker-player-74fd0ae7a6c6c5bcdaec4a5b2f77ff185d63ba5d8b71166e3911a097ca815d30.svg"
+                                />
+                              </div>
+                              <div
+                                data-audio-target="pauseIcon"
+                                class="hidden w-[17px] h-[17px]"
+                              >
+                                <svg
+                                  id="pause-icon"
+                                  class="text-[#C14DA0]"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="3"
+                                  stroke="currentColor"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M15.75 5.25v13.5m-7.5-13.5v13.5"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </div>
+                            <audio
+                              controlslist="nodownload"
+                              id="song"
+                              data-audio-target="song"
+                            >
+                              <source
+                                src="/voices/cma_voice_5.mp3"
+                                type="audio/mp3"
+                              />
+                            </audio>
+                          </div>
+                        </div>
+                        <div
+                          class="items-start self-center flex gap-1 my-auto max-md:justify-center"
+                        >
+                          <div
+                            class="bg-white bg-opacity-70 self-center flex w-0.5 h-0.5 flex-col my-auto rounded-sm"
+                          ></div>
+                          <div
+                            class="bg-white bg-opacity-70 self-center flex w-0.5 h-2 flex-col my-auto rounded-sm"
+                          ></div>
+                          <div
+                            class="bg-white bg-opacity-70 self-stretch flex w-0.5 h-3.5 flex-col mt-px rounded-sm"
+                          ></div>
+                          <div
+                            class="bg-white bg-opacity-70 self-center flex w-0.5 h-1 flex-col my-auto rounded-sm"
+                          ></div>
+                          <div
+                            class="bg-white bg-opacity-70 self-stretch flex w-0.5 h-4 flex-col rounded-sm"
+                          ></div>
+                          <div
+                            class="bg-white bg-opacity-70 self-stretch flex w-0.5 h-3.5 flex-col mt-px rounded-sm"
+                          ></div>
+                          <div
+                            class="bg-white bg-opacity-70 self-center flex w-0.5 h-2.5 flex-col my-auto rounded-sm"
+                          ></div>
+                          <div
+                            class="bg-white bg-opacity-70 self-center flex w-0.5 h-2.5 flex-col my-auto rounded-sm"
+                          ></div>
+                          <div
+                            class="bg-white bg-opacity-70 self-center flex w-0.5 h-2.5 flex-col my-auto rounded-sm"
+                          ></div>
+                          <div
+                            class="bg-white bg-opacity-70 self-stretch flex w-0.5 h-3.5 flex-col mt-px rounded-sm"
+                          ></div>
+                          <div
+                            class="bg-white bg-opacity-70 self-center flex w-0.5 h-2.5 flex-col my-auto rounded-sm"
+                          ></div>
+                          <div
+                            class="bg-white bg-opacity-70 self-stretch flex w-0.5 h-4 flex-col rounded-sm"
+                          ></div>
+                          <div
+                            class="bg-white bg-opacity-70 self-center flex w-0.5 h-2.5 flex-col my-auto rounded-sm"
+                          ></div>
+                          <div
+                            class="bg-white bg-opacity-70 self-center flex w-0.5 h-1 flex-col my-auto rounded-sm"
+                          ></div>
+                          <div
+                            class="bg-white bg-opacity-70 self-center flex w-0.5 h-0.5 flex-col my-auto rounded-sm"
+                          ></div>
+                        </div>
+                        <div
+                          class="text-gray-200 text-sm leading-[114.29%] opacity-[0.66] self-center my-auto"
+                        >
+                          0:05
+                        </div>
+                      </div>
+
+                      <div
+                        class="items-start flex w-[378px] max-w-full flex-col mt-11"
+                      >
+                        <div
+                          class="text-neutral-400 text-sm font-medium leading-[142.86%] uppercase"
+                        >
+                          Bio:
+                        </div>
+                        <div
+                          class="text-white text-sm font-medium leading-[142.86%] w-full mt-1"
+                        >
+                          Adventurous and passionate female yoga instructor,
+                          dedicated to spreading wellness through travel and
+                          teaching.
+                        </div>
+                      </div>
+                      <div
+                        class="items-start flex w-[378px] max-w-full grow flex-col mt-11"
+                      >
+                        <a
+                          data-controller="loading-button-cma"
+                          data-loading-button-cma-target="submit"
+                          data-turbo-stream="true"
+                          class="justify-center items-center bg-g4 text-white self-stretch flex w-full flex-col px-5 py-3 rounded-xl"
+                          href="#"
+                        >
+                          <div
+                            class="self-center w-[129px] max-w-full items-start gap-2 inline-flex"
+                          >
+                            <img
+                              class="aspect-square object-cover object-center w-5 justify-center items-center overflow-hidden shrink-0"
+                              src="https://candy.ai/assets/sidebar-icons/chat-1f356f466c9023c851a3a185fd1e607229737246758457a3f49b82e17bc5d82b.svg"
+                            />
+                            <div
+                              class="text-sm font-semibold leading-[142.86%] self-stretch"
+                            >
+                              Start Chatting
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          href="/"
+                          class="justify-center items-center text-rose-400 border-rose-400 border-solid self-stretch flex w-full grow flex-col mt-4 px-5 py-3 rounded-xl border-2"
+                        >
+                          <div
+                            class="self-center flex w-[111px] max-w-full items-start gap-2"
+                          >
+                            <img
+                              class="aspect-square object-cover object-center w-5 overflow-hidden shrink-0"
+                              src="https://candy.ai/assets/create-char/summary/plus-circle-3003a25d58bf3fa4cb161f1ba4ab3d1a010f395f307fe8b92e70c67cc6527214.svg"
+                            />
+                            <div
+                              class="text-sm font-semibold leading-[142.86%] self-stretch"
+                            >
+                              Create New
+                            </div>
+                          </div>
+                        </a>
+
+                        <a
+                          href="#"
+                          class="justify-center text-rose-400 border-rose-400 border-solid border-2 items-center self-stretch flex w-full grow flex-col mt-4 px-5 py-3 rounded-xl"
+                        >
+                          <div
+                            class="self-center flex max-w-full items-center gap-2"
+                          >
+                            <img
+                              class="w-5 h-5 items"
+                              src="https://candy.ai/assets/generate-image-ai-red-c4488c48147eb1ba24afb91b0227c7c0d114dd2b5f8767f55b2dd5fd0c165c9d.svg"
+                            />
+                            <div
+                              class="text-sm font-semibold leading-[142.86%] self-stretch"
+                            >
+                              Generate Image
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="self-center w-[782px] max-w-full mt-8 mb-11 px-5">
+                <div
+                  class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0"
+                >
+                  <div class="flex flex-col items-stretch w-6/12 max-md:w-full">
+                    <div class="items-start flex flex-col max-md:mt-10">
+                      <div
+                        class="text-neutral-400 text-sm font-semibold leading-[171.43%]"
+                      >
+                        Personality Attributes:
+                      </div>
+                      <div
+                        class="items-start content-start flex-wrap flex w-[352px] max-w-full grow flex-col mt-6"
+                      >
+                        <div
+                          class="self-stretch flex w-full items-start justify-between gap-5"
+                        >
+                          <div class="items-start flex gap-2">
+                            <div
+                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                            >
+                              <img
+                                class="w-[20px] justify-center items-center"
+                                src="https://candy.ai/assets/create-char/summary/personality-968563f19cb8384c13173f1e3ccb48e05eb6d7afe305b10535daacc80f2ef584.svg"
+                              />
+                            </div>
+                            <div class="items-start flex flex-col w-[122px]">
+                              <div
+                                class="text-zinc-400 text-xs font-medium leading-[127.27%] uppercase self-stretch w-full"
+                              >
+                                Personality
+                              </div>
+                              <div
+                                class="text-white text-sm font-semibold leading-[153.85%] self-stretch w-full mt-1"
+                              >
+                                Submissive
+                              </div>
+                            </div>
+                          </div>
+                          <div class="items-start flex gap-2">
+                            <div
+                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                            >
+                              <img
+                                class="w-[20px] justify-center items-center"
+                                src="https://candy.ai/assets/create-char/summary/occupation-7cde16eff53a4f7bf25dd302f85762086bd69a35afa4ba356726f065c6751362.svg"
+                              />
+                            </div>
+                            <div class="items-start flex flex-col w-[122px]">
+                              <div
+                                class="text-zinc-400 text-xs font-medium leading-[127.27%] uppercase self-stretch w-full"
+                              >
+                                Occupation
+                              </div>
+                              <div
+                                class="text-white text-sm font-semibold leading-[153.85%] self-stretch w-full mt-1"
+                              >
+                                Yoga Instructor
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="self-stretch flex w-full items-start justify-between gap-5 mt-9"
+                        >
+                          <div class="items-start flex gap-2">
+                            <div
+                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                            >
+                              <img
+                                class="w-[20px] justify-center items-center"
+                                src="https://candy.ai/assets/create-char/summary/hobbies-e3c37c5caa11446be0709ee373fd67629640fe6f2ab3d915e55fb4d80654641c.svg"
+                              />
+                            </div>
+                            <div class="items-start flex flex-col w-[122px]">
+                              <div
+                                class="text-zinc-400 text-xs font-medium leading-[127.27%] uppercase self-stretch w-full"
+                              >
+                                Hobbies
+                              </div>
+                              <div
+                                class="text-white text-sm font-semibold leading-[153.85%] self-stretch w-full mt-1"
+                              >
+                                Traveling
+                              </div>
+                            </div>
+                          </div>
+                          <div class="items-start flex gap-2">
+                            <div
+                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                            >
+                              <img
+                                class="w-[20px] justify-center items-center"
+                                src="https://candy.ai/assets/create-char/summary/relationship-c664fee450ef458d03b7132375a3901eeea0fe9e4765be161d801d2800d1de54.svg"
+                              />
+                            </div>
+                            <div class="items-start flex flex-col w-[122px]">
+                              <div
+                                class="text-zinc-400 text-xs font-medium leading-[127.27%] uppercase self-stretch w-full"
+                              >
+                                Relationship
+                              </div>
+                              <div
+                                class="text-white text-sm font-semibold leading-[153.85%] self-stretch w-full mt-1"
+                              >
+                                Sex Friend
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="hidden md:flex flex-col items-stretch w-[0%] ml-5 max-md:w-full"
+                  >
+                    <div
+                      class="bg-neutral-700 w-px h-[222px] mx-auto max-md:mt-10"
+                    ></div>
+                  </div>
+                  <div
+                    class="flex flex-col items-stretch w-6/12 ml-5 max-md:w-full"
+                  >
+                    <div class="items-start flex flex-col max-md:mt-10">
+                      <div
+                        class="text-neutral-400 text-sm font-semibold leading-[171.43%]"
+                      >
+                        Physical Attributes:
+                      </div>
+                      <div
+                        class="items-start content-start flex-wrap flex w-[352px] max-w-full grow flex-col mt-6"
+                      >
+                        <div
+                          class="self-stretch flex w-full items-start justify-between gap-5"
+                        >
+                          <div
+                            class="items-start self-stretch flex justify-between gap-2"
+                          >
+                            <div
+                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                            >
+                              <img
+                                class="w-[20px] justify-center items-center"
+                                src="https://candy.ai/assets/create-char/summary/body-7a632d92ccb5e909cd7ba886fca6236fe303473a554146f9bda5b679cad9d3da.svg"
+                              />
+                            </div>
+                            <div
+                              class="items-start self-stretch flex flex-col w-[122px]"
+                            >
+                              <div
+                                class="text-zinc-400 text-xs font-medium leading-[90.91%] uppercase self-stretch w-full"
+                              >
+                                Body
+                              </div>
+                              <div
+                                class="text-white text-sm font-semibold leading-[153.85%] self-stretch w-full mt-1"
+                              >
+                                Voluptuous
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="items-start self-stretch flex justify-between gap-2"
+                          >
+                            <div
+                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                            >
+                              <img
+                                class="w-[20px] justify-center items-center"
+                                src="https://candy.ai/assets/create-char/summary/age-5f1d0b6e7e67e2cd6d0dda62def62858d2ea15d733ec5e34503f5d112e8722c7.svg"
+                              />
+                            </div>
+                            <div
+                              class="items-start self-stretch flex flex-col w-[122px]"
+                            >
+                              <div
+                                class="text-zinc-400 text-xs font-medium leading-[90.91%] uppercase self-stretch w-full"
+                              >
+                                Age
+                              </div>
+                              <div
+                                class="text-white text-sm font-semibold leading-[153.85%] self-stretch w-full mt-1"
+                              >
+                                35
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="self-stretch flex w-full items-start justify-between gap-5 mt-9"
+                        >
+                          <div
+                            class="items-start self-stretch flex justify-between gap-2"
+                          >
+                            <div
+                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                            >
+                              <img
+                                class="w-[20px] justify-center items-center"
+                                src="https://candy.ai/assets/create-char/summary/ethnicity-f7bca73e082f7765fe0deffae0170b6e6a978bdad8c3ced7c6689546e1769366.svg"
+                              />
+                            </div>
+                            <div
+                              class="items-start self-stretch flex flex-col w-[122px]"
+                            >
+                              <div
+                                class="text-zinc-400 text-xs font-medium leading-[90.91%] uppercase self-stretch w-full"
+                              >
+                                Ethnicity
+                              </div>
+                              <div
+                                class="text-white text-sm font-semibold leading-[153.85%] self-stretch w-full mt-1"
+                              >
+                                Arab
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="md:hidden flex border border-[color:var(--Pop-Up-Stroke,#282828)] bg-zinc-900 flex-col rounded-xl border-solid"
+            >
+              <header
+                class="absolute w-full self-stretch flex flex-col max-md:max-w-full"
+              >
+                <div
+                  class="flex-row justify-end overflow-hidden relative flex min-h-[210px] grow max-md:max-w-full"
+                >
+                  <div
+                    class="relative flex max-w-full flex-col mb-3.5 w-1/2 pl-10 z-10"
+                  >
+                    <div
+                      class="absolute right-0 top-0 pr-8 pt-8 sm:block cursor-pointer"
+                    >
+                      <a
+                        href="#"
+                        class="rounded-md text-white focus:outline-none"
+                      >
+                        <span class="sr-only">Close</span>
+                        <svg
+                          class="h-6 w-6"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </header>
+              <div class="self-center z-[1] max-w-full">
+                <div
+                  class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0"
+                >
+                  <div
+                    class="relative p-5 flex flex-col items-stretch w-6/12 max-md:w-full bg-[linear-gradient(268deg,#FC768A_-14.8%,#E65073_102.08%)]"
+                  >
+                    <img
+                      class="top-0 right-0 left-0 bottom-0 absolute h-full w-full object-cover object-center"
+                      src="https://candy.ai/assets/create-char/summary/mobile-heart-pattern-cd1364d1c78a1c188c48869b92f8deae18efb93b75e3e3ef5f458835647fe808.png"
+                    />
+                    <div class="z-10 flex grow flex-col">
+                      <div class="relative">
+                        <img
+                          class="object-top rounded-[10px] aspect-[0.79] object-cover object-center w-full overflow-hidden self-stretch"
+                          src="https://res-4.cloudinary.com/dcp9dwff4/image/private/s--FiVaMGg9--/yly6hbg0wdlxhmmweyl4"
+                        />
+                        <div
+                          id="character-feedback-1871361-mobile"
+                          class="w-fit h-9 absolute inline-flex right-0 bottom-3"
+                        >
+                          <div class="w-9 h-9 relative mr-2">
+                            <div
+                              class="w-9 h-9 left-0 top-0 absolute bg-[#CFCFCF] opacity-70 rounded-full"
+                            ></div>
+                            <a
+                              data-turbo-stream="true"
+                              data-method="get"
+                              href="#"
+                            >
+                              <img
+                                class="w-5 h-5 left-[8px] top-[8px] absolute cursor-pointer"
+                                src="https://candy.ai/assets/create-char/summary/thumb-down-pink-6cb526c3591f5eda7c227f8870f7898d908b46a130f30ac6aa4ff1b7e82fd2d8.svg"
+                              />
+                            </a>
+                          </div>
+                          <div class="w-9 h-9 relative mr-2">
+                            <div
+                              class="w-9 h-9 left-0 top-0 absolute bg-[#CFCFCF] opacity-70 rounded-full"
+                            ></div>
+                            <form
+                              data-turbo-stream="true"
+                              action="/character_feedbacks"
+                              accept-charset="UTF-8"
+                              method="post"
+                            >
+                              <input
+                                type="hidden"
+                                name="authenticity_token"
+                                value=""
+                                autocomplete="off"
+                              />
+                              <input
+                                value="mobile"
+                                autocomplete="off"
+                                type="hidden"
+                                name="character_feedback[platform]"
+                                id="character_feedback_platform"
+                              />
+                              <input
+                                value="1871361"
+                                autocomplete="off"
+                                type="hidden"
+                                name="character_feedback[profile_id]"
+                                id="character_feedback_profile_id"
+                              />
+                              <input
+                                value="liked"
+                                autocomplete="off"
+                                type="hidden"
+                                name="character_feedback[response]"
+                                id="character_feedback_response"
+                              />
+                              <button name="button" type="submit">
+                                <img
+                                  class="w-5 h-5 left-[8px] top-[8px] absolute cursor-pointer"
+                                  src="https://candy.ai/assets/create-char/summary/thumb-up-pink-bbcfdbd15e61704d851dabb5fddc53fab4270939ee337a4d466d5767f4e3433b.svg"
+                                />
+                              </button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="character-name" class="w-full mt-5 mb-2">
+                        <form
+                          data-turbo="true"
+                          class="w-full"
+                          id="edit_profile_1871361"
+                          action="/characters/1871361/update_name"
+                          accept-charset="UTF-8"
+                          method="post"
+                        >
+                          <input
+                            type="hidden"
+                            name="_method"
+                            value="patch"
+                            autocomplete="off"
+                          /><input
+                            type="hidden"
+                            name="authenticity_token"
+                            value=""
+                            autocomplete="off"
+                          />
+                          <div class="text-white text-sm font-semibold mb-2">
+                            Enter a new name
+                          </div>
+                          <div
+                            class="justify-start flex w-full items-start gap-2 inline-flex"
+                          >
+                            <div
+                              class="h-11 bg-rose-400 rounded-[10px] grow shrink border border-rose-300 justify-start items-center gap-2.5 flex"
+                            >
+                              <input
+                                value="Tricia Dach"
+                                class="no-focus-border grow shrink basis-0 text-white text-sm font-medium bg-transparent border-0 outline-none"
+                                type="text"
+                                name="profile[name]"
+                                id="profile_name"
+                              />
+                            </div>
+                            <div
+                              class="w-11 h-11 px-2 py-1 rounded-[10px] border-2 border-white border-opacity-50 justify-center items-center flex"
+                            >
+                              <button
+                                name="button"
+                                type="submit"
+                                class="w-12 h-12 relative"
+                              >
+                                <img
+                                  class="w-12 h-12 relative"
+                                  src="https://candy.ai/assets/create-char/summary/done-a33c8caf89f6c76a3159a61444e2a174bb8b827afde075b77d01671526f55eed.svg"
+                                />
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                        <div class="text-red-100 text-xs font-medium mt-2">
+                          You can change it only once
+                        </div>
+                      </div>
+                      <div class="absolute bottom-[-30px]">
+                        <div
+                          class="items-start bg-neutral-800 flex w-48 max-w-full gap-3 pl-2 pr-3 py-2 rounded-3xl max-md:justify-center"
+                        >
+                          <div
+                            class="flex-col justify-center items-center overflow-hidden relative flex aspect-square w-8 shrink-0"
+                          >
+                            <div
+                              data-audio-target="wrapper"
+                              class="toggle-play-button button-transform cursor-pointer w-[32px] h-[32px] p-1 justify-center items-center inline-flex rounded-full bg-white"
+                              data-controller="audio"
+                              data-action="click->audio#togglePlay"
+                            >
+                              <div class="relative">
+                                <div
+                                  data-audio-target="playIcon"
+                                  class="w-[17px] h-[17px]"
+                                >
+                                  <img
+                                    class="w-[17px] h-[17px]"
+                                    src="https://candy.ai/assets/create-char/summary/speaker-player-74fd0ae7a6c6c5bcdaec4a5b2f77ff185d63ba5d8b71166e3911a097ca815d30.svg"
+                                  />
+                                </div>
+                                <div
+                                  data-audio-target="pauseIcon"
+                                  class="hidden w-[17px] h-[17px]"
+                                >
+                                  <svg
+                                    id="pause-icon"
+                                    class="text-[#C14DA0]"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="3"
+                                    stroke="currentColor"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M15.75 5.25v13.5m-7.5-13.5v13.5"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <audio
+                                controlslist="nodownload"
+                                id="song"
+                                data-audio-target="song"
+                              >
+                                <source
+                                  src="/voices/cma_voice_5.mp3"
+                                  type="audio/mp3"
+                                />
+                              </audio>
+                            </div>
+                          </div>
+                          <div
+                            class="items-start self-center flex gap-1 my-auto max-md:justify-center"
+                          >
+                            <div
+                              class="bg-white bg-opacity-70 self-center flex w-0.5 h-0.5 flex-col my-auto rounded-sm"
+                            ></div>
+                            <div
+                              class="bg-white bg-opacity-70 self-center flex w-0.5 h-2 flex-col my-auto rounded-sm"
+                            ></div>
+                            <div
+                              class="bg-white bg-opacity-70 self-stretch flex w-0.5 h-3.5 flex-col mt-px rounded-sm"
+                            ></div>
+                            <div
+                              class="bg-white bg-opacity-70 self-center flex w-0.5 h-1 flex-col my-auto rounded-sm"
+                            ></div>
+                            <div
+                              class="bg-white bg-opacity-70 self-stretch flex w-0.5 h-4 flex-col rounded-sm"
+                            ></div>
+                            <div
+                              class="bg-white bg-opacity-70 self-stretch flex w-0.5 h-3.5 flex-col mt-px rounded-sm"
+                            ></div>
+                            <div
+                              class="bg-white bg-opacity-70 self-center flex w-0.5 h-2.5 flex-col my-auto rounded-sm"
+                            ></div>
+                            <div
+                              class="bg-white bg-opacity-70 self-center flex w-0.5 h-2.5 flex-col my-auto rounded-sm"
+                            ></div>
+                            <div
+                              class="bg-white bg-opacity-70 self-center flex w-0.5 h-2.5 flex-col my-auto rounded-sm"
+                            ></div>
+                            <div
+                              class="bg-white bg-opacity-70 self-stretch flex w-0.5 h-3.5 flex-col mt-px rounded-sm"
+                            ></div>
+                            <div
+                              class="bg-white bg-opacity-70 self-center flex w-0.5 h-2.5 flex-col my-auto rounded-sm"
+                            ></div>
+                            <div
+                              class="bg-white bg-opacity-70 self-stretch flex w-0.5 h-4 flex-col rounded-sm"
+                            ></div>
+                            <div
+                              class="bg-white bg-opacity-70 self-center flex w-0.5 h-2.5 flex-col my-auto rounded-sm"
+                            ></div>
+                            <div
+                              class="bg-white bg-opacity-70 self-center flex w-0.5 h-1 flex-col my-auto rounded-sm"
+                            ></div>
+                            <div
+                              class="bg-white bg-opacity-70 self-center flex w-0.5 h-0.5 flex-col my-auto rounded-sm"
+                            ></div>
+                          </div>
+                          <div
+                            class="text-gray-200 text-sm leading-[114.29%] opacity-[0.66] self-center my-auto"
+                          >
+                            0:05
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-center w-full px-5">
+                    <div class="flex flex-col mt-[53px] w-full">
+                      <div class="items-center flex max-w-full grow flex-col">
+                        <div
+                          class="justify-center items-center bg-white bg-opacity-10 flex w-full flex-col mb-5 px-5 py-2 rounded-xl"
+                        >
+                          <div
+                            class="self-center flex max-w-full items-start gap-1"
+                          >
+                            <img
+                              class="aspect-square object-cover object-center w-[13px] justify-center items-center overflow-hidden self-center shrink-0 my-auto"
+                              src="https://candy.ai/assets/create-char/summary/lock-704be077b2ea96c0486506c5c2cbc0a06e0e664996940c72ffe833a4c079aab4.svg"
+                            />
+                            <div
+                              class="text-neutral-200 text-3xs font-semibold leading-[133.33%] self-stretch grow shrink-0 basis-auto"
+                            >
+                              Your AI will remain private. Only you will see it
+                            </div>
+                          </div>
+                        </div>
+                        <a
+                          data-controller="loading-button-cma"
+                          data-loading-button-cma-target="submit"
+                          data-turbo-stream="true"
+                          class="justify-center items-center bg-g4 text-white self-stretch flex w-full flex-col px-5 py-3 rounded-xl"
+                          href="#"
+                        >
+                          <div
+                            class="self-center flex w-[129px] max-w-full items-start gap-2 inline-flex"
+                          >
+                            <img
+                              class="aspect-square object-cover object-center w-5 justify-center items-center overflow-hidden shrink-0"
+                              src="https://candy.ai/assets/sidebar-icons/chat-1f356f466c9023c851a3a185fd1e607229737246758457a3f49b82e17bc5d82b.svg"
+                            />
+                            <div
+                              class="text-sm font-semibold leading-[142.86%] self-stretch"
+                            >
+                              Start Chatting
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          class="justify-center items-center text-rose-400 border-rose-400 border-solid self-stretch flex w-full grow flex-col mt-4 px-5 py-3 rounded-xl border-2"
+                        >
+                          <div
+                            class="self-center flex w-[111px] max-w-full items-start gap-2"
+                          >
+                            <img
+                              class="aspect-square object-cover object-center w-5 overflow-hidden shrink-0"
+                              src="https://candy.ai/assets/create-char/summary/plus-circle-3003a25d58bf3fa4cb161f1ba4ab3d1a010f395f307fe8b92e70c67cc6527214.svg"
+                            />
+                            <div
+                              class="text-sm font-semibold leading-[142.86%] self-stretch"
+                            >
+                              Create New
+                            </div>
+                          </div>
+                        </a>
+
+                        <a
+                          href="#"
+                          class="justify-center text-rose-400 border-rose-400 border-solid border-2 items-center self-stretch flex w-full grow flex-col mt-4 px-5 py-3 rounded-xl"
+                        >
+                          <div
+                            class="self-center flex max-w-full items-center gap-2"
+                          >
+                            <img
+                              class="w-5 h-5 items"
+                              src="https://candy.ai/assets/generate-image-ai-red-c4488c48147eb1ba24afb91b0227c7c0d114dd2b5f8767f55b2dd5fd0c165c9d.svg"
+                            />
+                            <div
+                              class="text-sm font-semibold leading-[142.86%] self-stretch"
+                            >
+                              Generate Image
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="self-center w-full p-5">
+                <div
+                  class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0"
+                >
+                  <div class="items-start flex flex-col">
+                    <div
+                      class="text-neutral-400 text-sm font-medium leading-[142.86%] uppercase"
+                    >
+                      Bio:
+                    </div>
+                    <div
+                      class="text-white text-sm font-medium leading-[142.86%] w-full mt-1"
+                    >
+                      Adventurous and passionate female yoga instructor,
+                      dedicated to spreading wellness through travel and
+                      teaching.
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-stretch w-6/12 max-md:w-full">
+                    <div class="items-start flex flex-col max-md:mt-10">
+                      <div
+                        class="text-neutral-400 text-sm font-semibold leading-[171.43%]"
+                      >
+                        Personality Attributes:
+                      </div>
+                      <div
+                        class="items-start content-start flex-wrap flex w-[352px] max-w-full grow flex-col mt-6"
+                      >
+                        <div
+                          class="self-stretch flex w-full items-start justify-between gap-5"
+                        >
+                          <div class="items-start flex gap-2">
+                            <div
+                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                            >
+                              <img
+                                class="w-[20px] justify-center items-center"
+                                src="https://candy.ai/assets/create-char/summary/personality-968563f19cb8384c13173f1e3ccb48e05eb6d7afe305b10535daacc80f2ef584.svg"
+                              />
+                            </div>
+                            <div class="items-start flex flex-col w-[122px]">
+                              <div
+                                class="text-zinc-400 text-xs font-medium leading-[127.27%] uppercase self-stretch w-full"
+                              >
+                                Personality
+                              </div>
+                              <div
+                                class="text-white text-sm font-semibold leading-[153.85%] self-stretch w-full mt-1"
+                              >
+                                Submissive
+                              </div>
+                            </div>
+                          </div>
+                          <div class="items-start flex gap-2">
+                            <div class="items-start flex gap-2">
+                              <div
+                                class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                              >
+                                <img
+                                  class="w-[20px] justify-center items-center"
+                                  src="https://candy.ai/assets/create-char/summary/occupation-7cde16eff53a4f7bf25dd302f85762086bd69a35afa4ba356726f065c6751362.svg"
+                                />
+                              </div>
+                              <div class="items-start flex flex-col w-[122px]">
+                                <div
+                                  class="text-zinc-400 text-xs font-medium leading-[127.27%] uppercase self-stretch w-full"
+                                >
+                                  Occupation
+                                </div>
+                                <div
+                                  class="text-white text-sm font-semibold leading-[153.85%] self-stretch w-full mt-1"
+                                >
+                                  Yoga Instructor
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="self-stretch flex w-full items-start justify-between gap-5 mt-9"
+                        >
+                          <div class="items-start flex gap-2">
+                            <div
+                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                            >
+                              <img
+                                class="w-[20px] justify-center items-center"
+                                src="https://candy.ai/assets/create-char/summary/hobbies-e3c37c5caa11446be0709ee373fd67629640fe6f2ab3d915e55fb4d80654641c.svg"
+                              />
+                            </div>
+                            <div class="items-start flex flex-col w-[122px]">
+                              <div
+                                class="text-zinc-400 text-xs font-medium leading-[127.27%] uppercase self-stretch w-full"
+                              >
+                                Hobbies
+                              </div>
+                              <div
+                                class="text-white text-sm font-semibold leading-[153.85%] self-stretch w-full mt-1"
+                              >
+                                Traveling
+                              </div>
+                            </div>
+                          </div>
+                          <div class="items-start flex gap-2">
+                            <div
+                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                            >
+                              <img
+                                class="w-[20px] justify-center items-center"
+                                src="https://candy.ai/assets/create-char/summary/relationship-c664fee450ef458d03b7132375a3901eeea0fe9e4765be161d801d2800d1de54.svg"
+                              />
+                            </div>
+                            <div class="items-start flex flex-col w-[122px]">
+                              <div
+                                class="text-zinc-400 text-xs font-medium leading-[127.27%] uppercase self-stretch w-full"
+                              >
+                                Relationship
+                              </div>
+                              <div
+                                class="text-white text-sm font-semibold leading-[153.85%] self-stretch w-full mt-1"
+                              >
+                                Sex Friend
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="hidden md:flex flex-col items-stretch w-[0%] ml-5 max-md:w-full"
+                  >
+                    <div
+                      class="bg-neutral-700 w-px h-[222px] mx-auto max-md:mt-10"
+                    ></div>
+                  </div>
+                  <div class="flex flex-col items-stretch w-6/12 max-md:w-full">
+                    <div class="items-start flex flex-col max-md:mt-10">
+                      <div
+                        class="text-neutral-400 text-sm font-semibold leading-[171.43%]"
+                      >
+                        Physical Attributes:
+                      </div>
+                      <div
+                        class="items-start content-start flex-wrap flex w-[352px] max-w-full grow flex-col mt-6"
+                      >
+                        <div
+                          class="self-stretch flex w-full items-start justify-between gap-5"
+                        >
+                          <div
+                            class="items-start self-stretch flex justify-between gap-2"
+                          >
+                            <div
+                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                            >
+                              <img
+                                class="w-[20px] justify-center items-center"
+                                src="https://candy.ai/assets/create-char/summary/body-7a632d92ccb5e909cd7ba886fca6236fe303473a554146f9bda5b679cad9d3da.svg"
+                              />
+                            </div>
+                            <div
+                              class="items-start self-stretch flex flex-col w-[122px]"
+                            >
+                              <div
+                                class="text-zinc-400 text-xs font-medium leading-[90.91%] uppercase self-stretch w-full"
+                              >
+                                Body
+                              </div>
+                              <div
+                                class="text-white text-sm font-semibold leading-[153.85%] self-stretch w-full mt-1"
+                              >
+                                Voluptuous
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="items-start self-stretch flex justify-between gap-2"
+                          >
+                            <div
+                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                            >
+                              <img
+                                class="w-[20px] justify-center items-center"
+                                src="https://candy.ai/assets/create-char/summary/age-5f1d0b6e7e67e2cd6d0dda62def62858d2ea15d733ec5e34503f5d112e8722c7.svg"
+                              />
+                            </div>
+                            <div
+                              class="items-start self-stretch flex flex-col w-[122px]"
+                            >
+                              <div
+                                class="text-zinc-400 text-xs font-medium leading-[90.91%] uppercase self-stretch w-full"
+                              >
+                                Age
+                              </div>
+                              <div
+                                class="text-white text-sm font-semibold leading-[153.85%] self-stretch w-full mt-1"
+                              >
+                                35
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="self-stretch flex w-full items-start justify-between gap-5 mt-9"
+                        >
+                          <div
+                            class="items-start self-stretch flex justify-between gap-2"
+                          >
+                            <div
+                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                            >
+                              <img
+                                class="w-[20px] justify-center items-center"
+                                src="https://candy.ai/assets/create-char/summary/ethnicity-f7bca73e082f7765fe0deffae0170b6e6a978bdad8c3ced7c6689546e1769366.svg"
+                              />
+                            </div>
+                            <div
+                              class="items-start self-stretch flex flex-col w-[122px]"
+                            >
+                              <div
+                                class="text-zinc-400 text-xs font-medium leading-[90.91%] uppercase self-stretch w-full"
+                              >
+                                Ethnicity
+                              </div>
+                              <div
+                                class="text-white text-sm font-semibold leading-[153.85%] self-stretch w-full mt-1"
+                              >
+                                Arab
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

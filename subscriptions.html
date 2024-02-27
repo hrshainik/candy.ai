@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Candy.ai - Enjoy The Ultimate AI Girlfriend Experience</title>
+  <link rel="stylesheet" href="dist/output.css" />
+</head>
+
+<body>
+  <div
+    class="bg-main fixed w-full top-0 z-40 flex h-16 shrink-0 items-center border-b border-[#363636] sm:px-4 px-2 shadow-sm sm:gap-x-2 lg:px-8">
+    <button id="nav-hamburger" type="button" class="py-2 sm:mr-0 md:mr-[10px] mr-0 text-gray-700 nav-hamburger">
+      <span class="sr-only">Open sidebar</span>
+      <svg class="nav-hamburger h-8 w-8 mr-1 text-white" data-action="click->sidebar#handleMenuClick" fill="none"
+        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </button>
+    <a href="/">
+      <img src="./icons/candyai-navbar.svg" class="h-[30px] md:h-[30px] w-[115px]">
+    </a>
+    <!-- Separator -->
+    <div class="h-6 w-px bg-gray-900/10 lg:hidden" aria-hidden="true"></div>
+
+    <div class="flex flex-1 self-stretch lg:gap-x-6 bg-main">
+      <form class="relative flex flex-1" action="#" method="GET"></form>
+      <div class="hidden min-[350px]:flex items-center gap-x-4 lg:gap-x-6">
+        <a href="/subscriptions?from=discover"
+          class="justify-center items-center primary-gradient flex max-w-full gap-2 px-2 py-1.5 rounded-xl">
+          <img src="./icons/premium.svg" class="object-cover object-center w-5 overflow-hidden shrink-0">
+          <div class="text-white text-xs font-semibold self-stretch">
+            Subscribe 75% OFF
+          </div>
+        </a>
+      </div>
+      <div class="hidden lg:flex items-center gap-x-4 lg:gap-x-6">
+        <!-- Separator -->
+        <div class="lg:block lg:h-6 lg:w-px lg:bg-gray-900/10" aria-hidden="true"></div>
+        <!-- Profile dropdown -->
+        <div x-data="{ open: false }" @keydown.escape="open = false" @click.away="open = false" class="w-fit relative ">
+          <button type="button" class="-m-1.5 flex items-center p-1.5 " id="user-menu-button" @click="open = !open"
+            aria-expanded="false" :aria-expanded="open.toString()">
+            <span class="sr-only">Open user menu</span>
+            <img src="./icons/man.svg" class="h-8 w-8 rounded-full">
+            <span class="hidden lg:flex lg:items-center">
+              <span class="ml-4 text-sm font-semibold leading-6 text-white" aria-hidden="true">My Profile</span>
+              <svg class="ml-2 h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </span>
+          </button>
+          <div x-show="open" @keydown.arrow-up.prevent="" @keydown.arrow-down.prevent="" @keydown.tab="open = false"
+            @keydown.enter.prevent="open = false"
+            class="absolute right-0 z-10 mt-2.5 origin-top-right rounded-lg shadow-lg focus:outline-none"
+            style="display: none;">
+            <a class="w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+              href="/subscriptions?from=dropdown">
+              <div class="w-5 h-5 relative"><img
+                  src="/assets/sidebar-icons/premium-bef4c0d01b6b99b6f2764cf40b755bd97debc307331857ca26f97628c6a38eec.svg">
+              </div>
+              <div class="text-white text-sm font-semibold leading-normal">
+                Subscription</div>
+            </a> <a
+              class="w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+              href="/settings">
+              <div class="w-5 h-5 relative"><img
+                  src="/assets/settings-087d65eb2d9a7508f04c379467f39735f971ac6299872f159da8e6c1d735a710.svg">
+              </div>
+              <div class="text-white text-sm font-semibold leading-normal">
+                Settings</div>
+            </a>
+            <form class="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method"
+                value="delete" autocomplete="off"><button data-turbo="false"
+                class="rounded-b-lg w-full h-11 px-4 py-2.5 bg-zinc-900 hover:bg-gray-700 justify-start items-center gap-2 inline-flex"
+                type="submit">
+                <div class="w-5 h-5 relative"><img
+                    src="/assets/logout-c5bab4efa12211db16618320220423a09cf3d7f5b562be32cdd5110df2a21c18.svg">
+                </div>
+                <div class="text-white text-sm font-semibold leading-normal">
+                  Logout</div>
+              </button><input type="hidden" name="authenticity_token"
+                value="oePBzbXcRPhgaxtuI43gp0eUExak7RltguVJo6RLNV5L3hPaxXJJTjyo4SQRewXWiwO_cSTE0QMxIxec8vJWCA"
+                autocomplete="off"></form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="hidden lg:pt-[63px] lg:z-20 lg:block lg:overflow-y-auto lg:overflow-x-hidden bg-g1 lg:fixed z-20 border-[#363636] border-r border-t lg:inset-y-0 lg:left-0 lg:w-[220px] lg:pb-5 w-[220px] fixed top-0 left-0 h-full webkit-transition-sidebar"
+    id="mainSidebarOpened">
+    <nav class="flex flex-col justify-between h-full ">
+      <ul role="list"
+        class="py-8 lg:py-6 flex flex-col gap-2 items-center justify-start px-6 overflow-y-auto  overflow-x-auto">
+        <li class="relative w-full">
+          <a href="/"
+            class="h-[40px] w-full  hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-4 h-4" src="./icons/explore.svg">
+            <span class="text-start text-grey-medium text-xxs font-medium leading-4">Explore</span>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/conversations/emily-caldwell"
+            class="h-[40px] w-full  hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-4 h-4" src="./icons/chat.svg">
+            <span class="text-start text-grey-medium text-xxs font-medium leading-4">Chat</span>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/gallery"
+            class="h-[40px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/gallery.svg">
+            <div class="text-start text-grey-medium text-xxs font-medium leading-4">
+              Gallery</div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/generate-image?from=sidebar" class="relative
+            h-[40px] hover:bg-zinc-700  rounded-[10px] border
+            border-white border-opacity-10 justify-start px-3 items-center
+            gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/generate.svg">
+            <div class="text-start text-grey-medium text-xxs font-medium leading-none">
+              Generate Image
+            </div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/characters/new"
+            class="relative h-[40px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/magic-wand.svg">
+            <div class="text-start  text-grey-medium text-xxs font-medium leading-none">
+              Create Character</div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/characters"
+            class="h-[40px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/love-lady.svg">
+            <div class="text-start text-grey-medium text-xxs font-medium leading-none">
+              My AI
+            </div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <a href="/subscriptions"
+            class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-4 h-4" src="./icons/premium1.svg">
+            <div class="text-start text-pink-default text-xxs font-medium leading-none">
+              Become Premium
+            </div>
+          </a>
+        </li>
+      </ul>
+      <ul role="list" class="flex flex-col gap-2 pt-6 px-6 border-[#363636] border-t items-center justify-end">
+        <li class="relative w-full">
+          <a href="https://discord.gg/candyai" target="_blank"
+            class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-4 h-4" src="./icons/discord1.svg">
+            <div class="text-start text-grey-medium text-xs font-medium leading-4">
+              Discord</div>
+          </a>
+        </li>
+        <li class="relative w-full">
+          <div data-action="click->sidebar#openContactUs"
+            class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-4 h-4" src="./icons/contact.svg">
+            <div class="text-start sidebar-text  text-grey-medium text-xs font-medium leading-4" @click="">Contact Us
+            </div>
+          </div>
+        </li>
+        <li class="relative w-full">
+          <a target="_blank" class="" href="https://forms.gle/ngh58ASCF15TKWYG7">
+            <div
+              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+              <img class="w-4 h-4" src="./icons/trophy.svg">
+              <div class="text-start  text-grey-medium text-xs font-medium leading-4">
+                Affiliate Program</div>
+            </div>
+          </a>
+        </li>
+        <li class="text-[8px] flex text-grey-medium pt-3 w-full">
+          <a class="leading-none mr-2" href="/privacy-policy">Privacy Policy</a>
+          <ul class="list-none">
+            <li class="flex items-center mr-2">
+              <span class="bg-white h-1 w-1 rounded-full mr-2"></span>
+              <a class="leading-none" href="/legal-information">Terms of
+                Service</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="mainSidebarClosed"
+    class="lg:fixed lg:pt-[63px] z-20 border-[#363636] border-r border-t lg:inset-y-0 lg:left-0 lg:w-[100px] lg:pb-5 w-[100px] fixed top-0 left-0 h-full webkit-transition-sidebar hidden lg:block -translate-x-full"
+    style="background: linear-gradient(0deg, #131313 0%, #131313 100%); max-height: 100vh">
+    <span class="tooltip-containers absolute" data-sidebar-target="tooltipContainer">
+      <div id="tooltip-explore" role="tooltip"
+        class="relative z-100 invisible px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 30px);"
+        data-popper-placement="right">
+        Explore
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-chat" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 86px);"
+        data-popper-placement="right">
+        Chat
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-gallery" role="tooltip"
+        class="absolute z-100 whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm tooltip tooltip-sidebar dark:bg-gray-700 opacity-0 invisible"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 142px);"
+        data-popper-placement="right">
+        Gallery
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-image" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 198px);"
+        data-popper-placement="right">
+        Generate Image
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-character" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 254px);"
+        data-popper-placement="right">
+        Create Character
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-my-ai" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 310px);"
+        data-popper-placement="right">
+        My AI
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+      <div id="tooltip-tokens" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700">
+        Buy Tokens
+        <div class="tooltip-arrow" data-popper-arrow=""></div>
+      </div>
+      <div id="tooltip-premium" role="tooltip"
+        class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(83px, 366px);"
+        data-popper-placement="right">
+        Become Premium
+        <div class="tooltip-arrow" data-popper-arrow=""
+          style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+        </div>
+      </div>
+    </span>
+    <nav class="flex flex-col justify-between h-full ">
+      <ul role="list"
+        class="py-8 lg:py-6 flex flex-col gap-2 items-center justify-start px-6 overflow-y-auto  overflow-x-auto">
+        <li class="relative w-full" data-tooltip-target="tooltip-explore" data-tooltip-placement="right">
+          <a href="/"
+            class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-6 h-6" src="./icons/explore.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-chat" data-tooltip-placement="right">
+          <a href="/conversations/emily-caldwell"
+            class="h-[48px] w-[52px]  hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer">
+            <img class="w-6 h-6" src="./icons/chat.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-gallery" data-tooltip-placement="right">
+          <a href="/gallery"
+            class="h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/gallery.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-image" data-tooltip-placement="right">
+          <a href="/generate-image?from=sidebar" class="relative
+            h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border
+            border-white border-opacity-10 justify-start px-3 items-center
+            gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/generate.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-character" data-tooltip-placement="right">
+          <a href="/characters/new"
+            class="relative h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/magic-wand.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-my-ai" data-tooltip-placement="right">
+          <a href="/characters"
+            class="h-[48px] w-[52px] hover:bg-zinc-700  rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/love-lady.svg">
+          </a>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-premium" data-tooltip-placement="right">
+          <a href="/subscriptions"
+            class="h-[48px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer">
+            <img class="w-6 h-6" src="./icons/premium1.svg">
+          </a>
+        </li>
+      </ul>
+      <ul role="list" class="flex flex-col gap-2 pt-6 px-6 border-[#363636] border-t items-center justify-end">
+        <li class="relative w-full" data-tooltip-target="tooltip-discord" data-tooltip-placement="right">
+          <div id="tooltip-discord" role="tooltip"
+            class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(59px, 6px);"
+            data-popper-placement="right">
+            Discord
+            <div class="tooltip-arrow" data-popper-arrow=""
+              style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+            </div>
+          </div>
+          <a href="https://discord.gg/candyai" target="_blank"
+            class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-6 h-6" src="./icons/discord1.svg">
+          </a>
+        </li>
+        <li class="relative w-full toggle-popup" data-tooltip-target="tooltip-contact" data-tooltip-placement="right">
+          <div id="tooltip-contact" role="tooltip"
+            class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(59px, 6px);"
+            data-popper-placement="right">
+            Contact Us
+            <div class="tooltip-arrow" data-popper-arrow=""
+              style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+            </div>
+          </div>
+          <div data-action="click->sidebar#openContactUs"
+            class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+            <img class="w-6 h-6" src="./icons/contact.svg">
+          </div>
+        </li>
+        <li class="relative w-full" data-tooltip-target="tooltip-affiliate" data-tooltip-placement="right">
+          <a target="_blank" class="" href="https://forms.gle/ngh58ASCF15TKWYG7">
+            <div id="tooltip-affiliate" role="tooltip"
+              class="absolute z-100 invisible whitespace-nowrap px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-grey-tooltip rounded-lg shadow-sm opacity-0 tooltip tooltip-sidebar dark:bg-gray-700"
+              style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(59px, 6px);"
+              data-popper-placement="right">
+              Affiliate Program
+              <div class="tooltip-arrow" data-popper-arrow=""
+                style="position: absolute; top: 0px; transform: translate(0px, 14px);">
+              </div>
+            </div>
+            <div
+              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer">
+              <img class="w-6 h-6" src="./icons/trophy.svg">
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="mainMobileSidebar" data-action="click->sidebar#toggleMobileSidebar"
+    class="inset-y-0 w-[100vw] mt-[64px] z-[100] pr-[40vw] no-scroll fixed left-0 webkit-transition-sidebar block lg:hidden -translate-x-full">
+    <nav class="flex flex-col justify-between h-full w-[240px] mobile-sidebar-list-item"
+      style="background: linear-gradient(0deg, #131313 0%, #131313 100%)"
+      data-action="click->sidebar#setMobileSidebarValueToDefault">
+      <nav class="flex flex-col justify-between h-full" data-action="click->sidebar#setMobileSidebarValueToDefault">
+        <ul role="list"
+          class="flex flex-col items-center justify-start px-5 bg-zinc-900 h-screen overflow-auto mobile-sidebar-list-item">
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <!-- Profile dropdown -->
+            <div x-data="{ open: false }" @keydown.escape="open = false" @click.away="open = false">
+              <button type="button" class="w-full flex text-xs leading-5" id="user-menu-button" @click="open = !open"
+                aria-expanded="false" :aria-expanded="open.toString()">
+                <img src="./icons/man.svg" class="h-5 w-5 rounded-full mobile-sidebar-list-item">
+                <div class="flex items-center justify-between w-full mobile-sidebar-list-item">
+                  <div class="ml-2 text-xs font-semibold leading-5 text-grey-medium mobile-sidebar-list-item"
+                    aria-hidden="true">
+                    My Profile</div>
+                  <svg class="ml-2 h-4 w-4 text-white mobile-sidebar-list-item" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path class="mobile-sidebar-list-item" fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd">
+                    </path>
+                  </svg>
+                </div>
+              </button>
+              <div x-show="open" @keydown.arrow-up.prevent="" @keydown.arrow-down.prevent="" @keydown.tab="open = false"
+                @keydown.enter.prevent="open = false"
+                class="relative right-0 z-10 mt-2.5 origin-top-right rounded-lg shadow-lg focus:outline-none w-full bg-zinc-900 mobile-sidebar-list-item"
+                style="display: none;">
+                <a class="w-full mt-4 justify-start items-center gap-2 inline-flex" href="/subscriptions?from=dropdown">
+                  <div class="relative"><img class="w-5 h-5 mobile-sidebar-list-item"
+                      src="/assets/sidebar-icons/premium-bef4c0d01b6b99b6f2764cf40b755bd97debc307331857ca26f97628c6a38eec.svg">
+                  </div>
+                  <div class=" text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item">
+                    Subscription
+                  </div>
+                </a> <a class="w-full mt-4 justify-start items-center gap-2 inline-flex mobile-sidebar-list-item"
+                  href="/settings">
+                  <div class="relative"><img class="w-5 h-5 mobile-sidebar-list-item"
+                      src="/assets/settings-087d65eb2d9a7508f04c379467f39735f971ac6299872f159da8e6c1d735a710.svg">
+                  </div>
+                  <div class=" text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item">
+                    Settings</div>
+                </a>
+                <form class="button_to" method="post" action="/users/sign_out">
+                  <input type="hidden" name="_method" value="delete" autocomplete="off"><button data-turbo="false"
+                    class="rounded-b-lg w-full mt-4 justify-start items-center gap-2 inline-flex mobile-sidebar-list-item"
+                    type="submit">
+                    <div class="relative">
+                      <img class="w-5 h-5 mobile-sidebar-list-item"
+                        src="/assets/logout-c5bab4efa12211db16618320220423a09cf3d7f5b562be32cdd5110df2a21c18.svg">
+                    </div>
+                    <div class=" text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item">
+                      Logout
+                    </div>
+                  </button><input type="hidden" name="authenticity_token"
+                    value="u71Y5G-UzK0Mq0h8RIESa1ppjXKi_OTKW4ZAFOed-SRRgIrzHzrBG1BosjZ2d_calv4hFSLVLKToQB4rsSSacg"
+                    autocomplete="off">
+                </form>
+              </div>
+            </div>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/" class="w-full flex justify-start items-center gap-2  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/explore.svg">
+              <span
+                class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item">Explore</span>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/conversations/emily-caldwell"
+              class="w-full justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/chat.svg">
+              <div class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item">
+                Chat
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/gallery" class="justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/gallery.svg">
+              <div class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item">
+                Gallery
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/generate-image?from=sidebar" class="relative
+            justify-start items-center
+            gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/generate.svg">
+              <div class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item">
+                Generate Image
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/characters/new"
+              class="relative justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/magic-wand.svg">
+              <div class="text-start  text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item">
+                Create
+                Character</div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/characters" class="justify-start items-center gap-2 flex mx-auto  mobile-sidebar-list-item">
+              <img class="w-5 h-5 mobile-sidebar-list-item" src="./icons/love-lady.svg">
+              <div class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item">
+                My AI
+              </div>
+            </a>
+          </li>
+          <li class="relative w-full py-4 border-b border-white border-opacity-10 mobile-sidebar-list-item">
+            <a href="/subscriptions" class=" justify-start items-center gap-2 flex mx-auto mobile-sidebar-list-item">
+              <img class="w-5 h-5  mobile-sidebar-list-item" src="./icons/premium1.svg">
+              <div class="text-start text-pink-default text-xs font-medium leading-none mobile-sidebar-list-item">
+                Become Premium
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="p-5 bg-[#1A1A1A] flex-col justify-end items-start gap-[17px] inline-flex mobile-sidebar-list-item">
+          <div class="justify-start items-start gap-5 inline-flex mobile-sidebar-list-item">
+            <div
+              class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item">
+              <div
+                class="w-[70px] text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item">
+                <a href="https://discord.gg/candyai" class="mobile-sidebar-list-item" target="_blank"> Discord</a>
+              </div>
+            </div>
+            <div data-action="click->sidebar#openContactUs"
+              class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex">
+              <div
+                class="w-[70px] text-center text-neutral-200 text-xs font-semibold whitespace-nowrap leading-tight relative">
+                Contact Us
+              </div>
+            </div>
+          </div>
+          <div class="justify-start items-start gap-5 inline-flex mobile-sidebar-list-item">
+            <div
+              class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex  mobile-sidebar-list-item">
+              <a target="_blank" class="mobile-sidebar-list-item" href="https://forms.gle/ngh58ASCF15TKWYG7">
+                <div
+                  class="w-[70px] text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item">
+                  Affiliate</div>
+              </a>
+            </div>
+          </div>
+          <div class="justify-start items-center gap-2 inline-flex mobile-sidebar-list-item">
+            <a class="text-neutral-300 text-[8px] font-medium leading-[14px] mobile-sidebar-list-item"
+              href="/privacy-policy">Privacy Policy</a>
+            <div class="w-1 h-1 bg-zinc-300 rounded-full mobile-sidebar-list-item">
+            </div>
+            <a class="text-neutral-300 text-[8px] font-medium leading-[14px] mobile-sidebar-list-item"
+              href="/legal-information">Terms of Service</a>
+          </div>
+        </div>
+      </nav>
+    </nav>
+  </div>
+
+  <div
+    class="flex px-5 py-2 justify-between w-full h-[56px] fixed bottom-0 z-50 border-t border-white border-opacity-20 bg-[#131313] lg:hidden">
+    <!-- Discover Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/explore.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Explore</span>
+    </a>
+    <!-- Generate Image Icon -->
+    <a href="#" class="flex flex-col items-center relative">
+      <img src="./icons/generate.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Generate</span>
+    </a>
+    <!-- Create AI Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/magic-wand.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Create</span>
+    </a>
+    <!-- Chat Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/chat.svg" class="w-6 h-6" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Chat</span>
+    </a>
+    <!-- Premium Icon -->
+    <a href="#" class="flex flex-col items-center">
+      <img src="./icons/premium.svg" />
+      <span class="text-[#A1A1A1] text-[10px] mt-1">Premium</span>
+    </a>
+  </div>
+
+  <div class="pt-16 lg:pl-[220px] trasnition-all duration-300 ease-in-out" id="main-content">
+    <div class="overflow-auto">
+      <div class="fixed flex z-10 flex-row justify-center mb-10 w-full red-gradient h-14">
+        <div id="left-side" class="w-[360px] items-center justify-start hidden lg:flex">
+          <div class="h-6 justify-start items-center gap-3 inline-flex">
+            <img src="./icons/crown.svg" class="w-6 h-6 relative">
+            <div class="text-white text-base font-extrabold uppercase leading-tight tracking-widest">First Subscription
+            </div>
+          </div>
+        </div>
+        <div id="middle-side" class="w-[360px] items-center justify-center sm:justify-start lg:justify-center flex">
+          <div class=" h-8 px-2.5 py-1.5 primary-gradient rounded-2xl justify-center items-center gap-2.5 inline-flex">
+            <div><span class="text-white text-base font-medium leading-tight">Up to </span><span
+                class="text-white text-base font-bold leading-tight">75%</span><span
+                class="text-white text-base font-medium leading-tight"> Off</span></div>
+          </div>
+        </div>
+        <div id="right-side" class="w-[360px] items-center justify-center md:justify-end flex"
+          data-controller="subscription-timer">
+          <div class="h-11 px-3 py-2 bg-neutral-700 rounded-3xl justify-center items-start gap-1.5 inline-flex">
+            <!-- Minutes -->
+            <div class="flex-col justify-start items-start gap-0.5 inline-flex">
+              <div class="text-white text-base font-extrabold leading-[14px]" data-subscription-timer-target="minute">55
+              </div>
+              <div class="text-neutral-400 text-xs font-medium leading-[14px]">Min</div>
+            </div>
+            <div class="text-white text-base font-extrabold leading-[14px]">:</div>
+            <!-- Seconds -->
+            <div class="flex-col justify-start items-start gap-0.5 inline-flex">
+              <div class="text-white text-base font-extrabold leading-[14px]" data-subscription-timer-target="second">31
+              </div>
+              <div class="text-neutral-400 text-xs font-medium leading-[14px]">Sec</div>
+            </div>
+            <div class="text-white text-base font-extrabold leading-[14px]">:</div>
+            <!-- Milliseconds -->
+            <div class="w-5 flex-col justify-start items-start gap-0.5 inline-flex">
+              <div class="text-white text-base font-extrabold leading-[14px]"
+                data-subscription-timer-target="millisecond">66</div>
+              <div class="text-neutral-400 text-xs font-medium leading-[14px]">Ms</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ml-5 mr-5 lg:ml-48 lg:mr-28 pb-20 md:pb-0">
+        <div class="lg:block hidden text-center text-white text-[32px] font-bold leading-[42px] mt-24">Choose your Plan
+        </div>
+        <div class="lg:block hidden text-center text-neutral-400 text-sm font-medium leading-tight">100% anonymous. You
+          can cancel anytime.</div>
+        <div class="flex justify-center">
+          <div
+            class="hidden lg:flex relative bg-zinc-900 rounded-lg border border-zinc-800 isolate  mt-12 grid max-w-md grid-cols-1 md:grid-cols-3 gap-10 md:max-w-2xl lg:max-w-4xl xl:mx-0 xl:max-w-none">
+            <div id="left-side" class="flex flex-col justify-between pt-12 pb-0 pl-12 max-w-[360px] w-[360px]">
+              <div>
+                <span class="text-md font-semibold text-primary ">Get Exclusive <br>
+                  Discount Only Today!</span>
+                <div class="text-white text-sm mt-[10px]">Up to <span
+                    class="text-primary text-sm font-semibold ">75%</span> off for first subscription</div>
+              </div>
+              <div class="text-center">
+                <img class="w-[85%] object-cover" src="./images/real_left.webp">
+              </div>
+            </div>
+            <div id="middle" class="pt-12 pb-0 pr-0 pl-0 max-w-[360px] w-[360px]" data-controller="subscription">
+              <div class="flex flex-col gap-8">
+                <div class="relative cursor-pointer sub-gradient" data-action="click->subscription#setActive"
+                  data-plan-type="monthly">
+                  <div class="flex-col justify-start items-start gap-1 lg:gap-2.5 inline-flex p-6">
+                    <div class="text-primary text-base font-semibold">Monthly</div>
+                    <div class="flex-col justify-start items-start flex">
+                      <div class="justify-start items-center gap-1 inline-flex">
+                        <div class="text-white text-2xl lg:text-3xl font-bold">$12.99</div>
+                        <div class="text-white text-opacity-60 relative top-1 text-[20px] font-medium line-through">
+                          $25.99</div>
+                        <div class="text-white text-sm relative top-1 font-medium">/ month</div>
+                      </div>
+                    </div>
+                    <div class="text-gray-500 text-xxs">Cancel anytime, privacy in bank statement</div>
+                  </div>
+                  <div
+                    class="px-2 py-1 left-[24px] top-[-10px] absolute bg-rose-400 rounded-3xl justify-center items-center gap-1 lg: inline-flex">
+                    <div class="text-white text-xs font-medium leading-tight">50% off</div>
+                  </div>
+                </div>
+                <div class="relative cursor-pointer sub-gradient-active" data-action="click->subscription#setActive"
+                  data-plan-type="yearly">
+                  <div class="flex-col justify-start items-start gap-1 lg:gap-2.5 inline-flex p-6">
+                    <div class="text-primary text-base font-semibold">Annually</div>
+                    <div
+                      class="absolute top-[20px] right-[12px] fire-tag text-[#FFCCD4] text-[11px] gap-1 font-semibold uppercase leading-tight flex">
+                      <img src="./icons/fire.svg">Popular
+                    </div>
+                    <div class="flex-col justify-start items-start gap-2.5 flex">
+                      <div class="justify-start items-center gap-1 inline-flex">
+                        <div class="text-white text-2xl lg:text-3xl font-bold">$5.99</div>
+                        <div class="text-white text-opacity-60 relative top-1 text-[20px] font-medium line-through">
+                          $25.99</div>
+                        <div class="text-white text-sm relative top-1 font-medium">/ month</div>
+                      </div>
+                    </div>
+                    <div class="text-gray-500 text-xxs">Cancel anytime, privacy in bank statement</div>
+                  </div>
+                  <div
+                    class="px-2 py-1 left-[24px] top-[-10px] absolute bg-rose-400 rounded-3xl justify-center items-center gap-2.5 inline-flex">
+                    <div class="text-white text-xs font-medium leading-tight">75% off</div>
+                  </div>
+                </div>
+                <div class="flex-col flex gap-3.5">
+                  <form data-turbo="false" class="button_to" method="post"
+                    action="/create_checkout?plan_id=premium-yearly"><button data-controller="loading-button-state"
+                      data-loading-button-state-target="submit" data-action="loading-button-state#handleClick"
+                      data-plan-button="true"
+                      class="w-full px-4 py-3 primary-gradient rounded-lg justify-center items-center gap-2 inline-flex"
+                      type="submit">
+                      <img src="./icons/credit-card.svg" class="w-5 h-5 relative">
+                      <div class="text-white text-sm font-semibold leading-tight">Pay with Credit / Debit Card</div>
+                    </button><input type="hidden" name="authenticity_token"
+                      value="nu156MkP8K3ey1SIZgp10X2oXy8UP_-BWb4QH2QJ5ocfQl-ohTd8spb7f6eYh_76gr5k8DTNS6FYT8D5WstP7w"
+                      autocomplete="off"></form> <a data-turbo-stream="true" data-controller="loading-button-state"
+                    data-loading-button-state-target="submit" data-action="loading-button-state#handleClick"
+                    data-plan-button="true" data-subscription-target="coinbaseBuyButton"
+                    class="w-full px-4 py-3 bg-neutral-700 rounded-lg justify-center items-center gap-2 inline-flex"
+                    data-method="get" href="/load_coinbase_modal?plan_id=premium-yearly">
+                    <div class="text-white text-sm font-semibold leading-tight">Pay with Crypto</div>
+                    <div class="w-16 h-5 flex">
+                      <img src="./icons/bitcoin.svg" class="w-16 h-5">
+                      <img src="./icons/eth.svg" class="w-16 h-5">
+                      <img src="./icons/litecoin.svg" class="w-16 h-5">
+                    </div>
+                  </a>
+                </div>
+                <div data-subscription-target="annualBillingInfo"
+                  class="lg:block text-center text-neutral-400 text-sm font-medium leading-tight -mt-5">
+                  Annual payment billed as $69.99
+                </div>
+              </div>
+
+            </div>
+            <div id="right" class="flex flex-col justify-between pt-12 pb-0 pr-0 pl-0 max-w-[360px] w-[360px]">
+              <div>
+                <div class="text-neutral-400 text-[20px] font-semibold mb-6">Premium Benefits</div>
+                <div class="flex flex-col gap-5">
+                  <div class="justify-start items-center gap-2 inline-flex">
+                    <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
+                        class="mr-2"> Create your own AI Girlfriend(s)</div>
+                  </div>
+                  <div class="justify-start items-center gap-2 inline-flex">
+                    <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
+                        class="mr-2"> Unlimited text messages</div>
+                  </div>
+                  <div class="justify-start items-center gap-2 inline-flex">
+                    <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
+                        class="mr-2"> Get 100 FREE tokens / month</div>
+                  </div>
+                  <div class="justify-start items-center gap-2 inline-flex">
+                    <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
+                        class="mr-2"> Remove image blur</div>
+                  </div>
+                  <div class="justify-start items-center gap-2 inline-flex">
+                    <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
+                        class="mr-2"> Generate images</div>
+                  </div>
+                  <div class="justify-start items-center gap-2 inline-flex">
+                    <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
+                        class="mr-2"> Listen to voice messages</div>
+                  </div>
+                  <div class="justify-start items-center gap-2 inline-flex">
+                    <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
+                        class="mr-2"> Fast response time</div>
+                  </div>
+                </div>
+                <div class="absolute bottom-0 right-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="242" height="475" viewBox="0 0 242 475" fill="none">
+                    <path opacity="0.05" fill-rule="evenodd" clip-rule="evenodd"
+                      d="M134.444 107.556C134.444 48.1543 182.599 0 242 0C301.401 0 349.556 48.1543 349.556 107.556V134.444H376.444C435.846 134.444 484 182.599 484 242C484 301.401 435.846 349.556 376.444 349.556H349.556V376.444C349.556 435.846 301.401 484 242 484C182.599 484 134.444 435.846 134.444 376.444V349.556H107.556C48.1543 349.556 0 301.401 0 242C0 182.599 48.1543 134.444 107.556 134.444H134.444V107.556ZM127.722 245.361C171.211 255.655 229.151 318.599 242 369.722C254.849 318.599 312.789 255.655 356.278 245.361C312.789 235.067 254.849 172.123 242 121C229.151 172.123 171.211 235.067 127.722 245.361Z"
+                      fill="url(#paint0_radial_4541_28606)"></path>
+                    <defs>
+                      <radialGradient id="paint0_radial_4541_28606" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                        gradientTransform="translate(242 242) rotate(90) scale(242)">
+                        <stop stop-color="white"></stop>
+                        <stop offset="0.457376" stop-color="white" stop-opacity="0.991115"></stop>
+                        <stop offset="1" stop-color="#131313"></stop>
+                      </radialGradient>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="text-center mt-6">
+                <img class="w-[85%] object-cover" src="./images/manga_right.webp">
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex lg:hidden relative bg-zinc-900 rounded-lg border border-zinc-800 isolate mx-5 md: mt-[70px] grid w-full grid-cols-1 gap-6">
+            <div id="left-side" class="px-6 pt-6">
+              <span class="text-[18px] font-semibold text-primary ">Get Exclusive Discount Only Today!</span>
+              <div class="text-white text-sm mt-[10px]">Up to <span
+                  class="text-primary text-sm font-semibold ">75%</span> off for first subscription</div>
+            </div>
+            <div id="right" class="px-6">
+              <div class="text-neutral-400 text-[16px] font-semibold mb-6">Premium Benefits</div>
+              <div class="flex flex-col gap-5">
+                <div class="justify-start items-center gap-2 inline-flex">
+                  <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
+                      class="mr-2"> Create your own AI Girlfriend(s)</div>
+                </div>
+                <div class="justify-start items-center gap-2 inline-flex">
+                  <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
+                      class="mr-2"> Unlimited text messages</div>
+                </div>
+                <div class="justify-start items-center gap-2 inline-flex">
+                  <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
+                      class="mr-2"> Get 100 FREE tokens / month</div>
+                </div>
+                <div class="justify-start items-center gap-2 inline-flex">
+                  <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
+                      class="mr-2"> Remove image blur</div>
+                </div>
+                <div class="justify-start items-center gap-2 inline-flex">
+                  <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
+                      class="mr-2"> Generate images</div>
+                </div>
+                <div class="justify-start items-center gap-2 inline-flex">
+                  <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
+                      class="mr-2"> Listen to voice messages</div>
+                </div>
+                <div class="justify-start items-center gap-2 inline-flex">
+                  <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
+                      class="mr-2"> Fast response time</div>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 mt-4 pb-6" data-controller="subscription">
+              <div class="flex flex-col gap-8">
+                <div class="relative cursor-pointer sub-gradient" data-action="click->subscription#setActive"
+                  data-plan-type="monthly">
+                  <div class="flex-col justify-start items-start gap-1 lg:gap-2.5 inline-flex p-6">
+                    <div class="text-primary text-base font-semibold">Monthly</div>
+                    <div class="flex-col justify-start items-start flex">
+                      <div class="justify-start items-center gap-1 inline-flex">
+                        <div class="text-white text-2xl lg:text-3xl font-bold">$12.99</div>
+                        <div class="text-white text-opacity-60 relative top-1 text-[20px] font-medium line-through">
+                          $25.99</div>
+                        <div class="text-white text-sm relative top-1 font-medium">/ month</div>
+                      </div>
+                    </div>
+                    <div class="text-gray-500 text-xxs">Cancel anytime, privacy in bank statement</div>
+                  </div>
+                  <div
+                    class="px-2 py-1 left-[24px] top-[-10px] absolute bg-rose-400 rounded-3xl justify-center items-center gap-1 lg: inline-flex">
+                    <div class="text-white text-xs font-medium leading-tight">50% off</div>
+                  </div>
+                </div>
+                <div class="relative cursor-pointer sub-gradient-active" data-action="click->subscription#setActive"
+                  data-plan-type="yearly">
+                  <div class="flex-col justify-start items-start gap-1 lg:gap-2.5 inline-flex p-6">
+                    <div class="text-primary text-base font-semibold">Annually</div>
+                    <div
+                      class="absolute top-[20px] right-[12px] fire-tag text-[#FFCCD4] text-[11px] gap-1 font-semibold uppercase leading-tight flex">
+                      <img src="./icons/fire.svg">Popular
+                    </div>
+                    <div class="flex-col justify-start items-start gap-2.5 flex">
+                      <div class="justify-start items-center gap-1 inline-flex">
+                        <div class="text-white text-2xl lg:text-3xl font-bold">$5.99</div>
+                        <div class="text-white text-opacity-60 relative top-1 text-[20px] font-medium line-through">
+                          $25.99</div>
+                        <div class="text-white text-sm relative top-1 font-medium">/ month</div>
+                      </div>
+                    </div>
+                    <div class="text-gray-500 text-xxs">Cancel anytime, privacy in bank statement</div>
+                  </div>
+                  <div
+                    class="px-2 py-1 left-[24px] top-[-10px] absolute bg-rose-400 rounded-3xl justify-center items-center gap-2.5 inline-flex">
+                    <div class="text-white text-xs font-medium leading-tight">75% off</div>
+                  </div>
+                </div>
+                <div class="flex-col flex gap-3.5">
+                  <form data-turbo="false" class="button_to" method="post"
+                    action="/create_checkout?plan_id=premium-yearly"><button data-controller="loading-button-state"
+                      data-loading-button-state-target="submit" data-action="loading-button-state#handleClick"
+                      data-plan-button="true"
+                      class="w-full px-4 py-3 primary-gradient rounded-lg justify-center items-center gap-2 inline-flex"
+                      type="submit">
+                      <img src="./icons/credit-card.svg" class="w-5 h-5 relative">
+                      <div class="text-white text-sm font-semibold leading-tight">Pay with Credit / Debit Card</div>
+                    </button><input type="hidden" name="authenticity_token"
+                      value="5nzm5czEiNG2MVirWQhSBNR8XbmT_2AvUhbI5-uVgeJn08ClgPwEzv4Bc4SnhdkvK2pmZrMN1A9T5xgB1Vcoig"
+                      autocomplete="off"></form> <a data-turbo-stream="true" data-controller="loading-button-state"
+                    data-loading-button-state-target="submit" data-action="loading-button-state#handleClick"
+                    data-plan-button="true" data-subscription-target="coinbaseBuyButton"
+                    class="w-full px-4 py-3 bg-neutral-700 rounded-lg justify-center items-center gap-2 inline-flex"
+                    data-method="get" href="/load_coinbase_modal?plan_id=premium-yearly">
+                    <div class="text-white text-sm font-semibold leading-tight">Pay with Crypto</div>
+                    <div class="w-16 h-5 flex">
+                      <img src="./icons/bitcoin.svg" class="w-16 h-5">
+                      <img src="./icons/eth.svg" class="w-16 h-5">
+                      <img src="./icons/litecoin.svg" class="w-16 h-5">
+                    </div>
+                  </a>
+                </div>
+                <div data-subscription-target="annualBillingInfo"
+                  class="lg:block text-center text-neutral-400 text-sm font-medium leading-tight -mt-5">
+                  Annual payment billed as $69.99
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class=" flex justify-center mb-0 lg:mb-10">
+          <div class="relative  mt-10">
+            <div class="w-80 h-9 justify-center items-center gap-12 inline-flex">
+              <div class="justify-start items-center gap-1 inline-flex">
+                <img src="./icons/shield.svg" class="relative w-[30px] h-[36px]">
+                <div class="text-neutral-400 text-base font-semibold leading-none">Antivirus<br>
+                  Secured</div>
+              </div>
+              <div class="justify-start items-center gap-1 inline-flex">
+                <img src="./icons/privacy.svg" class="w-9 h-9 relative">
+                <div class="text-neutral-400 text-base font-semibold leading-none">Privacy in bank <br>
+                  statement</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const hamburger = document.querySelector("#nav-hamburger");
+    const mainSidebarOpened = document.querySelector("#mainSidebarOpened");
+    const mainSidebarClosed = document.querySelector("#mainSidebarClosed");
+    const mainMobileSidebar = document.querySelector("#mainMobileSidebar");
+    const mainContent = document.querySelector("#main-content");
+
+    hamburger.addEventListener("click", function () {
+      mainSidebarOpened.classList.toggle("-translate-x-full");
+      mainSidebarClosed.classList.toggle("-translate-x-full");
+      mainMobileSidebar.classList.toggle("-translate-x-full");
+      mainMobileSidebar.classList.toggle("backdrop-blur-sm");
+      if (mainSidebarOpened.classList.contains("-translate-x-full")) {
+        mainContent.classList.add("lg:pl-[100px]");
+        mainContent.classList.remove("lg:pl-[220px]");
+      } else {
+        mainContent.classList.add("lg:pl-[220px]");
+        mainContent.classList.remove("lg:pl-[100px]");
+      }
+
+      if (!mainMobileSidebar.classList.contains("-translate-x-full") && window.innerWidth < 1024) {
+        document.body.addEventListener("touchmove", preventDefaultScroll, {
+          passive: false,
+        });
+        document.body.addEventListener("wheel", preventDefaultScroll, {
+          passive: false,
+        });
+      } else {
+        document.body.removeEventListener("touchmove", preventDefaultScroll);
+        document.body.removeEventListener("wheel", preventDefaultScroll);
+      }
+    })
+
+    function preventDefaultScroll(event) {
+      event.preventDefault();
+    }
+  </script>
+</body>
+
+</html>
