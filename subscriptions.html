@@ -11,7 +11,7 @@
 
 <body>
   <div
-      class="bg-main fixed w-full top-0 z-40 flex h-16 shrink-0 items-center border-b border-[#363636] sm:px-4 px-2 shadow-sm sm:gap-x-2 lg:px-8"
+      class="bg-blackDarker fixed w-full top-0 z-40 flex h-16 shrink-0 items-center border-b border-blackLight sm:px-4 px-2 shadow-sm sm:gap-x-2 lg:px-8"
     >
       <button
         id="nav-hamburger"
@@ -38,18 +38,18 @@
       <a href="/">
         <img
           src="./icons/candyai-navbar.svg"
-          class="h-[30px] md:h-[30px] w-[115px]"
+          class="h-30 md:h-30 w-[115px]"
         />
       </a>
       <!-- Separator -->
       <div class="h-6 w-px bg-gray-900/10 lg:hidden" aria-hidden="true"></div>
 
-      <div class="flex flex-1 self-stretch lg:gap-x-6 bg-main">
+      <div class="flex flex-1 self-stretch lg:gap-x-6 bg-blackDarker">
         <form class="relative flex flex-1" action="#" method="GET"></form>
         <div class="hidden min-[350px]:flex items-center gap-x-4 lg:gap-x-6">
           <a
             href="/subscriptions.html"
-            class="justify-center items-center primary-gradient flex max-w-full gap-2 px-2 py-1.5 rounded-xl"
+            class="justify-center items-center bg-g4 flex max-w-full gap-2 px-2 py-1.5 rounded-xl"
           >
             <img
               src="./icons/premium.svg"
@@ -135,7 +135,7 @@
     </div>
 
     <div
-      class="hidden lg:pt-[63px] lg:z-20 lg:block lg:overflow-y-auto lg:overflow-x-hidden bg-g1 lg:fixed z-20 border-[#363636] border-r border-t lg:inset-y-0 lg:left-0 lg:w-[220px] lg:pb-5 w-[220px] fixed top-0 left-0 h-full webkit-transition-sidebar"
+      class="hidden lg:pt-[63px] lg:z-20 lg:block lg:overflow-y-auto lg:overflow-x-hidden bg-g1 lg:fixed z-20 border-blackLight border-r border-t lg:inset-y-0 lg:left-0 lg:w-[220px] lg:pb-5 w-[220px] fixed top-0 left-0 h-full transition-all duration-300 ease-in-out"
       id="mainSidebarOpened"
     >
       <nav class="flex flex-col justify-between h-full">
@@ -146,11 +146,11 @@
           <li class="relative w-full">
             <a
               href="/"
-              class="h-[40px] w-full hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
+              class="h-10 w-full hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/explore.svg" />
               <span
-                class="text-start text-grey-medium text-xxs font-medium leading-4"
+                class="text-start text-greyLight text-xxs font-medium leading-4"
                 >Explore</span
               >
             </a>
@@ -158,11 +158,11 @@
           <li class="relative w-full">
             <a
               href="/chat.html"
-              class="h-[40px] w-full hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
+              class="h-10 w-full hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/chat.svg" />
               <span
-                class="text-start text-grey-medium text-xxs font-medium leading-4"
+                class="text-start text-greyLight text-xxs font-medium leading-4"
                 >Chat</span
               >
             </a>
@@ -170,11 +170,11 @@
           <li class="relative w-full">
             <a
               href="/gallery.html"
-              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/gallery.svg" />
               <div
-                class="text-start text-grey-medium text-xxs font-medium leading-4"
+                class="text-start text-greyLight text-xxs font-medium leading-4"
               >
                 Gallery
               </div>
@@ -183,11 +183,11 @@
           <li class="relative w-full">
             <a
               href="/generate-image.html"
-              class="relative h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="relative h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/generate.svg" />
               <div
-                class="text-start text-grey-medium text-xxs font-medium leading-none"
+                class="text-start text-greyLight text-xxs font-medium leading-none"
               >
                 Generate Image
               </div>
@@ -196,11 +196,11 @@
           <li class="relative w-full">
             <a
               href="/create-character.html"
-              class="relative h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="relative h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/magic-wand.svg" />
               <div
-                class="text-start text-grey-medium text-xxs font-medium leading-none"
+                class="text-start text-greyLight text-xxs font-medium leading-none"
               >
                 Create Character
               </div>
@@ -209,11 +209,11 @@
           <li class="relative w-full">
             <a
               href="/my-ai.html"
-              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/love-lady.svg" />
               <div
-                class="text-start text-grey-medium text-xxs font-medium leading-none"
+                class="text-start text-greyLight text-xxs font-medium leading-none"
               >
                 My AI
               </div>
@@ -222,11 +222,11 @@
           <li class="relative w-full">
             <a
               href="/subscriptions.html"
-              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/premium1.svg" />
               <div
-                class="text-start text-pink-default text-xxs font-medium leading-none"
+                class="text-start text-primary text-xxs font-medium leading-none"
               >
                 Become Premium
               </div>
@@ -235,17 +235,17 @@
         </ul>
         <ul
           role="list"
-          class="flex flex-col gap-2 pt-6 px-6 border-[#363636] border-t items-center justify-end"
+          class="flex flex-col gap-2 pt-6 px-6 border-blackLight border-t items-center justify-end"
         >
           <li class="relative w-full">
             <a
               href="https://discord.gg/candyai"
               target="_blank"
-              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+              class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/discord1.svg" />
               <div
-                class="text-start text-grey-medium text-xs font-medium leading-4"
+                class="text-start text-greyLight text-xs font-medium leading-4"
               >
                 Discord
               </div>
@@ -254,11 +254,11 @@
           <li class="relative w-full">
             <div
               data-action="click->sidebar#openContactUs"
-              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+              class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/contact.svg" />
               <div
-                class="text-start sidebar-text text-grey-medium text-xs font-medium leading-4"
+                class="text-start sidebar-text text-greyLight text-xs font-medium leading-4"
               >
                 Contact Us
               </div>
@@ -267,18 +267,18 @@
           <li class="relative w-full">
             <a target="_blank" class="" href="#">
               <div
-                class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+                class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
               >
                 <img class="w-4 h-4" src="./icons/trophy.svg" />
                 <div
-                  class="text-start text-grey-medium text-xs font-medium leading-4"
+                  class="text-start text-greyLight text-xs font-medium leading-4"
                 >
                   Affiliate Program
                 </div>
               </div>
             </a>
           </li>
-          <li class="text-[8px] flex text-grey-medium pt-3 w-full">
+          <li class="text-8 flex text-greyLight pt-3 w-full">
             <a class="leading-none mr-2" href="#">Privacy Policy</a>
             <ul class="list-none">
               <li class="flex items-center mr-2">
@@ -293,7 +293,7 @@
 
     <div
       id="mainSidebarClosed"
-      class="lg:fixed lg:pt-[63px] z-20 border-[#363636] border-r border-t lg:inset-y-0 lg:left-0 lg:w-[100px] lg:pb-5 w-[100px] fixed top-0 left-0 h-full webkit-transition-sidebar hidden lg:block -translate-x-full"
+      class="lg:fixed lg:pt-[63px] z-20 border-blackLight border-r border-t lg:inset-y-0 lg:left-0 lg:w-[100px] lg:pb-5 w-[100px] fixed top-0 left-0 h-full transition-all duration-300 ease-in-out hidden lg:block -translate-x-full"
       style="
         background: linear-gradient(0deg, #131313 0%, #131313 100%);
         max-height: 100vh;
@@ -486,7 +486,7 @@
           >
             <a
               href="/"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/explore.svg" />
             </a>
@@ -499,7 +499,7 @@
           >
             <a
               href="/chat.html"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/chat.svg" />
             </a>
@@ -512,7 +512,7 @@
           >
             <a
               href="/gallery.html"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/gallery.svg" />
             </a>
@@ -525,7 +525,7 @@
           >
             <a
               href="/generate-image.html"
-              class="relative h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="relative h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/generate.svg" />
             </a>
@@ -538,7 +538,7 @@
           >
             <a
               href="/create-character.html"
-              class="relative h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="relative h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/magic-wand.svg" />
             </a>
@@ -551,7 +551,7 @@
           >
             <a
               href="/my-ai.html"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/love-lady.svg" />
             </a>
@@ -564,7 +564,7 @@
           >
             <a
               href="/subscriptions.html"
-              class="h-[48px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-12 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/premium1.svg" />
             </a>
@@ -572,7 +572,7 @@
         </ul>
         <ul
           role="list"
-          class="flex flex-col gap-2 pt-6 px-6 border-[#363636] border-t items-center justify-end"
+          class="flex flex-col gap-2 pt-6 px-6 border-blackLight border-t items-center justify-end"
         >
           <li
             class="relative w-full"
@@ -583,7 +583,7 @@
             <a
               href="https://discord.gg/candyai"
               target="_blank"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/discord1.svg" />
             </a>
@@ -596,7 +596,7 @@
           >
             <div
               data-action="click->sidebar#openContactUs"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/contact.svg" />
             </div>
@@ -609,7 +609,7 @@
           >
             <a target="_blank" class="" href="#">
               <div
-                class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+                class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
               >
                 <img class="w-6 h-6" src="./icons/trophy.svg" />
               </div>
@@ -622,7 +622,7 @@
     <div
       id="mainMobileSidebar"
       data-action="click->sidebar#toggleMobileSidebar"
-      class="inset-y-0 w-[100vw] mt-[64px] z-[100] pr-[40vw] no-scroll fixed left-0 webkit-transition-sidebar block lg:hidden -translate-x-full"
+      class="inset-y-0 w-screen mt-16 z-[100] pr-[40vw]  fixed left-0 transition-all duration-300 ease-in-out block lg:hidden -translate-x-full"
     >
       <nav
         class="flex flex-col justify-between h-full w-[240px] mobile-sidebar-list-item"
@@ -654,7 +654,7 @@
                     class="flex items-center justify-between w-full mobile-sidebar-list-item"
                   >
                     <div
-                      class="ml-2 text-xs font-semibold leading-5 text-grey-medium mobile-sidebar-list-item"
+                      class="ml-2 text-xs font-semibold leading-5 text-greyLight mobile-sidebar-list-item"
                     >
                       My Profile
                     </div>
@@ -686,7 +686,7 @@
                       />
                     </div>
                     <div
-                      class="text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item"
+                      class="text-greyLight text-sm font-semibold leading-5 mobile-sidebar-list-item"
                     >
                       Subscription
                     </div>
@@ -702,7 +702,7 @@
                       />
                     </div>
                     <div
-                      class="text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item"
+                      class="text-greyLight text-sm font-semibold leading-5 mobile-sidebar-list-item"
                     >
                       Settings
                     </div>
@@ -719,7 +719,7 @@
                       />
                     </div>
                     <div
-                      class="text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item"
+                      class="text-greyLight text-sm font-semibold leading-5 mobile-sidebar-list-item"
                     >
                       Logout
                     </div>
@@ -739,7 +739,7 @@
                   src="./icons/explore.svg"
                 />
                 <span
-                  class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs leading-5 font-semibold mobile-sidebar-list-item"
                   >Explore</span
                 >
               </a>
@@ -756,7 +756,7 @@
                   src="./icons/chat.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs leading-5 font-semibold mobile-sidebar-list-item"
                 >
                   Chat
                 </div>
@@ -774,7 +774,7 @@
                   src="./icons/gallery.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs leading-5 font-semibold mobile-sidebar-list-item"
                 >
                   Gallery
                 </div>
@@ -792,7 +792,7 @@
                   src="./icons/generate.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs font-medium leading-none mobile-sidebar-list-item"
                 >
                   Generate Image
                 </div>
@@ -810,7 +810,7 @@
                   src="./icons/magic-wand.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs font-medium leading-none mobile-sidebar-list-item"
                 >
                   Create Character
                 </div>
@@ -828,7 +828,7 @@
                   src="./icons/love-lady.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs font-medium leading-none mobile-sidebar-list-item"
                 >
                   My AI
                 </div>
@@ -846,7 +846,7 @@
                   src="./icons/premium1.svg"
                 />
                 <div
-                  class="text-start text-pink-default text-xs font-medium leading-none mobile-sidebar-list-item"
+                  class="text-start text-primary text-xs font-medium leading-none mobile-sidebar-list-item"
                 >
                   Become Premium
                 </div>
@@ -854,16 +854,16 @@
             </li>
           </ul>
           <div
-            class="p-5 bg-[#1A1A1A] flex-col justify-end items-start gap-[17px] inline-flex mobile-sidebar-list-item"
+            class="p-5 bg-blackDark flex-col justify-end items-start gap-[17px] inline-flex mobile-sidebar-list-item"
           >
             <div
               class="justify-start items-start gap-5 inline-flex mobile-sidebar-list-item"
             >
               <div
-                class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item"
+                class="px-2.5 py-1 rounded-5 border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item"
               >
                 <div
-                  class="w-[70px] text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item"
+                  class="w-70 text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item"
                 >
                   <a
                     href="https://discord.gg/candyai"
@@ -876,10 +876,10 @@
               </div>
               <div
                 data-action="click->sidebar#openContactUs"
-                class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex"
+                class="px-2.5 py-1 rounded-5 border border-neutral-400 justify-center items-center gap-2.5 flex"
               >
                 <div
-                  class="w-[70px] text-center text-neutral-200 text-xs font-semibold whitespace-nowrap leading-tight relative"
+                  class="w-70 text-center text-neutral-200 text-xs font-semibold whitespace-nowrap leading-tight relative"
                 >
                   Contact Us
                 </div>
@@ -889,11 +889,11 @@
               class="justify-start items-start gap-5 inline-flex mobile-sidebar-list-item"
             >
               <div
-                class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item"
+                class="px-2.5 py-1 rounded-5 border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item"
               >
                 <a target="_blank" class="mobile-sidebar-list-item" href="#">
                   <div
-                    class="w-[70px] text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item"
+                    class="w-70 text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item"
                   >
                     Affiliate
                   </div>
@@ -904,7 +904,7 @@
               class="justify-start items-center gap-2 inline-flex mobile-sidebar-list-item"
             >
               <a
-                class="text-neutral-300 text-[8px] font-medium leading-[14px] mobile-sidebar-list-item"
+                class="text-neutral-300 text-8 font-medium leading-[14px] mobile-sidebar-list-item"
                 href="#"
                 >Privacy Policy</a
               >
@@ -912,7 +912,7 @@
                 class="w-1 h-1 bg-zinc-300 rounded-full mobile-sidebar-list-item"
               ></div>
               <a
-                class="text-neutral-300 text-[8px] font-medium leading-[14px] mobile-sidebar-list-item"
+                class="text-neutral-300 text-8 font-medium leading-[14px] mobile-sidebar-list-item"
                 href="#"
                 >Terms of Service</a
               >
@@ -923,7 +923,7 @@
     </div>
 
     <div
-      class="flex px-5 py-2 justify-between w-full h-[56px] fixed bottom-0 z-50 border-t border-white border-opacity-20 bg-[#131313] lg:hidden"
+      class="flex px-5 py-2 justify-between w-full h-[56px] fixed bottom-0 z-50 border-t border-white border-opacity-20 bg-blackDarker lg:hidden"
     >
       <!-- Discover Icon -->
       <a href="/" class="flex flex-col items-center">
@@ -951,7 +951,7 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="text-[#A1A1A1] text-[10px] mt-1">Explore</span>
+        <span class="textsterlingSilver text-10 mt-1">Explore</span>
       </a>
       <!-- Generate Image Icon -->
       <a
@@ -979,7 +979,7 @@
             fill="#a1a1a1"
           />
         </svg>
-        <span class="text-[#a1a1a1] text-[10px] mt-1">Generate</span>
+        <span class="textsterlingSilver text-10 mt-1">Generate</span>
       </a>
       <!-- Create AI Icon -->
       <a href="/create-character.html" class="flex flex-col items-center">
@@ -1059,7 +1059,7 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="text-[#a1a1a1] text-[10px] mt-1">Create</span>
+        <span class="textsterlingSilver text-10 mt-1">Create</span>
       </a>
       <!-- Chat Icon -->
       <a href="/chat.html" class="flex flex-col items-center">
@@ -1098,7 +1098,7 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="text-[#A1A1A1] text-[10px] mt-1">Chat</span>
+        <span class="textsterlingSilver text-10 mt-1">Chat</span>
       </a>
       <!-- Premium Icon -->
       <a href="/subscriptions.html" class="flex flex-col items-center">
@@ -1122,13 +1122,13 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="text-[#f97187] text-[10px] mt-1">Premium</span>
+        <span class="text-primary text-10 mt-1">Premium</span>
       </a>
     </div>
 
-  <div class="pt-16 lg:pl-[220px] trasnition-all duration-300 ease-in-out" id="main-content">
+  <div class="pt-16 lg:pl-[220px] trasnition-all duration-300 ease-in-out relative" id="main-content">
     <div class="overflow-auto">
-      <div class="fixed flex z-10 flex-row justify-center mb-10 w-full red-gradient h-14">
+      <div class="fixed flex z-10 flex-row justify-center mb-10 w-full lg:w-[calc(100vw-220px)] bg-g9 h-14 px-4 transition-all duration-300 ease-in-out" id="top-bar">
         <div id="left-side" class="w-[360px] items-center justify-start hidden lg:flex">
           <div class="h-6 justify-start items-center gap-3 inline-flex">
             <img src="./icons/crown.svg" class="w-6 h-6 relative">
@@ -1137,13 +1137,13 @@
           </div>
         </div>
         <div id="middle-side" class="w-[360px] items-center justify-center sm:justify-start lg:justify-center flex">
-          <div class=" h-8 px-2.5 py-1.5 primary-gradient rounded-2xl justify-center items-center gap-2.5 inline-flex">
+          <div class=" h-8 px-2.5 py-1.5 bg-g4 rounded-2xl justify-center items-center gap-2.5 inline-flex">
             <div><span class="text-white text-base font-medium leading-tight">Up to </span><span
                 class="text-white text-base font-bold leading-tight">75%</span><span
                 class="text-white text-base font-medium leading-tight"> Off</span></div>
           </div>
         </div>
-        <div id="right-side" class="w-[360px] items-center justify-center md:justify-end flex"
+        <div id="right-side" class="w-[360px] items-center justify-center sm:justify-end flex"
           data-controller="subscription-timer">
           <div class="h-11 px-3 py-2 bg-neutral-700 rounded-3xl justify-center items-start gap-1.5 inline-flex">
             <!-- Minutes -->
@@ -1169,19 +1169,19 @@
           </div>
         </div>
       </div>
-      <div class="ml-5 mr-5 lg:ml-48 lg:mr-28 pb-20 md:pb-0">
-        <div class="lg:block hidden text-center text-white text-[32px] font-bold leading-[42px] mt-24">Choose your Plan
+      <div class="px-4 lg:px-8 xl:px-12 2xl:px-16 pb-20 md:pb-0 mt-20">
+        <div class="lg:block hidden text-center text-white text-3xl font-bold leading-[42px] mt-24">Choose your Plan
         </div>
         <div class="lg:block hidden text-center text-neutral-400 text-sm font-medium leading-tight">100% anonymous. You
           can cancel anytime.</div>
         <div class="flex justify-center">
           <div
-            class="hidden lg:flex relative bg-zinc-900 rounded-lg border border-zinc-800 isolate  mt-12 grid max-w-md grid-cols-1 md:grid-cols-3 gap-10 md:max-w-2xl lg:max-w-4xl xl:mx-0 xl:max-w-none">
+            class="hidden lg:flex relative bg-zinc-900 rounded-lg border border-zinc-800 isolate  mt-12 max-w-md gap-6 xl:gap-10 md:max-w-2xl lg:max-w-4xl xl:mx-0 xl:max-w-none">
             <div id="left-side" class="flex flex-col justify-between pt-12 pb-0 pl-12 max-w-[360px] w-[360px]">
               <div>
                 <span class="text-md font-semibold text-primary ">Get Exclusive <br>
                   Discount Only Today!</span>
-                <div class="text-white text-sm mt-[10px]">Up to <span
+                <div class="text-white text-sm mt-2.5">Up to <span
                     class="text-primary text-sm font-semibold ">75%</span> off for first subscription</div>
               </div>
               <div class="text-center">
@@ -1190,14 +1190,14 @@
             </div>
             <div id="middle" class="pt-12 pb-0 pr-0 pl-0 max-w-[360px] w-[360px]" data-controller="subscription">
               <div class="flex flex-col gap-8">
-                <div class="relative cursor-pointer sub-gradient" data-action="click->subscription#setActive"
+                <div class="relative cursor-pointer rounded-10 border border-midnightBlack bg-g9" data-action="click->subscription#setActive"
                   data-plan-type="monthly">
                   <div class="flex-col justify-start items-start gap-1 lg:gap-2.5 inline-flex p-6">
                     <div class="text-primary text-base font-semibold">Monthly</div>
                     <div class="flex-col justify-start items-start flex">
                       <div class="justify-start items-center gap-1 inline-flex">
                         <div class="text-white text-2xl lg:text-3xl font-bold">$12.99</div>
-                        <div class="text-white text-opacity-60 relative top-1 text-[20px] font-medium line-through">
+                        <div class="text-white text-opacity-60 relative top-1 text-20 font-medium line-through">
                           $25.99</div>
                         <div class="text-white text-sm relative top-1 font-medium">/ month</div>
                       </div>
@@ -1209,18 +1209,18 @@
                     <div class="text-white text-xs font-medium leading-tight">50% off</div>
                   </div>
                 </div>
-                <div class="relative cursor-pointer sub-gradient-active" data-action="click->subscription#setActive"
+                <div class="relative cursor-pointer rounded-10 border-2 bg-g9 border-roseQuartz" data-action="click->subscription#setActive"
                   data-plan-type="yearly">
                   <div class="flex-col justify-start items-start gap-1 lg:gap-2.5 inline-flex p-6">
                     <div class="text-primary text-base font-semibold">Annually</div>
                     <div
-                      class="absolute top-[20px] right-[12px] fire-tag text-[#FFCCD4] text-[11px] gap-1 font-semibold uppercase leading-tight flex">
+                      class="absolute top-5 right-[12px] inline-flex py-1.5 px-2.5 items-center border border-crimsonRose bg-g12 text-[#FFCCD4] text-11 gap-1 font-semibold uppercase leading-tight flex rounded-full">
                       <img src="./icons/fire.svg">Popular
                     </div>
                     <div class="flex-col justify-start items-start gap-2.5 flex">
                       <div class="justify-start items-center gap-1 inline-flex">
                         <div class="text-white text-2xl lg:text-3xl font-bold">$5.99</div>
-                        <div class="text-white text-opacity-60 relative top-1 text-[20px] font-medium line-through">
+                        <div class="text-white text-opacity-60 relative top-1 text-20 font-medium line-through">
                           $25.99</div>
                         <div class="text-white text-sm relative top-1 font-medium">/ month</div>
                       </div>
@@ -1237,7 +1237,7 @@
                     action="/create_checkout?plan_id=premium-yearly"><button data-controller="loading-button-state"
                       data-loading-button-state-target="submit" data-action="loading-button-state#handleClick"
                       data-plan-button="true"
-                      class="w-full px-4 py-3 primary-gradient rounded-lg justify-center items-center gap-2 inline-flex"
+                      class="w-full px-4 py-3 bg-g4 rounded-lg justify-center items-center gap-2 inline-flex"
                       type="submit">
                       <img src="./icons/credit-card.svg" class="w-5 h-5 relative">
                       <div class="text-white text-sm font-semibold leading-tight">Pay with Credit / Debit Card</div>
@@ -1265,7 +1265,7 @@
             </div>
             <div id="right" class="flex flex-col justify-between pt-12 pb-0 pr-0 pl-0 max-w-[360px] w-[360px]">
               <div>
-                <div class="text-neutral-400 text-[20px] font-semibold mb-6">Premium Benefits</div>
+                <div class="text-neutral-400 text-20 font-semibold mb-6">Premium Benefits</div>
                 <div class="flex flex-col gap-5">
                   <div class="justify-start items-center gap-2 inline-flex">
                     <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
@@ -1318,14 +1318,14 @@
             </div>
           </div>
           <div
-            class="flex lg:hidden relative bg-zinc-900 rounded-lg border border-zinc-800 isolate mx-5 md: mt-[70px] grid w-full grid-cols-1 gap-6">
+            class="lg:hidden relative bg-zinc-900 rounded-lg border border-zinc-800 isolate mx-5 grid w-full grid-cols-1 gap-6">
             <div id="left-side" class="px-6 pt-6">
               <span class="text-[18px] font-semibold text-primary ">Get Exclusive Discount Only Today!</span>
-              <div class="text-white text-sm mt-[10px]">Up to <span
+              <div class="text-white text-sm mt-2.5">Up to <span
                   class="text-primary text-sm font-semibold ">75%</span> off for first subscription</div>
             </div>
             <div id="right" class="px-6">
-              <div class="text-neutral-400 text-[16px] font-semibold mb-6">Premium Benefits</div>
+              <div class="text-neutral-400 text-base font-semibold mb-6">Premium Benefits</div>
               <div class="flex flex-col gap-5">
                 <div class="justify-start items-center gap-2 inline-flex">
                   <div class="text-white text-sm font-medium leading-tight flex"><img src="./icons/check_circle.svg"
@@ -1359,14 +1359,14 @@
             </div>
             <div class="px-6 mt-4 pb-6" data-controller="subscription">
               <div class="flex flex-col gap-8">
-                <div class="relative cursor-pointer sub-gradient" data-action="click->subscription#setActive"
+                <div class="relative cursor-pointer rounded-10 border border-midnightBlack bg-g9" data-action="click->subscription#setActive"
                   data-plan-type="monthly">
                   <div class="flex-col justify-start items-start gap-1 lg:gap-2.5 inline-flex p-6">
                     <div class="text-primary text-base font-semibold">Monthly</div>
                     <div class="flex-col justify-start items-start flex">
                       <div class="justify-start items-center gap-1 inline-flex">
                         <div class="text-white text-2xl lg:text-3xl font-bold">$12.99</div>
-                        <div class="text-white text-opacity-60 relative top-1 text-[20px] font-medium line-through">
+                        <div class="text-white text-opacity-60 relative top-1 text-20 font-medium line-through">
                           $25.99</div>
                         <div class="text-white text-sm relative top-1 font-medium">/ month</div>
                       </div>
@@ -1378,18 +1378,18 @@
                     <div class="text-white text-xs font-medium leading-tight">50% off</div>
                   </div>
                 </div>
-                <div class="relative cursor-pointer sub-gradient-active" data-action="click->subscription#setActive"
+                <div class="relative cursor-pointer rounded-10 border-2 bg-g9 border-roseQuartz" data-action="click->subscription#setActive"
                   data-plan-type="yearly">
                   <div class="flex-col justify-start items-start gap-1 lg:gap-2.5 inline-flex p-6">
                     <div class="text-primary text-base font-semibold">Annually</div>
                     <div
-                      class="absolute top-[20px] right-[12px] fire-tag text-[#FFCCD4] text-[11px] gap-1 font-semibold uppercase leading-tight flex">
+                      class="absolute top-[20px] right-[12px] py-1.5 px-2.5 items-center border border-crimsonRose bg-g12 text-[#FFCCD4] text-11 gap-1 font-semibold uppercase leading-tight flex rounded-full">
                       <img src="./icons/fire.svg">Popular
                     </div>
                     <div class="flex-col justify-start items-start gap-2.5 flex">
                       <div class="justify-start items-center gap-1 inline-flex">
                         <div class="text-white text-2xl lg:text-3xl font-bold">$5.99</div>
-                        <div class="text-white text-opacity-60 relative top-1 text-[20px] font-medium line-through">
+                        <div class="text-white text-opacity-60 relative top-1 text-20 font-medium line-through">
                           $25.99</div>
                         <div class="text-white text-sm relative top-1 font-medium">/ month</div>
                       </div>
@@ -1406,7 +1406,7 @@
                     action="/create_checkout?plan_id=premium-yearly"><button data-controller="loading-button-state"
                       data-loading-button-state-target="submit" data-action="loading-button-state#handleClick"
                       data-plan-button="true"
-                      class="w-full px-4 py-3 primary-gradient rounded-lg justify-center items-center gap-2 inline-flex"
+                      class="w-full px-4 py-3 bg-g4 rounded-lg justify-center items-center gap-2 inline-flex"
                       type="submit">
                       <img src="./icons/credit-card.svg" class="w-5 h-5 relative">
                       <div class="text-white text-sm font-semibold leading-tight">Pay with Credit / Debit Card</div>
@@ -1460,6 +1460,7 @@
     const mainSidebarClosed = document.querySelector("#mainSidebarClosed");
     const mainMobileSidebar = document.querySelector("#mainMobileSidebar");
     const mainContent = document.querySelector("#main-content");
+    const topBar = document.querySelector("#top-bar");
 
     function toggleClass(element, className) {
       element.classList.toggle(className);
@@ -1473,6 +1474,8 @@
         toggleClass(mainSidebarClosed, "-translate-x-full");
         toggleClass(mainContent, "lg:pl-[100px]");
         toggleClass(mainContent, "lg:pl-[220px]");
+        toggleClass(topBar, "lg:w-[calc(100vw-220px)]")
+        toggleClass(topBar, "lg:w-[calc(100vw-100px)]")
       } else {
         toggleClass(mainMobileSidebar, "-translate-x-full");
         toggleClass(mainMobileSidebar, "backdrop-blur-sm");

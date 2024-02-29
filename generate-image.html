@@ -10,7 +10,7 @@
 
   <body>
     <div
-      class="bg-main fixed w-full top-0 z-40 flex h-16 shrink-0 items-center border-b border-[#363636] sm:px-4 px-2 shadow-sm sm:gap-x-2 lg:px-8"
+      class="bg-blackDarker fixed w-full top-0 z-40 flex h-16 shrink-0 items-center border-b border-blackLight sm:px-4 px-2 shadow-sm sm:gap-x-2 lg:px-8"
     >
       <button
         id="nav-hamburger"
@@ -37,18 +37,18 @@
       <a href="/">
         <img
           src="./icons/candyai-navbar.svg"
-          class="h-[30px] md:h-[30px] w-[115px]"
+          class="h-30 md:h-30 w-[115px]"
         />
       </a>
       <!-- Separator -->
       <div class="h-6 w-px bg-gray-900/10 lg:hidden" aria-hidden="true"></div>
 
-      <div class="flex flex-1 self-stretch lg:gap-x-6 bg-main">
+      <div class="flex flex-1 self-stretch lg:gap-x-6 bg-blackDarker">
         <form class="relative flex flex-1" action="#" method="GET"></form>
         <div class="hidden min-[350px]:flex items-center gap-x-4 lg:gap-x-6">
           <a
             href="/subscriptions.html"
-            class="justify-center items-center primary-gradient flex max-w-full gap-2 px-2 py-1.5 rounded-xl"
+            class="justify-center items-center bg-g4 flex max-w-full gap-2 px-2 py-1.5 rounded-xl"
           >
             <img
               src="./icons/premium.svg"
@@ -134,7 +134,7 @@
     </div>
 
     <div
-      class="hidden lg:pt-[63px] lg:z-20 lg:block lg:overflow-y-auto lg:overflow-x-hidden bg-g1 lg:fixed z-20 border-[#363636] border-r border-t lg:inset-y-0 lg:left-0 lg:w-[220px] lg:pb-5 w-[220px] fixed top-0 left-0 h-full webkit-transition-sidebar"
+      class="hidden lg:pt-[63px] lg:z-20 lg:block lg:overflow-y-auto lg:overflow-x-hidden bg-g1 lg:fixed z-20 border-blackLight border-r border-t lg:inset-y-0 lg:left-0 lg:w-[220px] lg:pb-5 w-[220px] fixed top-0 left-0 h-full transition-all duration-300 ease-in-out"
       id="mainSidebarOpened"
     >
       <nav class="flex flex-col justify-between h-full">
@@ -145,11 +145,11 @@
           <li class="relative w-full">
             <a
               href="/"
-              class="h-[40px] w-full hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
+              class="h-10 w-full hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/explore.svg" />
               <span
-                class="text-start text-grey-medium text-xxs font-medium leading-4"
+                class="text-start text-greyLight text-xxs font-medium leading-4"
                 >Explore</span
               >
             </a>
@@ -157,11 +157,11 @@
           <li class="relative w-full">
             <a
               href="/chat.html"
-              class="h-[40px] w-full hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
+              class="h-10 w-full hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/chat.svg" />
               <span
-                class="text-start text-grey-medium text-xxs font-medium leading-4"
+                class="text-start text-greyLight text-xxs font-medium leading-4"
                 >Chat</span
               >
             </a>
@@ -169,11 +169,11 @@
           <li class="relative w-full">
             <a
               href="/gallery.html"
-              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/gallery.svg" />
               <div
-                class="text-start text-grey-medium text-xxs font-medium leading-4"
+                class="text-start text-greyLight text-xxs font-medium leading-4"
               >
                 Gallery
               </div>
@@ -182,11 +182,11 @@
           <li class="relative w-full">
             <a
               href="/generate-image.html"
-              class="relative h-[40px] bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="relative h-10 bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/generate.svg" />
               <div
-                class="text-start text-grey-medium text-xxs font-medium leading-none"
+                class="text-start text-greyLight text-xxs font-medium leading-none"
               >
                 Generate Image
               </div>
@@ -195,11 +195,11 @@
           <li class="relative w-full">
             <a
               href="/create-character.html"
-              class="relative h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="relative h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/magic-wand.svg" />
               <div
-                class="text-start text-grey-medium text-xxs font-medium leading-none"
+                class="text-start text-greyLight text-xxs font-medium leading-none"
               >
                 Create Character
               </div>
@@ -208,11 +208,11 @@
           <li class="relative w-full">
             <a
               href="/my-ai.html"
-              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/love-lady.svg" />
               <div
-                class="text-start text-grey-medium text-xxs font-medium leading-none"
+                class="text-start text-greyLight text-xxs font-medium leading-none"
               >
                 My AI
               </div>
@@ -221,11 +221,11 @@
           <li class="relative w-full">
             <a
               href="/subscriptions.html"
-              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/premium1.svg" />
               <div
-                class="text-start text-pink-default text-xxs font-medium leading-none"
+                class="text-start text-primary text-xxs font-medium leading-none"
               >
                 Become Premium
               </div>
@@ -234,17 +234,17 @@
         </ul>
         <ul
           role="list"
-          class="flex flex-col gap-2 pt-6 px-6 border-[#363636] border-t items-center justify-end"
+          class="flex flex-col gap-2 pt-6 px-6 border-blackLight border-t items-center justify-end"
         >
           <li class="relative w-full">
             <a
               href="https://discord.gg/candyai"
               target="_blank"
-              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+              class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/discord1.svg" />
               <div
-                class="text-start text-grey-medium text-xs font-medium leading-4"
+                class="text-start text-greyLight text-xs font-medium leading-4"
               >
                 Discord
               </div>
@@ -253,11 +253,11 @@
           <li class="relative w-full">
             <div
               data-action="click->sidebar#openContactUs"
-              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+              class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/contact.svg" />
               <div
-                class="text-start sidebar-text text-grey-medium text-xs font-medium leading-4"
+                class="text-start sidebar-text text-greyLight text-xs font-medium leading-4"
               >
                 Contact Us
               </div>
@@ -266,18 +266,18 @@
           <li class="relative w-full">
             <a target="_blank" class="" href="#">
               <div
-                class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+                class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
               >
                 <img class="w-4 h-4" src="./icons/trophy.svg" />
                 <div
-                  class="text-start text-grey-medium text-xs font-medium leading-4"
+                  class="text-start text-greyLight text-xs font-medium leading-4"
                 >
                   Affiliate Program
                 </div>
               </div>
             </a>
           </li>
-          <li class="text-[8px] flex text-grey-medium pt-3 w-full">
+          <li class="text-8 flex text-greyLight pt-3 w-full">
             <a class="leading-none mr-2" href="#">Privacy Policy</a>
             <ul class="list-none">
               <li class="flex items-center mr-2">
@@ -292,7 +292,7 @@
 
     <div
       id="mainSidebarClosed"
-      class="lg:fixed lg:pt-[63px] z-20 border-[#363636] border-r border-t lg:inset-y-0 lg:left-0 lg:w-[100px] lg:pb-5 w-[100px] fixed top-0 left-0 h-full webkit-transition-sidebar hidden lg:block -translate-x-full"
+      class="lg:fixed lg:pt-[63px] z-20 border-blackLight border-r border-t lg:inset-y-0 lg:left-0 lg:w-[100px] lg:pb-5 w-[100px] fixed top-0 left-0 h-full transition-all duration-300 ease-in-out hidden lg:block -translate-x-full"
       style="
         background: linear-gradient(0deg, #131313 0%, #131313 100%);
         max-height: 100vh;
@@ -485,7 +485,7 @@
           >
             <a
               href="/"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/explore.svg" />
             </a>
@@ -498,7 +498,7 @@
           >
             <a
               href="/chat.html"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/chat.svg" />
             </a>
@@ -511,7 +511,7 @@
           >
             <a
               href="/gallery.html"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/gallery.svg" />
             </a>
@@ -524,7 +524,7 @@
           >
             <a
               href="/generate-image.html"
-              class="relative h-[48px] w-[52px] bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="relative h-12 w-52 bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/generate.svg" />
             </a>
@@ -537,7 +537,7 @@
           >
             <a
               href="/create-character.html"
-              class="relative h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="relative h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/magic-wand.svg" />
             </a>
@@ -550,7 +550,7 @@
           >
             <a
               href="/my-ai.html"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/love-lady.svg" />
             </a>
@@ -563,7 +563,7 @@
           >
             <a
               href="/subscriptions.html"
-              class="h-[48px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-12 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/premium1.svg" />
             </a>
@@ -571,7 +571,7 @@
         </ul>
         <ul
           role="list"
-          class="flex flex-col gap-2 pt-6 px-6 border-[#363636] border-t items-center justify-end"
+          class="flex flex-col gap-2 pt-6 px-6 border-blackLight border-t items-center justify-end"
         >
           <li
             class="relative w-full"
@@ -582,7 +582,7 @@
             <a
               href="https://discord.gg/candyai"
               target="_blank"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/discord1.svg" />
             </a>
@@ -595,7 +595,7 @@
           >
             <div
               data-action="click->sidebar#openContactUs"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/contact.svg" />
             </div>
@@ -608,7 +608,7 @@
           >
             <a target="_blank" class="" href="#">
               <div
-                class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+                class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
               >
                 <img class="w-6 h-6" src="./icons/trophy.svg" />
               </div>
@@ -621,7 +621,7 @@
     <div
       id="mainMobileSidebar"
       data-action="click->sidebar#toggleMobileSidebar"
-      class="inset-y-0 w-[100vw] mt-[64px] z-[100] pr-[40vw] no-scroll fixed left-0 webkit-transition-sidebar block lg:hidden -translate-x-full"
+      class="inset-y-0 w-screen mt-16 z-[100] pr-[40vw]  fixed left-0 transition-all duration-300 ease-in-out block lg:hidden -translate-x-full"
     >
       <nav
         class="flex flex-col justify-between h-full w-[240px] mobile-sidebar-list-item"
@@ -653,7 +653,7 @@
                     class="flex items-center justify-between w-full mobile-sidebar-list-item"
                   >
                     <div
-                      class="ml-2 text-xs font-semibold leading-5 text-grey-medium mobile-sidebar-list-item"
+                      class="ml-2 text-xs font-semibold leading-5 text-greyLight mobile-sidebar-list-item"
                     >
                       My Profile
                     </div>
@@ -685,7 +685,7 @@
                       />
                     </div>
                     <div
-                      class="text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item"
+                      class="text-greyLight text-sm font-semibold leading-5 mobile-sidebar-list-item"
                     >
                       Subscription
                     </div>
@@ -701,7 +701,7 @@
                       />
                     </div>
                     <div
-                      class="text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item"
+                      class="text-greyLight text-sm font-semibold leading-5 mobile-sidebar-list-item"
                     >
                       Settings
                     </div>
@@ -718,7 +718,7 @@
                       />
                     </div>
                     <div
-                      class="text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item"
+                      class="text-greyLight text-sm font-semibold leading-5 mobile-sidebar-list-item"
                     >
                       Logout
                     </div>
@@ -738,7 +738,7 @@
                   src="./icons/explore.svg"
                 />
                 <span
-                  class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs leading-5 font-semibold mobile-sidebar-list-item"
                   >Explore</span
                 >
               </a>
@@ -755,7 +755,7 @@
                   src="./icons/chat.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs leading-5 font-semibold mobile-sidebar-list-item"
                 >
                   Chat
                 </div>
@@ -773,7 +773,7 @@
                   src="./icons/gallery.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs leading-5 font-semibold mobile-sidebar-list-item"
                 >
                   Gallery
                 </div>
@@ -791,7 +791,7 @@
                   src="./icons/generate.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs font-medium leading-none mobile-sidebar-list-item"
                 >
                   Generate Image
                 </div>
@@ -809,7 +809,7 @@
                   src="./icons/magic-wand.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs font-medium leading-none mobile-sidebar-list-item"
                 >
                   Create Character
                 </div>
@@ -827,7 +827,7 @@
                   src="./icons/love-lady.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs font-medium leading-none mobile-sidebar-list-item"
                 >
                   My AI
                 </div>
@@ -845,7 +845,7 @@
                   src="./icons/premium1.svg"
                 />
                 <div
-                  class="text-start text-pink-default text-xs font-medium leading-none mobile-sidebar-list-item"
+                  class="text-start text-primary text-xs font-medium leading-none mobile-sidebar-list-item"
                 >
                   Become Premium
                 </div>
@@ -853,16 +853,16 @@
             </li>
           </ul>
           <div
-            class="p-5 bg-[#1A1A1A] flex-col justify-end items-start gap-[17px] inline-flex mobile-sidebar-list-item"
+            class="p-5 bg-blackDark flex-col justify-end items-start gap-[17px] inline-flex mobile-sidebar-list-item"
           >
             <div
               class="justify-start items-start gap-5 inline-flex mobile-sidebar-list-item"
             >
               <div
-                class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item"
+                class="px-2.5 py-1 rounded-5 border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item"
               >
                 <div
-                  class="w-[70px] text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item"
+                  class="w-70 text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item"
                 >
                   <a
                     href="https://discord.gg/candyai"
@@ -875,10 +875,10 @@
               </div>
               <div
                 data-action="click->sidebar#openContactUs"
-                class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex"
+                class="px-2.5 py-1 rounded-5 border border-neutral-400 justify-center items-center gap-2.5 flex"
               >
                 <div
-                  class="w-[70px] text-center text-neutral-200 text-xs font-semibold whitespace-nowrap leading-tight relative"
+                  class="w-70 text-center text-neutral-200 text-xs font-semibold whitespace-nowrap leading-tight relative"
                 >
                   Contact Us
                 </div>
@@ -888,11 +888,11 @@
               class="justify-start items-start gap-5 inline-flex mobile-sidebar-list-item"
             >
               <div
-                class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item"
+                class="px-2.5 py-1 rounded-5 border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item"
               >
                 <a target="_blank" class="mobile-sidebar-list-item" href="#">
                   <div
-                    class="w-[70px] text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item"
+                    class="w-70 text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item"
                   >
                     Affiliate
                   </div>
@@ -903,7 +903,7 @@
               class="justify-start items-center gap-2 inline-flex mobile-sidebar-list-item"
             >
               <a
-                class="text-neutral-300 text-[8px] font-medium leading-[14px] mobile-sidebar-list-item"
+                class="text-neutral-300 text-8 font-medium leading-[14px] mobile-sidebar-list-item"
                 href="#"
                 >Privacy Policy</a
               >
@@ -911,7 +911,7 @@
                 class="w-1 h-1 bg-zinc-300 rounded-full mobile-sidebar-list-item"
               ></div>
               <a
-                class="text-neutral-300 text-[8px] font-medium leading-[14px] mobile-sidebar-list-item"
+                class="text-neutral-300 text-8 font-medium leading-[14px] mobile-sidebar-list-item"
                 href="#"
                 >Terms of Service</a
               >
@@ -922,7 +922,7 @@
     </div>
 
     <div
-      class="flex px-5 py-2 justify-between w-full h-[56px] fixed bottom-0 z-50 border-t border-white border-opacity-20 bg-[#131313] lg:hidden"
+      class="flex px-5 py-2 justify-between w-full h-[56px] fixed bottom-0 z-50 border-t border-white border-opacity-20 bg-blackDarker lg:hidden"
     >
       <!-- Discover Icon -->
       <a href="/" class="flex flex-col items-center">
@@ -950,7 +950,7 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="text-[#A1A1A1] text-[10px] mt-1">Explore</span>
+        <span class="textsterlingSilver text-10 mt-1">Explore</span>
       </a>
       <!-- Generate Image Icon -->
       <a
@@ -978,7 +978,7 @@
             fill="#f97187"
           />
         </svg>
-        <span class="text-[#f97187] text-[10px] mt-1">Generate</span>
+        <span class="text-primary text-10 mt-1">Generate</span>
       </a>
       <!-- Create AI Icon -->
       <a href="/create-character.html" class="flex flex-col items-center">
@@ -1058,7 +1058,7 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="text-[#A1A1A1] text-[10px] mt-1">Create</span>
+        <span class="textsterlingSilver text-10 mt-1">Create</span>
       </a>
       <!-- Chat Icon -->
       <a href="/chat.html" class="flex flex-col items-center">
@@ -1097,7 +1097,7 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="text-[#A1A1A1] text-[10px] mt-1">Chat</span>
+        <span class="textsterlingSilver text-10 mt-1">Chat</span>
       </a>
       <!-- Premium Icon -->
       <a href="/subscriptions.html" class="flex flex-col items-center">
@@ -1121,7 +1121,7 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="text-[#A1A1A1] text-[10px] mt-1">Premium</span>
+        <span class="textsterlingSilver text-10 mt-1">Premium</span>
       </a>
     </div>
 
@@ -1130,9 +1130,8 @@
       id="main-content"
     >
       <div
-        class="pb-20 px-5"
+        class="pb-20 px-4 lg:px-8 xl:px-12 2xl:px-16 pt-8"
         id="generate-image-container"
-        x-data="{ isLoginModalOpen: false, isCharacterModalOpen: false, isGeneratedImageModalOpen: false, selectedImage: '',activeSlide: 0,isPremiumSubscriptionModalOpen: false }"
       >
         <div class="flex items-center justify-center mb-7">
           <img class="w-7 h-7" src="./icons/generate-ai.svg" />
@@ -1160,7 +1159,7 @@
           data-generate-image-user-gender-interest-value="female"
         >
           <div
-            class="hidden mr-0 xl:mr-7 xl:flex xl:flex-col xl:flex-initial xl:w-[478px] 2xl:w-[580px] xl:items-center xl:justify-center bg-black-dark xl:border border-grey-dark rounded-[10px] mb-5 xl:mb-0"
+            class="hidden mr-0 xl:mr-7 xl:flex xl:flex-col xl:flex-initial xl:w-[478px] 2xl:w-[580px] xl:items-center xl:justify-center bg-blackDark xl:border border-midnightBlack rounded-10 mb-5 xl:mb-0"
             data-generate-image-target="generatedImage"
           >
             <turbo-cable-stream-source
@@ -1174,7 +1173,7 @@
               >
                 <img class="w-20 h-20" src="./icons/generate-image-ai.svg" />
                 <span
-                  class="text-[20px] text-grey-light text-center font-semibold mt-4"
+                  class="text-20 text-greyMedium text-center font-semibold mt-4"
                   >Enter a prompt and click "Generate"</span
                 >
               </div>
@@ -1182,11 +1181,11 @@
           </div>
           <div class="flex flex-col flex-1 w-full xl:w-2/3">
             <div
-              class="flex flex-0 items-center flex-col rounded-[10px] bg-black-dark border border-grey-dark w-full p-5 2xl:p-7"
+              class="flex flex-0 items-center flex-col rounded-10 bg-blackDark border border-midnightBlack w-full p-5 2xl:p-7"
               data-generate-image-target="chooseCharacterContainer"
             >
               <span
-                class="text-sm leading-[30px] text-grey-light font-bold sm:text-[20px] sm:font-semibold"
+                class="text-sm leading-[30px] text-greyMedium font-bold sm:text-20 sm:font-semibold"
                 >Choose Character*</span
               >
               <div
@@ -1195,29 +1194,29 @@
               >
                 <button
                   @click="isCharacterModalOpen = true"
-                  class="flex flex-1 justify-center bg-black-dark py-3 text-sm text-white font-semibold rounded-[10px] border-2 border-black-light mb-4 sm:mr-[22px] sm:mb-0"
+                  class="flex flex-1 justify-center bg-blackDark py-3 text-sm text-white font-semibold rounded-10 border-2 border-blackLight mb-4 sm:mr-[22px] sm:mb-0"
                 >
                   <img
                     class="w-5 h-5 mr-2"
-                    src="/assets/user-icons/woman-white-0cb5d8049e2b4886ede2ce63b53ecb4828ca11d09d0880576b5c0203d1b38f95.svg"
+                    src="./icons/woman-white.svg"
                   />Existing Character
                 </button>
                 <a
                   href="/characters/new?from=generate-image"
-                  class="flex flex-1 justify-center bg-black-dark px-4 py-3 text-sm text-white font-semibold rounded-[10px] border-2 border-black-light"
+                  class="flex flex-1 justify-center bg-blackDark px-4 py-3 text-sm text-white font-semibold rounded-10 border-2 border-blackLight"
                 >
                   <img
                     class="w-5 h-5 mr-2"
-                    src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                    src="./icons/add-filled.svg"
                   />Create New Character
                 </a>
               </div>
               <div
                 data-generate-image-target="selectedCharacter"
-                class="flex flex-col items-center justify-between sm:flex-row w-full p-0 sm:p-2 sm:pr-3 mt-4 sm:border-grey-default sm:border-opacity-20 sm:rounded-[10px] sm:bg-black-medium hidden"
+                class="flex flex-col items-center justify-between sm:flex-row w-full p-0 sm:p-2 sm:pr-3 mt-4 sm:border-grey-default sm:border-opacity-20 sm:rounded-10 sm:bg-blackMedium hidden"
               >
                 <div
-                  class="flex flex-1 items-center cursor-pointer font-semibold text-sm sm:text-[20px] text-white w-full border-grey-default border-opacity-20 rounded-[10px] bg-black-medium p-2 sm:border-none sm:bg-none sm:p-0"
+                  class="flex flex-1 items-center cursor-pointer font-semibold text-sm sm:text-20 text-white w-full border-grey-default border-opacity-20 rounded-10 bg-blackMedium p-2 sm:border-none sm:bg-none sm:p-0"
                   @click="isCharacterModalOpen = true"
                 >
                   <img
@@ -1233,7 +1232,7 @@
                   class="flex flex-1 justify-center mt-3 w-full sm:w-auto sm:mt-0 sm:justify-end"
                 >
                   <button
-                    class="flex items-center justify-center w-full sm:w-auto py-2 sm:px-2 sm:py-1 text-sm font-semibold text-pink-default rounded-[10px] border-2 border-pink-default"
+                    class="flex items-center justify-center w-full sm:w-auto py-2 sm:px-2 sm:py-1 text-sm font-semibold text-primary rounded-10 border-2 border-primary"
                     data-action="click->generate-image#changeCharacterView"
                   >
                     <img
@@ -1246,12 +1245,12 @@
               </div>
             </div>
             <div
-              class="flex flex-1 items-left flex-col rounded-[10px] bg-black-dark border border-grey-dark w-full mt-7 p-5 md:p-7 md:py-5"
+              class="flex flex-1 items-left flex-col rounded-10 bg-blackDark border border-midnightBlack w-full mt-7 p-5 md:p-7 md:py-5"
             >
               <div class="flex flex-col mb-[10px]">
                 <label
                   for="message"
-                  class="text-sm font-semibold text-grey-default"
+                  class="text-sm font-semibold text-silverSlate"
                   >Enter prompt*</label
                 >
                 <textarea
@@ -1260,7 +1259,7 @@
                   id="message"
                   name="message"
                   rows="4"
-                  class="mt-1 w-full p-4 text-white text-sm bg-black-medium border border-black-light rounded-[10px] shadow-sm resize-none placeholder-grey-light placeholder:text-sm focus:outline-0 focus:ring-0 focus:border-grey-default focus:border-opacity-40 2xl:h-[130px] md:h-[90px]"
+                  class="mt-1 w-full p-4 text-white text-sm bg-blackMedium border border-blackLight rounded-10 shadow-sm resize-none placeholder-greyMedium placeholder:text-sm focus:outline-0 focus:ring-0 focus:border-grey-default focus:border-opacity-40 2xl:h-[130px] md:h-[90px]"
                   placeholder="Enter an image description"
                 >
 wearing a pencil dress, sitting at the dinner table in a fancy restaurant at night with dim lights</textarea
@@ -1274,33 +1273,33 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                   <div
                     data-action="click->generate-image#replaceWithChip"
                     data-prompt="Wearing shorts and a crop top shirt, portrait picture, looking at the viewer"
-                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                    class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                   >
                     <img
                       class="w-[14px] h-[14px] mr-1"
-                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                      src="./icons/add-filled.svg"
                     />
                     Cute Picture
                   </div>
                   <div
                     data-action="click->generate-image#replaceWithChip"
                     data-prompt="Wearing a long sundress, walking on the beach by the sea waves and the palm trees"
-                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                    class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                   >
                     <img
                       class="w-[14px] h-[14px] mr-1"
-                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                      src="./icons/add-filled.svg"
                     />
                     Walking on the beach
                   </div>
                   <div
                     data-action="click->generate-image#replaceWithChip"
                     data-prompt="Wearing a pencil dress, sitting at the dinner table in a fancy restaurant at night with dim lights"
-                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                    class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                   >
                     <img
                       class="w-[14px] h-[14px] mr-1"
-                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                      src="./icons/add-filled.svg"
                     />
                     Out for dinner
                   </div>
@@ -1312,33 +1311,33 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                   <div
                     data-action="click->generate-image#replaceWithChip"
                     data-prompt="Wearing a polo shirt and chino pants, sitting at a café, outside, sunny day"
-                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                    class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                   >
                     <img
                       class="w-[14px] h-[14px] mr-1"
-                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                      src="./icons/add-filled.svg"
                     />
                     Cute Picture
                   </div>
                   <div
                     data-action="click->generate-image#replaceWithChip"
                     data-prompt="Wearing swimshorts, walking on the beach by the sea waves and the palm trees"
-                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                    class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                   >
                     <img
                       class="w-[14px] h-[14px] mr-1"
-                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                      src="./icons/add-filled.svg"
                     />
                     Walking on the beach
                   </div>
                   <div
                     data-action="click->generate-image#replaceWithChip"
                     data-prompt="Wearing a suit and shirt, sitting at the dinner table in a fancy restaurant at night with dim lights"
-                    class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                    class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                   >
                     <img
                       class="w-[14px] h-[14px] mr-1"
-                      src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                      src="./icons/add-filled.svg"
                     />
                     Out for dinner
                   </div>
@@ -1346,10 +1345,10 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                 <!-- Tab navigations -->
                 <ul
                   data-generate-image-target="additionalSuggestedFemalePromptTabs"
-                  class="tabs grid grid-cols-3 remove-border-3rd md:flex md:flex-wrap md:justify-between mb-4 bg-black-medium rounded-xl p-[2px] gap-y-2.5 md:gap-0"
+                  class="tabs grid grid-cols-3 remove-border-3rd md:flex md:flex-wrap md:justify-between mb-4 bg-blackMedium rounded-xl p-[2px] gap-y-2.5 md:gap-0"
                 >
                   <li
-                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1 border-r-[0.5px] active bg-[#616161] text-white font-semibold rounded-lg"
+                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-silverSlate cursor-pointer border-greyMedium border-opacity-40 md:flex-1 active"
                     data-tab-target="1"
                     data-action="click->generate-image#changeTab"
                     data-generate-image-target="tab"
@@ -1357,7 +1356,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     Action
                   </li>
                   <li
-                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1 border-r-[0.5px]"
+                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-silverSlate cursor-pointer border-greyMedium border-opacity-40 md:flex-1"
                     data-tab-target="2"
                     data-action="click->generate-image#changeTab"
                     data-generate-image-target="tab"
@@ -1365,7 +1364,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     Body
                   </li>
                   <li
-                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1 border-r-[0.5px]"
+                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-silverSlate cursor-pointer border-greyMedium border-opacity-40 md:flex-1"
                     data-tab-target="3"
                     data-action="click->generate-image#changeTab"
                     data-generate-image-target="tab"
@@ -1373,7 +1372,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     Clothing
                   </li>
                   <li
-                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1 border-r-[0.5px]"
+                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-silverSlate cursor-pointer border-greyMedium border-opacity-40 md:flex-1"
                     data-tab-target="4"
                     data-action="click->generate-image#changeTab"
                     data-generate-image-target="tab"
@@ -1381,7 +1380,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     Scene
                   </li>
                   <li
-                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1 border-r-[0.5px]"
+                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-silverSlate cursor-pointer border-greyMedium border-opacity-40 md:flex-1"
                     data-tab-target="5"
                     data-action="click->generate-image#changeTab"
                     data-generate-image-target="tab"
@@ -1389,7 +1388,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     Accessories
                   </li>
                   <li
-                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1"
+                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-silverSlate cursor-pointer border-greyMedium border-opacity-40 md:flex-1"
                     data-tab-target="6"
                     data-action="click->generate-image#changeTab"
                     data-generate-image-target="tab"
@@ -1399,10 +1398,10 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                 </ul>
                 <ul
                   data-generate-image-target="additionalSuggestedMalePromptTabs"
-                  class="tabs grid grid-cols-3 remove-border-3rd md:flex md:flex-wrap md:justify-between mb-4 bg-black-medium rounded-xl p-[2px] gap-y-2.5 md:gap-0 !hidden"
+                  class="tabs grid grid-cols-3 remove-border-3rd md:flex md:flex-wrap md:justify-between mb-4 bg-blackMedium rounded-xl p-[2px] gap-y-2.5 md:gap-0 !hidden"
                 >
                   <li
-                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1"
+                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-silverSlate cursor-pointer border-greyMedium border-opacity-40 md:flex-1"
                     data-tab-target="1"
                     data-action="click->generate-image#changeTab"
                     data-generate-image-target="tab"
@@ -1410,7 +1409,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     Action
                   </li>
                   <li
-                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1"
+                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-silverSlate cursor-pointer border-greyMedium border-opacity-40 md:flex-1"
                     data-tab-target="2"
                     data-action="click->generate-image#changeTab"
                     data-generate-image-target="tab"
@@ -1418,7 +1417,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     Body
                   </li>
                   <li
-                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1"
+                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-silverSlate cursor-pointer border-greyMedium border-opacity-40 md:flex-1"
                     data-tab-target="3"
                     data-action="click->generate-image#changeTab"
                     data-generate-image-target="tab"
@@ -1426,7 +1425,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     Clothing
                   </li>
                   <li
-                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1"
+                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-silverSlate cursor-pointer border-greyMedium border-opacity-40 md:flex-1"
                     data-tab-target="4"
                     data-action="click->generate-image#changeTab"
                     data-generate-image-target="tab"
@@ -1434,7 +1433,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     Scene
                   </li>
                   <li
-                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1"
+                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-silverSlate cursor-pointer border-greyMedium border-opacity-40 md:flex-1"
                     data-tab-target="5"
                     data-action="click->generate-image#changeTab"
                     data-generate-image-target="tab"
@@ -1442,7 +1441,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     Accessories
                   </li>
                   <li
-                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-grey-default cursor-pointer border-grey-light border-opacity-40 md:flex-1"
+                    class="items-center text-center text-xs px-2 py-1 my-0.5 text-silverSlate cursor-pointer border-greyMedium border-opacity-40 md:flex-1"
                     data-tab-target="6"
                     data-action="click->generate-image#changeTab"
                     data-generate-image-target="tab"
@@ -1462,66 +1461,66 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Standing"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Standing
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Sitting"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Sitting
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Squatting"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Squatting
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Lying Down"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Lying down
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Working Out in the gym"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Working out
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Swimming in a pool"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Swimming
                     </div>
@@ -1534,33 +1533,33 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Back view"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Back
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Front View"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Front
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Full Body picture"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Full body
                     </div>
@@ -1573,99 +1572,99 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing a long summer dress in a park with trees and flowers"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Summer Dress
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing a bikini at the beach"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Bikini
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing a skirt and a shirt"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Skirt
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing jeans and a crop top"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Jeans
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing a white lab coat and a shirt"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Lab Coat
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing a pencil skirt with a blazer and a shirt, teaching in front of the class"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Teacher
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing comfy pyjamas, sitting on the bed"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Pyjamas
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing a tank top and shorts"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Tank Top
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing a sport outfit, in a gym"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Sport
                     </div>
@@ -1678,55 +1677,55 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="in a flower garden"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Garden
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="in a gym"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Gym
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="in the forest"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Forest
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="at the beach"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Beach
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="sitting in a taxi"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Taxi
                     </div>
@@ -1739,55 +1738,55 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing an elegant necklace"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Necklace
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing stylish glasses"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Glasses
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="a room lit with aromatic candles"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Candles
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing a colorful scarf"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Scarf
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing a baseball cap outdoors"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Baseball Cap
                     </div>
@@ -1800,33 +1799,33 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Close up view"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Close up
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="view from above"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       From above
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="view from behind"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       From behind
                     </div>
@@ -1844,66 +1843,66 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Standing"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Standing
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Sitting"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Sitting
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Squatting"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Squatting
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Lying Down"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Lying down
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Working Out in the gym"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Working out
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Swimming in a pool"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Swimming
                     </div>
@@ -1916,33 +1915,33 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Back view"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Back
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Front View"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Front
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Full Body picture"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Full body
                     </div>
@@ -1955,99 +1954,99 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing Jeans and T-Shirt"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Jeans
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing Chinos and Shirt"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Chino
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing Bermuda and Polo"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Polo
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing Tracksuit"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Tracksuit
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing Leather vest and Jeans"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Leather Vest
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing Suit and Shirt"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Suit
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing Turtleneck and Trousers"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Turtleneck
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing a tight sports t-shirt and shorts, at the gym"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Sport
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing swimshorts, laying down at the beach"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Swimshorts
                     </div>
@@ -2060,55 +2059,55 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="in a flower garden"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Garden
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="in a gym"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Gym
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="in the forest"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Forest
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="at the beach"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Beach
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="sitting in a taxi"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Taxi
                     </div>
@@ -2121,55 +2120,55 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing jewelry"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Jewelry
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing glasses"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Glasses
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing headphones"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Headphones
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing a bow tie"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Bow tie
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="wearing a baseball cap"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Baseball Cap
                     </div>
@@ -2182,33 +2181,33 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="Close up view"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       Close up
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="view from above"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       From above
                     </div>
                     <div
                       data-action="click->generate-image#addChip"
                       data-prompt="view from behind"
-                      class="flex items-center bg-black-dark text-sm mr-2 text-grey-light px-3 py-1 rounded-full cursor-pointer border border-[#4A4A4A] mb-2"
+                      class="flex items-center bg-blackDark text-sm mr-2 text-greyMedium px-3 py-1 rounded-full cursor-pointer border border-slateGray mb-2"
                     >
                       <img
                         class="w-[14px] h-[14px] mr-1"
-                        src="/assets/add-filled-ce599fed268d34c1f923f9ed6bf465201c50e58b298219177d7fb1d08f56d0f2.svg"
+                        src="./icons/add-filled.svg"
                       />
                       From behind
                     </div>
@@ -2216,7 +2215,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                 </div>
                 <div class="flex flex-col justify-between h-full">
                   <div class="mt-4 2xl:mt-8 mb-6 md:mb-16 xl:mb-0">
-                    <span class="text-grey-default text-sm font-semibold"
+                    <span class="text-silverSlate text-sm font-semibold"
                       >Number of images *</span
                     >
                     <!-- Hidden input to store the selected number -->
@@ -2224,17 +2223,17 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       <div
                         data-action="click->generate-image#numberOfImages"
                         data-generate-image-target="numberedImage"
-                        class="flex items-center justify-center relative bg-black-dark text-[20px] text-grey-light text-center px-7 py-5 w-[72px] min-w-[72px] max-w-[72px] overflow-hidden rounded-[10px] cursor-pointer border border-[#4A4A4A] outline outline-1 outline-pink-default bg-pink-medium border-none"
+                        class="flex items-center justify-center relative bg-blackDark text-20 text-greyMedium text-center px-7 py-5 w-[72px] min-w-[72px] max-w-[72px] overflow-hidden rounded-10 cursor-pointer border border-slateGray outline outline-1 outline-primary bg-pinkMedium border-none"
                       >
                         <div class="number-container">1</div>
                       </div>
                       <div
                         data-action="click->generate-image#numberOfImages"
                         data-generate-image-target="numberedImage"
-                        class="flex items-center justify-center relative bg-black-dark text-[20px] text-grey-light text-center px-7 py-5 w-[72px] min-w-[72px] max-w-[72px] overflow-hidden rounded-[10px] cursor-pointer border border-[#4A4A4A]"
+                        class="flex items-center justify-center relative bg-blackDark text-20 text-greyMedium text-center px-7 py-5 w-[72px] min-w-[72px] max-w-[72px] overflow-hidden rounded-10 cursor-pointer border border-slateGray"
                       >
                         <div
-                          class="absolute -right-[1px] top-0 bg-[#AD314E] rounded-bl-[10px] rounded-tr-[10px] px-[3px] text-[11px]"
+                          class="absolute -right-[1px] top-0 bg-[#AD314E] rounded-bl-[10px] rounded-tr-[10px] px-[3px] text-11"
                         >
                           Premium
                         </div>
@@ -2243,10 +2242,10 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       <div
                         data-action="click->generate-image#numberOfImages"
                         data-generate-image-target="numberedImage"
-                        class="flex items-center justify-center relative bg-black-dark text-[20px] text-grey-light text-center px-7 py-5 w-[72px] min-w-[72px] max-w-[72px] overflow-hidden rounded-[10px] cursor-pointer border border-[#4A4A4A]"
+                        class="flex items-center justify-center relative bg-blackDark text-20 text-greyMedium text-center px-7 py-5 w-[72px] min-w-[72px] max-w-[72px] overflow-hidden rounded-10 cursor-pointer border border-slateGray"
                       >
                         <div
-                          class="absolute -right-[1px] top-0 bg-[#AD314E] rounded-bl-[10px] rounded-tr-[10px] px-[3px] text-[11px]"
+                          class="absolute -right-[1px] top-0 bg-[#AD314E] rounded-bl-[10px] rounded-tr-[10px] px-[3px] text-11"
                         >
                           Premium
                         </div>
@@ -2255,10 +2254,10 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       <div
                         data-action="click->generate-image#numberOfImages"
                         data-generate-image-target="numberedImage"
-                        class="flex items-center justify-center relative bg-black-dark text-[20px] text-grey-light text-center px-7 py-5 w-[72px] min-w-[72px] max-w-[72px] overflow-hidden rounded-[10px] cursor-pointer border border-[#4A4A4A]"
+                        class="flex items-center justify-center relative bg-blackDark text-20 text-greyMedium text-center px-7 py-5 w-[72px] min-w-[72px] max-w-[72px] overflow-hidden rounded-10 cursor-pointer border border-slateGray"
                       >
                         <div
-                          class="absolute -right-[1px] top-0 bg-[#AD314E] rounded-bl-[10px] rounded-tr-[10px] px-[3px] text-[11px]"
+                          class="absolute -right-[1px] top-0 bg-[#AD314E] rounded-bl-[10px] rounded-tr-[10px] px-[3px] text-11"
                         >
                           Premium
                         </div>
@@ -2302,14 +2301,14 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       />
                       <button
                         id="image-generation-submit-button"
-                        class="disabled:opacity-50 disabled:cursor-not-allowed relative flex justify-center bg-pink-dark w-full px-4 py-3 rounded-[10px] text-sm text-white font-semibold text-center"
+                        class="disabled:opacity-50 disabled:cursor-not-allowed relative flex justify-center bg-pinkDark w-full px-4 py-3 rounded-10 text-sm text-white font-semibold text-center"
                         data-action="click->generate-image#submit"
                         data-generate-image-target="generateButton"
                       >
                         Generate
                         <img
                           class="w-5 h-5 mx-1 pointer-events-none"
-                          src="/assets/arrow-east-811274d2d7e43a5ccbdd000c6e0c680496b0940f372163dfd9bbff1642fb7b05.svg"
+                          src="./icons/arrow-east.svg"
                         />
                         <div
                           class="absolute flex items-center p-[1px] bg-black-default bg-opacity-20 rounded-bl-[10px] right-0 top-0"
@@ -2338,7 +2337,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                 style="display: none"
               >
                 <div
-                  class="absolute top-3 md:relative flex flex-col justify-between bg-black-dark p-3 md:p-6 border border-grey-dark rounded-[10px] shadow-xl w-11/12 z-50 md:max-w-2xl md:w-full h-[88%] md:h-[710px]"
+                  class="absolute top-3 md:relative flex flex-col justify-between bg-blackDark p-3 md:p-6 border border-midnightBlack rounded-10 shadow-xl w-11/12 z-50 md:max-w-2xl md:w-full h-[88%] md:h-[710px]"
                 >
                   <div class="flex-0">
                     <h6 class="text-md font-bold text-white">
@@ -2349,10 +2348,10 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     class="flex flex-col flex-0 flex-wrap justify-between mt-4 pb-5 md:flex-row gap-1 md:gap-0"
                   >
                     <ul
-                      class="flex flex-0 flex-wrap border-r-[1px] gap-2 border-r-[#4A4A4A] p-1 md:p-0 md:pr-4 bg-[#2D2D2D] md:bg-transparent rounded-[10px] md:rounded-none"
+                      class="flex flex-0 flex-wrap border-r-[1px] gap-2 border-r-slateGray p-1 md:p-0 md:pr-4 bg-[#2D2D2D] md:bg-transparent rounded-10 md:rounded-none"
                     >
                       <li
-                        class="flex items-center text-sm font-semibold text-grey-light px-3 py-1 md:py-2 rounded-[10px] cursor-pointer border border-[#4A4A4A] flex-1 md:flex-initial justify-center md:justify-start border-pink-default bg-pink-medium"
+                        class="flex items-center text-sm font-semibold text-greyMedium px-3 py-1 md:py-2 rounded-10 cursor-pointer border border-slateGray flex-1 md:flex-initial justify-center md:justify-start border-primary bg-pinkMedium"
                         data-action="click->generate-image#selectCharacterLocation"
                         data-id="system"
                         data-generate-image-target="characterLocation"
@@ -2364,7 +2363,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                         Discover
                       </li>
                       <li
-                        class="flex items-center text-sm font-semibold text-grey-light px-3 py-1 md:py-2 rounded-[10px] cursor-pointer border border-[#4A4A4A] flex-1 md:flex-initial justify-center md:justify-start"
+                        class="flex items-center text-sm font-semibold text-greyMedium px-3 py-1 md:py-2 rounded-10 cursor-pointer border border-slateGray flex-1 md:flex-initial justify-center md:justify-start"
                         data-action="click->generate-image#selectCharacterLocation"
                         data-id="user"
                         data-generate-image-target="characterLocation"
@@ -2377,10 +2376,10 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       </li>
                     </ul>
                     <ul
-                      class="flex flex-1 flex-wrap justify-center gap-2 border-r-[1px] border-r-[#4A4A4A] p-1 md:p-0 bg-[#2D2D2D] md:bg-transparent rounded-[10px] md:rounded-none"
+                      class="flex flex-1 flex-wrap justify-center gap-2 border-r-[1px] border-r-slateGray p-1 md:p-0 bg-[#2D2D2D] md:bg-transparent rounded-10 md:rounded-none"
                     >
                       <li
-                        class="flex items-center text-sm font-semibold text-grey-light px-3 py-1 md:py-2 rounded-[10px] cursor-pointer border border-[#4A4A4A] flex-1 md:flex-initial justify-center md:justify-start"
+                        class="flex items-center text-sm font-semibold text-greyMedium px-3 py-1 md:py-2 rounded-10 cursor-pointer border border-slateGray flex-1 md:flex-initial justify-center md:justify-start"
                         data-action="click->generate-image#selectedCharacterType"
                         data-id="anime"
                         data-generate-image-target="characterType"
@@ -2388,7 +2387,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                         Anime
                       </li>
                       <li
-                        class="flex items-center text-sm font-semibold text-grey-light px-3 py-1 md:py-2 rounded-[10px] cursor-pointer border border-[#4A4A4A] flex-1 md:flex-initial justify-center md:justify-start"
+                        class="flex items-center text-sm font-semibold text-greyMedium px-3 py-1 md:py-2 rounded-10 cursor-pointer border border-slateGray flex-1 md:flex-initial justify-center md:justify-start"
                         data-action="click->generate-image#selectedCharacterType"
                         data-id="realistic"
                         data-generate-image-target="characterType"
@@ -2397,10 +2396,10 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       </li>
                     </ul>
                     <ul
-                      class="flex flex-1 flex-wrap justify-end gap-2 p-1 md:p-0 bg-[#2D2D2D] md:bg-transparent rounded-[10px] md:rounded-none"
+                      class="flex flex-1 flex-wrap justify-end gap-2 p-1 md:p-0 bg-[#2D2D2D] md:bg-transparent rounded-10 md:rounded-none"
                     >
                       <li
-                        class="flex items-center text-sm font-semibold text-grey-light px-3 py-1 md:py-2 rounded-[10px] cursor-pointer border border-[#4A4A4A] flex-1 md:flex-initial justify-center md:justify-start"
+                        class="flex items-center text-sm font-semibold text-greyMedium px-3 py-1 md:py-2 rounded-10 cursor-pointer border border-slateGray flex-1 md:flex-initial justify-center md:justify-start"
                         data-action="click->generate-image#selectedCharacterGender"
                         data-id="male"
                         data-generate-image-target="characterGender"
@@ -2412,7 +2411,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                         Male
                       </li>
                       <li
-                        class="flex items-center text-sm font-semibold text-grey-light px-3 py-1 md:py-2 rounded-[10px] cursor-pointer border border-[#4A4A4A] flex-1 md:flex-initial justify-center md:justify-start border-pink-default bg-pink-medium"
+                        class="flex items-center text-sm font-semibold text-greyMedium px-3 py-1 md:py-2 rounded-10 cursor-pointer border border-slateGray flex-1 md:flex-initial justify-center md:justify-start border-primary bg-pinkMedium"
                         data-action="click->generate-image#selectedCharacterGender"
                         data-id="female"
                         data-generate-image-target="characterGender"
@@ -2437,13 +2436,13 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       <div
                         data-action="click->generate-image#selectCharacter"
                         id="136696"
-                        class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                        class="relative rounded-10 h-[250px] md:h-[221px] min-w-[160px]"
                         data-generate-image-target="characterItem"
                         data-generate-image-confirmed-character-gender="female"
                       >
                         <img
                           src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/136696-4a3ea98e-d393-4022-9522-1417c85dd3af"
-                          class="rounded-[10px] object-cover w-full h-full"
+                          class="rounded-10 object-cover w-full h-full"
                         />
                         <span
                           class="font-semibold text-sm text-white absolute bottom-3 text-center w-full"
@@ -2453,13 +2452,13 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       <div
                         data-action="click->generate-image#selectCharacter"
                         id="22"
-                        class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                        class="relative rounded-10 h-[250px] md:h-[221px] min-w-[160px]"
                         data-generate-image-target="characterItem"
                         data-generate-image-confirmed-character-gender="female"
                       >
                         <img
                           src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/22-8026baed-b47a-4009-995d-c1890be18c35"
-                          class="rounded-[10px] object-cover w-full h-full"
+                          class="rounded-10 object-cover w-full h-full"
                         />
                         <span
                           class="font-semibold text-sm text-white absolute bottom-3 text-center w-full"
@@ -2469,13 +2468,13 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       <div
                         data-action="click->generate-image#selectCharacter"
                         id="2102327"
-                        class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                        class="relative rounded-10 h-[250px] md:h-[221px] min-w-[160px]"
                         data-generate-image-target="characterItem"
                         data-generate-image-confirmed-character-gender="female"
                       >
                         <img
                           src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/2102327-743fdd1f-bf50-4233-811d-a4d09f081ddc"
-                          class="rounded-[10px] object-cover w-full h-full"
+                          class="rounded-10 object-cover w-full h-full"
                         />
                         <span
                           class="font-semibold text-sm text-white absolute bottom-3 text-center w-full"
@@ -2485,13 +2484,13 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       <div
                         data-action="click->generate-image#selectCharacter"
                         id="2127253"
-                        class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                        class="relative rounded-10 h-[250px] md:h-[221px] min-w-[160px]"
                         data-generate-image-target="characterItem"
                         data-generate-image-confirmed-character-gender="female"
                       >
                         <img
                           src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/2127253-79f31e7c-d675-4567-b215-10f32a3fce7f"
-                          class="rounded-[10px] object-cover w-full h-full"
+                          class="rounded-10 object-cover w-full h-full"
                         />
                         <span
                           class="font-semibold text-sm text-white absolute bottom-3 text-center w-full"
@@ -2501,13 +2500,13 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       <div
                         data-action="click->generate-image#selectCharacter"
                         id="3747248"
-                        class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                        class="relative rounded-10 h-[250px] md:h-[221px] min-w-[160px]"
                         data-generate-image-target="characterItem"
                         data-generate-image-confirmed-character-gender="female"
                       >
                         <img
                           src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/3747248-5d5bb96f-c090-4dba-8655-a54b57c51fe1"
-                          class="rounded-[10px] object-cover w-full h-full"
+                          class="rounded-10 object-cover w-full h-full"
                         />
                         <span
                           class="font-semibold text-sm text-white absolute bottom-3 text-center w-full"
@@ -2517,13 +2516,13 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       <div
                         data-action="click->generate-image#selectCharacter"
                         id="3747086"
-                        class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                        class="relative rounded-10 h-[250px] md:h-[221px] min-w-[160px]"
                         data-generate-image-target="characterItem"
                         data-generate-image-confirmed-character-gender="female"
                       >
                         <img
                           src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/3747086-085b5b80-651a-4314-9df5-46b7876e5881"
-                          class="rounded-[10px] object-cover w-full h-full"
+                          class="rounded-10 object-cover w-full h-full"
                         />
                         <span
                           class="font-semibold text-sm text-white absolute bottom-3 text-center w-full"
@@ -2533,13 +2532,13 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       <div
                         data-action="click->generate-image#selectCharacter"
                         id="3746922"
-                        class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                        class="relative rounded-10 h-[250px] md:h-[221px] min-w-[160px]"
                         data-generate-image-target="characterItem"
                         data-generate-image-confirmed-character-gender="female"
                       >
                         <img
                           src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/3746922-a5f9cc3a-2d24-4d7f-b4f4-77cc597e3d91"
-                          class="rounded-[10px] object-cover w-full h-full"
+                          class="rounded-10 object-cover w-full h-full"
                         />
                         <span
                           class="font-semibold text-sm text-white absolute bottom-3 text-center w-full"
@@ -2549,13 +2548,13 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       <div
                         data-action="click->generate-image#selectCharacter"
                         id="2099592"
-                        class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                        class="relative rounded-10 h-[250px] md:h-[221px] min-w-[160px]"
                         data-generate-image-target="characterItem"
                         data-generate-image-confirmed-character-gender="female"
                       >
                         <img
                           src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/2099592-c0029072-dc0f-4d96-93b3-64581b29f664"
-                          class="rounded-[10px] object-cover w-full h-full"
+                          class="rounded-10 object-cover w-full h-full"
                         />
                         <span
                           class="font-semibold text-sm text-white absolute bottom-3 text-center w-full"
@@ -2565,13 +2564,13 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                       <div
                         data-action="click->generate-image#selectCharacter"
                         id="9"
-                        class="relative rounded-[10px] h-[250px] md:h-[221px] min-w-[160px]"
+                        class="relative rounded-10 h-[250px] md:h-[221px] min-w-[160px]"
                         data-generate-image-target="characterItem"
                         data-generate-image-confirmed-character-gender="female"
                       >
                         <img
                           src="https://cdn.candy.ai/cdn-cgi/image/format=webp,quality=80/https://cdn.candy.ai/9-77889ccf-250e-4209-b345-94d52625aa2b"
-                          class="rounded-[10px] object-cover w-full h-full"
+                          class="rounded-10 object-cover w-full h-full"
                         />
                         <span
                           class="font-semibold text-sm text-white absolute bottom-3 text-center w-full"
@@ -2589,13 +2588,13 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
 
                   <div class="flex flex-0">
                     <button
-                      class="flex-0 mr-8 mt-4 md:mt-8 justify-center border-2 text-pink-default border-pink-default w-full px-4 py-1.5 md:py-3 rounded-[10px] relative text-sm font-semibold text-center"
+                      class="flex-0 mr-8 mt-4 md:mt-8 justify-center border-2 text-primary border-primary w-full px-4 py-1.5 md:py-3 rounded-10 relative text-sm font-semibold text-center"
                       @click="isCharacterModalOpen = false"
                     >
                       Cancel
                     </button>
                     <button
-                      class="flex-0 mt-4 md:mt-8 justify-center text-white bg-pink-dark w-full px-4 py-1.5 md:py-3 rounded-[10px] relative text-sm font-semibold text-center disabled:opacity-40 cursor-not-allowed"
+                      class="flex-0 mt-4 md:mt-8 justify-center text-white bg-pinkDark w-full px-4 py-1.5 md:py-3 rounded-10 relative text-sm font-semibold text-center disabled:opacity-40 cursor-not-allowed"
                       data-action="generate-image#confirmCharacterSelection"
                       data-generate-image-target="confirmCharacterButton"
                       @click="isCharacterModalOpen = false"
@@ -2620,16 +2619,16 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
               <div
                 data-generate-image-target="toast"
                 id="choose-character-error"
-                class="hidden fixed bg-[#C23934] w-80 z-10 rounded-lg top-[70px] left-0 right-0 mx-auto my-0 lg:right-[40px] lg:left-[initial] text-white flex gap-3 px-4 py-3 justify-center items-start animate-slideFromRight duration-300 lg:mx-0"
+                class="hidden fixed bg-[#C23934] w-80 z-10 rounded-lg top-70 left-0 right-0 mx-auto my-0 lg:right-[40px] lg:left-[initial] text-white flex gap-3 px-4 py-3 justify-center items-start animate-slideFromRight duration-300 lg:mx-0"
               >
                 <img
                   src="/assets/create-char/crossed_circle-4248764afe392ec6862750722104a2ca280f995d373b5c53165b91391c4d5ca3.svg"
                 />
                 <div class="flex flex-col">
-                  <p class="leading-[24px] font-medium text-[16px]">
+                  <p class="leading-[24px] font-medium text-base">
                     Choose a character
                   </p>
-                  <p class="font-normal leading-[20px] text-[13px]">
+                  <p class="font-normal leading-[20px] text-xs">
                     You need to choose a character to continue
                   </p>
                 </div>
@@ -2654,7 +2653,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                     class="justify-center p-4 flex items-center min-h-screen text-center sm:items-center sm:p-0"
                   >
                     <div
-                      class="relative border border-black-light rounded-[10px] transform overflow-hidden text-left shadow-xl transition-all bubble-wrapper"
+                      class="relative border border-blackLight rounded-10 transform overflow-hidden text-left shadow-xl transition-all bubble-wrapper"
                     >
                       <button
                         @click="isPremiumSubscriptionModalOpen = false"
@@ -2677,7 +2676,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                           />
                         </div>
                         <div
-                          class="flex flex-1 z-10 flex-col items-start gap-16 px-6 py-10 md:py-6 bg-black-dark w-full h-1/2 md:w-1/2 md:h-full rounded-r-[10px]"
+                          class="flex flex-1 z-10 flex-col items-start gap-16 px-6 py-10 md:py-6 bg-blackDark w-full h-1/2 md:w-1/2 md:h-full rounded-r-[10px]"
                         >
                           <div
                             class="text-white md:text-3xl text-xl font-bold leading-[34px]"
@@ -2687,7 +2686,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                             more!
                           </div>
                           <div
-                            class="mt-5 mb-2.5 flex text-[#A4A4A4] text-sm italic font-medium"
+                            class="mt-5 mb-2.5 flex text-silverGray text-sm italic font-medium"
                           >
                             With subscription you can:
                           </div>
@@ -2735,7 +2734,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                           <div class="flex flex-col gap-y-2 mt-6">
                             <a
                               href="/subscriptions?from=generate-image"
-                              class="z-50 px-4 py-3 primary-gradient rounded-[10px] justify-center items-center gap-2 inline-flex"
+                              class="z-50 px-4 py-3 bg-g4 rounded-10 justify-center items-center gap-2 inline-flex"
                             >
                               <img
                                 class="h-5 w-5"
@@ -2804,7 +2803,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                             /assets/create-char/registration-modal-desktop-female-3e052793ac495e06fcec24252b22ec4f2d92bd7c843737dca7ee6ae9c2a98a72.png 768w
                           "
                           sizes="(max-width: 767px) 300px, 768px"
-                          class="left-0 absolute w-full lg:w-[70%] md:w-[70%] md:h-[100%] object-cover h-[65%] lg:h-full"
+                          class="left-0 absolute w-full lg:w-[70%] md:w-[70%] md:h-full object-cover h-[65%] lg:h-full"
                           src="/assets/create-char/registration-modal-mobile-female-db1b87b7c9cc7bcc18021e5286db193be614104c7260d4be2689da3f66cdb901.png"
                         />
                         <div
@@ -2818,7 +2817,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                               Only
                             </div>
                             <div
-                              class="flex justify-center text-[#E1E1E1] text-sm font-medium"
+                              class="flex justify-center text-greyMedium text-sm font-medium"
                             >
                               Please login or register in order to use this
                               feature
@@ -2830,7 +2829,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                             <a
                               href="/users/sign_up"
                               data-generate-image-target="registrationModalSignupButton"
-                              class="px-4 flex-grow py-3 primary-gradient rounded-lg justify-center items-center gap-2 inline-flex registration_button_ga"
+                              class="px-4 flex-grow py-3 bg-g4 rounded-lg justify-center items-center gap-2 inline-flex registration_button_ga"
                             >
                               <div
                                 class="text-white text-sm font-semibold leading-tight"
@@ -2842,7 +2841,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                               href="/users/sign_in"
                               data-generate-image-target="registrationModalSigninButton"
                               type="button"
-                              class="cursor-pointer flex-grow px-4 py-3 border-[#E75275] border text-[#E75275] rounded-lg justify-center items-center gap-2 inline-flex"
+                              class="cursor-pointer flex-grow px-4 py-3 border-pinkDark border text-pinkDark rounded-lg justify-center items-center gap-2 inline-flex"
                             >
                               <div class="text-sm font-semibold leading-tight">
                                 Login
@@ -2851,7 +2850,7 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
                           </div>
                           <div class="flex justify-center w-full">
                             <div
-                              class="w-[223px] h-8 px-2 py-1 bg-white bg-opacity-20 rounded-[10px] justify-start items-center gap-1 inline-flex"
+                              class="w-[223px] h-8 px-2 py-1 bg-white bg-opacity-20 rounded-10 justify-start items-center gap-1 inline-flex"
                             >
                               <img
                                 class="w-4 h-4 relative"
@@ -3027,6 +3026,26 @@ wearing a pencil dress, sitting at the dinner table in a fancy restaurant at nig
           tooltip.remove();
         });
       });
+
+      const tabs = document.querySelectorAll('[data-tab-target]');
+    const tabContents = document.querySelectorAll('[data-generate-image-target="tabContent"]');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetId = tab.dataset.tabTarget;
+
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        tabContents.forEach(content => {
+          if (content.id === targetId) {
+            content.classList.add('active');
+          } else {
+            content.classList.remove('active');
+          }
+        });
+      });
+    });
     </script>
   </body>
 </html>

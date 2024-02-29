@@ -9,7 +9,7 @@
   </head>
   <body>
     <div
-      class="bg-main fixed w-full top-0 z-40 flex h-16 shrink-0 items-center border-b border-[#363636] sm:px-4 px-2 shadow-sm sm:gap-x-2 lg:px-8"
+      class="bg-blackDarker fixed w-full top-0 z-40 flex h-16 shrink-0 items-center border-b border-blackLight sm:px-4 px-2 shadow-sm sm:gap-x-2 lg:px-8"
     >
       <button
         id="nav-hamburger"
@@ -36,18 +36,18 @@
       <a href="/">
         <img
           src="./icons/candyai-navbar.svg"
-          class="h-[30px] md:h-[30px] w-[115px]"
+          class="h-30 md:h-30 w-[115px]"
         />
       </a>
       <!-- Separator -->
       <div class="h-6 w-px bg-gray-900/10 lg:hidden" aria-hidden="true"></div>
 
-      <div class="flex flex-1 self-stretch lg:gap-x-6 bg-main">
+      <div class="flex flex-1 self-stretch lg:gap-x-6 bg-blackDarker">
         <form class="relative flex flex-1" action="#" method="GET"></form>
         <div class="hidden min-[350px]:flex items-center gap-x-4 lg:gap-x-6">
           <a
             href="/subscriptions.html"
-            class="justify-center items-center primary-gradient flex max-w-full gap-2 px-2 py-1.5 rounded-xl"
+            class="justify-center items-center bg-g4 flex max-w-full gap-2 px-2 py-1.5 rounded-xl"
           >
             <img
               src="./icons/premium.svg"
@@ -133,7 +133,7 @@
     </div>
 
     <div
-      class="hidden lg:pt-[63px] lg:z-20 lg:block lg:overflow-y-auto lg:overflow-x-hidden bg-g1 lg:fixed z-20 border-[#363636] border-r border-t lg:inset-y-0 lg:left-0 lg:w-[220px] lg:pb-5 w-[220px] fixed top-0 left-0 h-full webkit-transition-sidebar"
+      class="hidden lg:pt-[63px] lg:z-20 lg:block lg:overflow-y-auto lg:overflow-x-hidden bg-g1 lg:fixed z-20 border-blackLight border-r border-t lg:inset-y-0 lg:left-0 lg:w-[220px] lg:pb-5 w-[220px] fixed top-0 left-0 h-full transition-all duration-300 ease-in-out"
       id="mainSidebarOpened"
     >
       <nav class="flex flex-col justify-between h-full">
@@ -144,11 +144,11 @@
           <li class="relative w-full">
             <a
               href="/"
-              class="h-[40px] w-full hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
+              class="h-10 w-full hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/explore.svg" />
               <span
-                class="text-start text-grey-medium text-xxs font-medium leading-4"
+                class="text-start text-greyLight text-xxs font-medium leading-4"
                 >Explore</span
               >
             </a>
@@ -156,11 +156,11 @@
           <li class="relative w-full">
             <a
               href="/chat.html"
-              class="h-[40px] w-full hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
+              class="h-10 w-full hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/chat.svg" />
               <span
-                class="text-start text-grey-medium text-xxs font-medium leading-4"
+                class="text-start text-greyLight text-xxs font-medium leading-4"
                 >Chat</span
               >
             </a>
@@ -168,11 +168,11 @@
           <li class="relative w-full">
             <a
               href="/gallery.html"
-              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/gallery.svg" />
               <div
-                class="text-start text-grey-medium text-xxs font-medium leading-4"
+                class="text-start text-greyLight text-xxs font-medium leading-4"
               >
                 Gallery
               </div>
@@ -181,11 +181,11 @@
           <li class="relative w-full">
             <a
               href="/generate-image.html"
-              class="relative h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="relative h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/generate.svg" />
               <div
-                class="text-start text-grey-medium text-xxs font-medium leading-none"
+                class="text-start text-greyLight text-xxs font-medium leading-none"
               >
                 Generate Image
               </div>
@@ -194,11 +194,11 @@
           <li class="relative w-full">
             <a
               href="/create-character.html"
-              class="relative h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="relative h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/magic-wand.svg" />
               <div
-                class="text-start text-grey-medium text-xxs font-medium leading-none"
+                class="text-start text-greyLight text-xxs font-medium leading-none"
               >
                 Create Character
               </div>
@@ -207,11 +207,11 @@
           <li class="relative w-full">
             <a
               href="/my-ai.html"
-              class="h-[40px] bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-10 bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/love-lady.svg" />
               <div
-                class="text-start text-grey-medium text-xxs font-medium leading-none"
+                class="text-start text-greyLight text-xxs font-medium leading-none"
               >
                 My AI
               </div>
@@ -220,11 +220,11 @@
           <li class="relative w-full">
             <a
               href="/subscriptions.html"
-              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/premium1.svg" />
               <div
-                class="text-start text-pink-default text-xxs font-medium leading-none"
+                class="text-start text-primary text-xxs font-medium leading-none"
               >
                 Become Premium
               </div>
@@ -233,17 +233,17 @@
         </ul>
         <ul
           role="list"
-          class="flex flex-col gap-2 pt-6 px-6 border-[#363636] border-t items-center justify-end"
+          class="flex flex-col gap-2 pt-6 px-6 border-blackLight border-t items-center justify-end"
         >
           <li class="relative w-full">
             <a
               href="https://discord.gg/candyai"
               target="_blank"
-              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+              class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/discord1.svg" />
               <div
-                class="text-start text-grey-medium text-xs font-medium leading-4"
+                class="text-start text-greyLight text-xs font-medium leading-4"
               >
                 Discord
               </div>
@@ -252,11 +252,11 @@
           <li class="relative w-full">
             <div
               data-action="click->sidebar#openContactUs"
-              class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+              class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
             >
               <img class="w-4 h-4" src="./icons/contact.svg" />
               <div
-                class="text-start sidebar-text text-grey-medium text-xs font-medium leading-4"
+                class="text-start sidebar-text text-greyLight text-xs font-medium leading-4"
               >
                 Contact Us
               </div>
@@ -265,18 +265,18 @@
           <li class="relative w-full">
             <a target="_blank" class="" href="#">
               <div
-                class="h-[40px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+                class="h-10 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
               >
                 <img class="w-4 h-4" src="./icons/trophy.svg" />
                 <div
-                  class="text-start text-grey-medium text-xs font-medium leading-4"
+                  class="text-start text-greyLight text-xs font-medium leading-4"
                 >
                   Affiliate Program
                 </div>
               </div>
             </a>
           </li>
-          <li class="text-[8px] flex text-grey-medium pt-3 w-full">
+          <li class="text-8 flex text-greyLight pt-3 w-full">
             <a class="leading-none mr-2" href="#">Privacy Policy</a>
             <ul class="list-none">
               <li class="flex items-center mr-2">
@@ -291,7 +291,7 @@
 
     <div
       id="mainSidebarClosed"
-      class="lg:fixed lg:pt-[63px] z-20 border-[#363636] border-r border-t lg:inset-y-0 lg:left-0 lg:w-[100px] lg:pb-5 w-[100px] fixed top-0 left-0 h-full webkit-transition-sidebar hidden lg:block -translate-x-full"
+      class="lg:fixed lg:pt-[63px] z-20 border-blackLight border-r border-t lg:inset-y-0 lg:left-0 lg:w-[100px] lg:pb-5 w-[100px] fixed top-0 left-0 h-full transition-all duration-300 ease-in-out hidden lg:block -translate-x-full"
       style="
         background: linear-gradient(0deg, #131313 0%, #131313 100%);
         max-height: 100vh;
@@ -484,7 +484,7 @@
           >
             <a
               href="/"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/explore.svg" />
             </a>
@@ -497,7 +497,7 @@
           >
             <a
               href="/chat.html"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 flex justify-start px-3 items-center gap-2 cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/chat.svg" />
             </a>
@@ -510,7 +510,7 @@
           >
             <a
               href="/gallery.html"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/gallery.svg" />
             </a>
@@ -523,7 +523,7 @@
           >
             <a
               href="/generate-image.html"
-              class="relative h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="relative h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/generate.svg" />
             </a>
@@ -536,7 +536,7 @@
           >
             <a
               href="/create-character.html"
-              class="relative h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="relative h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/magic-wand.svg" />
             </a>
@@ -549,7 +549,7 @@
           >
             <a
               href="/my-ai.html"
-              class="h-[48px] w-[52px] bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-12 w-52 bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/love-lady.svg" />
             </a>
@@ -562,7 +562,7 @@
           >
             <a
               href="/subscriptions.html"
-              class="h-[48px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
+              class="h-12 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex mx-auto cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/premium1.svg" />
             </a>
@@ -570,7 +570,7 @@
         </ul>
         <ul
           role="list"
-          class="flex flex-col gap-2 pt-6 px-6 border-[#363636] border-t items-center justify-end"
+          class="flex flex-col gap-2 pt-6 px-6 border-blackLight border-t items-center justify-end"
         >
           <li
             class="relative w-full"
@@ -581,7 +581,7 @@
             <a
               href="https://discord.gg/candyai"
               target="_blank"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/discord1.svg" />
             </a>
@@ -594,7 +594,7 @@
           >
             <div
               data-action="click->sidebar#openContactUs"
-              class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+              class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
             >
               <img class="w-6 h-6" src="./icons/contact.svg" />
             </div>
@@ -607,7 +607,7 @@
           >
             <a target="_blank" class="" href="#">
               <div
-                class="h-[48px] w-[52px] hover:bg-zinc-700 rounded-[10px] border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
+                class="h-12 w-52 hover:bg-zinc-700 rounded-10 border border-white border-opacity-10 justify-start px-3 items-center gap-2 flex cursor-pointer"
               >
                 <img class="w-6 h-6" src="./icons/trophy.svg" />
               </div>
@@ -620,7 +620,7 @@
     <div
       id="mainMobileSidebar"
       data-action="click->sidebar#toggleMobileSidebar"
-      class="inset-y-0 w-[100vw] mt-[64px] z-[100] pr-[40vw] no-scroll fixed left-0 webkit-transition-sidebar block lg:hidden -translate-x-full"
+      class="inset-y-0 w-screen mt-16 z-[100] pr-[40vw]  fixed left-0 transition-all duration-300 ease-in-out block lg:hidden -translate-x-full"
     >
       <nav
         class="flex flex-col justify-between h-full w-[240px] mobile-sidebar-list-item"
@@ -652,7 +652,7 @@
                     class="flex items-center justify-between w-full mobile-sidebar-list-item"
                   >
                     <div
-                      class="ml-2 text-xs font-semibold leading-5 text-grey-medium mobile-sidebar-list-item"
+                      class="ml-2 text-xs font-semibold leading-5 text-greyLight mobile-sidebar-list-item"
                     >
                       My Profile
                     </div>
@@ -684,7 +684,7 @@
                       />
                     </div>
                     <div
-                      class="text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item"
+                      class="text-greyLight text-sm font-semibold leading-5 mobile-sidebar-list-item"
                     >
                       Subscription
                     </div>
@@ -700,7 +700,7 @@
                       />
                     </div>
                     <div
-                      class="text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item"
+                      class="text-greyLight text-sm font-semibold leading-5 mobile-sidebar-list-item"
                     >
                       Settings
                     </div>
@@ -717,7 +717,7 @@
                       />
                     </div>
                     <div
-                      class="text-grey-medium text-sm font-semibold leading-5 mobile-sidebar-list-item"
+                      class="text-greyLight text-sm font-semibold leading-5 mobile-sidebar-list-item"
                     >
                       Logout
                     </div>
@@ -737,7 +737,7 @@
                   src="./icons/explore.svg"
                 />
                 <span
-                  class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs leading-5 font-semibold mobile-sidebar-list-item"
                   >Explore</span
                 >
               </a>
@@ -754,7 +754,7 @@
                   src="./icons/chat.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs leading-5 font-semibold mobile-sidebar-list-item"
                 >
                   Chat
                 </div>
@@ -772,7 +772,7 @@
                   src="./icons/gallery.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs leading-5 font-semibold mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs leading-5 font-semibold mobile-sidebar-list-item"
                 >
                   Gallery
                 </div>
@@ -790,7 +790,7 @@
                   src="./icons/generate.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs font-medium leading-none mobile-sidebar-list-item"
                 >
                   Generate Image
                 </div>
@@ -808,7 +808,7 @@
                   src="./icons/magic-wand.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs font-medium leading-none mobile-sidebar-list-item"
                 >
                   Create Character
                 </div>
@@ -826,7 +826,7 @@
                   src="./icons/love-lady.svg"
                 />
                 <div
-                  class="text-start text-grey-medium text-xs font-medium leading-none mobile-sidebar-list-item"
+                  class="text-start text-greyLight text-xs font-medium leading-none mobile-sidebar-list-item"
                 >
                   My AI
                 </div>
@@ -844,7 +844,7 @@
                   src="./icons/premium1.svg"
                 />
                 <div
-                  class="text-start text-pink-default text-xs font-medium leading-none mobile-sidebar-list-item"
+                  class="text-start text-primary text-xs font-medium leading-none mobile-sidebar-list-item"
                 >
                   Become Premium
                 </div>
@@ -852,16 +852,16 @@
             </li>
           </ul>
           <div
-            class="p-5 bg-[#1A1A1A] flex-col justify-end items-start gap-[17px] inline-flex mobile-sidebar-list-item"
+            class="p-5 bg-blackDark flex-col justify-end items-start gap-[17px] inline-flex mobile-sidebar-list-item"
           >
             <div
               class="justify-start items-start gap-5 inline-flex mobile-sidebar-list-item"
             >
               <div
-                class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item"
+                class="px-2.5 py-1 rounded-5 border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item"
               >
                 <div
-                  class="w-[70px] text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item"
+                  class="w-70 text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item"
                 >
                   <a
                     href="https://discord.gg/candyai"
@@ -874,10 +874,10 @@
               </div>
               <div
                 data-action="click->sidebar#openContactUs"
-                class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex"
+                class="px-2.5 py-1 rounded-5 border border-neutral-400 justify-center items-center gap-2.5 flex"
               >
                 <div
-                  class="w-[70px] text-center text-neutral-200 text-xs font-semibold whitespace-nowrap leading-tight relative"
+                  class="w-70 text-center text-neutral-200 text-xs font-semibold whitespace-nowrap leading-tight relative"
                 >
                   Contact Us
                 </div>
@@ -887,11 +887,11 @@
               class="justify-start items-start gap-5 inline-flex mobile-sidebar-list-item"
             >
               <div
-                class="px-2.5 py-1 rounded-[5px] border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item"
+                class="px-2.5 py-1 rounded-5 border border-neutral-400 justify-center items-center gap-2.5 flex mobile-sidebar-list-item"
               >
                 <a target="_blank" class="mobile-sidebar-list-item" href="#">
                   <div
-                    class="w-[70px] text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item"
+                    class="w-70 text-center text-neutral-200 text-xs font-semibold leading-tight mobile-sidebar-list-item"
                   >
                     Affiliate
                   </div>
@@ -902,7 +902,7 @@
               class="justify-start items-center gap-2 inline-flex mobile-sidebar-list-item"
             >
               <a
-                class="text-neutral-300 text-[8px] font-medium leading-[14px] mobile-sidebar-list-item"
+                class="text-neutral-300 text-8 font-medium leading-[14px] mobile-sidebar-list-item"
                 href="#"
                 >Privacy Policy</a
               >
@@ -910,7 +910,7 @@
                 class="w-1 h-1 bg-zinc-300 rounded-full mobile-sidebar-list-item"
               ></div>
               <a
-                class="text-neutral-300 text-[8px] font-medium leading-[14px] mobile-sidebar-list-item"
+                class="text-neutral-300 text-8 font-medium leading-[14px] mobile-sidebar-list-item"
                 href="#"
                 >Terms of Service</a
               >
@@ -921,7 +921,7 @@
     </div>
 
     <div
-      class="flex px-5 py-2 justify-between w-full h-[56px] fixed bottom-0 z-50 border-t border-white border-opacity-20 bg-[#131313] lg:hidden"
+      class="flex px-5 py-2 justify-between w-full h-[56px] fixed bottom-0 z-50 border-t border-white border-opacity-20 bg-blackDarker lg:hidden"
     >
       <!-- Discover Icon -->
       <a href="/" class="flex flex-col items-center">
@@ -949,7 +949,7 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="text-[#A1A1A1] text-[10px] mt-1">Explore</span>
+        <span class="textsterlingSilver text-10 mt-1">Explore</span>
       </a>
       <!-- Generate Image Icon -->
       <a
@@ -977,7 +977,7 @@
             fill="#a1a1a1"
           />
         </svg>
-        <span class="text-[#a1a1a1] text-[10px] mt-1">Generate</span>
+        <span class="textsterlingSilver text-10 mt-1">Generate</span>
       </a>
       <!-- Create AI Icon -->
       <a href="/create-character.html" class="flex flex-col items-center">
@@ -1057,7 +1057,7 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="text-[#a1a1a1] text-[10px] mt-1">Create</span>
+        <span class="textsterlingSilver text-10 mt-1">Create</span>
       </a>
       <!-- Chat Icon -->
       <a href="/chat.html" class="flex flex-col items-center">
@@ -1096,7 +1096,7 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="text-[#A1A1A1] text-[10px] mt-1">Chat</span>
+        <span class="textsterlingSilver text-10 mt-1">Chat</span>
       </a>
       <!-- Premium Icon -->
       <a href="/subscriptions.html" class="flex flex-col items-center">
@@ -1120,7 +1120,7 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="text-[#A1A1A1] text-[10px] mt-1">Premium</span>
+        <span class="textsterlingSilver text-10 mt-1">Premium</span>
       </a>
     </div>
 
@@ -1150,7 +1150,7 @@
                 <a class="flex flex-col flex-grow" href="/">
                   <li>
                     <div
-                      class="relative rounded-lg md:h-[400px] h-[90px] bg-g4 flex justify-center items-center"
+                      class="relative rounded-lg md:h-400 h-[90px] bg-g4 flex justify-center items-center"
                     >
                       <div class="">
                         <img
@@ -1207,14 +1207,14 @@
                       </h1>
                       <div class="mt-10 flex flex-col gap-4 justify-center">
                         <div
-                          class="text-center text-[#E1E1E1] text-sm font-medium"
+                          class="text-center text-greyMedium text-sm font-medium"
                         >
                           Are you sure you want to delete this character? This
                           action is irreversible, and the character will be
                           permanently deleted.
                         </div>
                         <div
-                          class="text-center text-[#E1E1E1] text-sm font-medium"
+                          class="text-center text-greyMedium text-sm font-medium"
                         >
                           As a gesture of gratitude for joining us during our
                           beta phase, we will credit 3 tokens back to your
@@ -1237,7 +1237,7 @@
                               value="delete"
                               autocomplete="off"
                             /><button
-                              class="h-11 px-4 py-3 w-full justify-center bg-gradient-to-l from-rose-400 to-rose-500 rounded-[10px] items-center gap-2 inline-flex text-white text-sm font-semibold leading-tight"
+                              class="h-11 px-4 py-3 w-full justify-center bg-gradient-to-l from-rose-400 to-rose-500 rounded-10 items-center gap-2 inline-flex text-white text-sm font-semibold leading-tight"
                               data-controller="loading-button-cma"
                               data-loading-button-cma-target="submit"
                               type="submit"
@@ -1254,7 +1254,7 @@
                         <div>
                           <button
                             @click.prevent.stop="confirmModal = false"
-                            class="h-11 px-4 py-3 inline-flex w-full justify-center rounded-md border-2 border-rose-400 rounded-[10px] justify-center items-center gap-2 inline-flex text-rose-400 text-sm font-semibold leading-tight"
+                            class="h-11 px-4 py-3 inline-flex w-full justify-center rounded-md border-2 border-rose-400 rounded-10 justify-center items-center gap-2 inline-flex text-rose-400 text-sm font-semibold leading-tight"
                           >
                             Cancel
                           </button>
@@ -1263,7 +1263,6 @@
                     </div>
                   </div>
                 </div>
-
                 <a
                   href="#"
                   data-turbo-stream="true"
@@ -1271,33 +1270,33 @@
                 >
                   <li>
                     <div
-                      class="relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:right-0 before:h-[45%] before:bg-g5 before:pointer-events-none before:z-[1]-my-ai md:h-[400px] h-[500px]"
+                      class="relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:right-0 before:h-[45%] before:bg-g5 before:pointer-events-none before:z-[1] md:h-400 h-[500px]"
                     >
                       <div class="absolute z-10"></div>
                       <img
-                        class="rounded-lg profile-image object-top first-image w-full object-cover md:h-[400px] h-[500px]"
-                        src="https://res-3.cloudinary.com/dcp9dwff4/image/private/s--mAvw87t0--/zutjpvajf0ez5wuuv5mf"
+                        class="rounded-lg absolute transition-opacity duration-300 ease-in-out object-top first-image w-full object-cover md:h-400 h-[500px]"
+                        src="./images/samantha.png"
                       />
                       <div
                         class="z-[3] w-10 h-10 shadow-lg absolute right-3 top-3 bg-g4 rounded-full shadow backdrop-blur-lg"
                       >
                         <img
                           src="https://candy.ai/assets/chat-profile-3188fc1c14a3a8e68784875dddbb03c5badf6d0ef632680a80f0c65d692104fc.svg"
-                          class="absolute w-5 h-5 left-[10px] top-[10px]"
+                          class="absolute w-5 h-5 left-2.5 top-[10px]"
                         />
                       </div>
                       <div
                         class="absolute bottom-0 px-3 md:px-4 py-3 font-medium z-[3]"
                       >
                         <h1 class="text-white text-md font-semibold">
-                          Hayley Kirlin
+                          Samatha Hirthe 
                         </h1>
                         <h1 class="text-white font-medium text-xxs">
                           29 years
                         </h1>
-                        <p
-                          class="text-gray-200 font-medium block text-sm md:text-sm opacity-[0.8] py-2"
-                        ></p>
+                        <p class="text-gray-200 font-medium block text-sm md:text-sm opacity-80 py-2">
+                          Cosplay enthusiast and self-development advocate, this confident and classy female massage therapist is passionate about manga, anime, and her career.
+                        </p>
                       </div>
                     </div>
                   </li>
@@ -1374,7 +1373,7 @@
           class="flex min-h-full items-end justify-center p-4 text-center sm:items-center"
         >
           <div
-            class="relative transform overflow-hidden rounded-[10px] bg-main text-left shadow-xl transition-all sm:my-8"
+            class="relative transform overflow-hidden rounded-10 bg-blackDarker text-left shadow-xl transition-all sm:my-8"
           >
             <div
               class="hidden md:flex border border-[color:var(--Pop-Up-Stroke,#282828)] bg-zinc-900 flex-col rounded-xl border-solid"
@@ -1446,7 +1445,7 @@
                             class="justify-start w-full items-start gap-2 inline-flex"
                           >
                             <div
-                              class="h-11 bg-rose-400 rounded-[10px] grow shrink border border-rose-300 justify-start items-center gap-2.5 flex"
+                              class="h-11 bg-rose-400 rounded-10 grow shrink border border-rose-300 justify-start items-center gap-2.5 flex"
                             >
                               <input
                                 value="Tricia Dach"
@@ -1457,7 +1456,7 @@
                               />
                             </div>
                             <div
-                              class="w-11 h-11 px-2 py-1 rounded-[10px] border-2 border-white border-opacity-50 justify-center items-center flex"
+                              class="w-11 h-11 px-2 py-1 rounded-10 border-2 border-white border-opacity-50 justify-center items-center flex"
                             >
                               <button
                                 name="button"
@@ -1488,7 +1487,7 @@
                     <div class="flex grow flex-col w-[380px] max-md:mt-6">
                       <div class="relative">
                         <img
-                          class="object-top rounded-[10px] aspect-[0.79] object-cover object-center w-full overflow-hidden self-stretch"
+                          class="object-top rounded-10 aspect-[0.79] object-cover object-center w-full overflow-hidden self-stretch"
                           src="https://res-4.cloudinary.com/dcp9dwff4/image/private/s--FiVaMGg9--/yly6hbg0wdlxhmmweyl4"
                         />
                         <div
@@ -1606,7 +1605,7 @@
                               >
                                 <svg
                                   id="pause-icon"
-                                  class="text-[#C14DA0]"
+                                  class="text-orchidPink"
                                   fill="none"
                                   viewBox="0 0 24 24"
                                   stroke-width="3"
@@ -1689,7 +1688,7 @@
                       </div>
 
                       <div
-                        class="items-start flex w-[378px] max-w-full flex-col mt-11"
+                        class="items-start flex w-378 max-w-full flex-col mt-11"
                       >
                         <div
                           class="text-neutral-400 text-sm font-medium leading-[142.86%] uppercase"
@@ -1705,7 +1704,7 @@
                         </div>
                       </div>
                       <div
-                        class="items-start flex w-[378px] max-w-full grow flex-col mt-11"
+                        class="items-start flex w-378 max-w-full grow flex-col mt-11"
                       >
                         <a
                           data-controller="loading-button-cma"
@@ -1789,7 +1788,7 @@
                         >
                           <div class="items-start flex gap-2">
                             <div
-                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                              class="w-34 h-34 p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
                             >
                               <img
                                 class="w-[20px] justify-center items-center"
@@ -1811,7 +1810,7 @@
                           </div>
                           <div class="items-start flex gap-2">
                             <div
-                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                              class="w-34 h-34 p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
                             >
                               <img
                                 class="w-[20px] justify-center items-center"
@@ -1837,7 +1836,7 @@
                         >
                           <div class="items-start flex gap-2">
                             <div
-                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                              class="w-34 h-34 p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
                             >
                               <img
                                 class="w-[20px] justify-center items-center"
@@ -1859,7 +1858,7 @@
                           </div>
                           <div class="items-start flex gap-2">
                             <div
-                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                              class="w-34 h-34 p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
                             >
                               <img
                                 class="w-[20px] justify-center items-center"
@@ -1909,7 +1908,7 @@
                             class="items-start self-stretch flex justify-between gap-2"
                           >
                             <div
-                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                              class="w-34 h-34 p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
                             >
                               <img
                                 class="w-[20px] justify-center items-center"
@@ -1935,7 +1934,7 @@
                             class="items-start self-stretch flex justify-between gap-2"
                           >
                             <div
-                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                              class="w-34 h-34 p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
                             >
                               <img
                                 class="w-[20px] justify-center items-center"
@@ -1965,7 +1964,7 @@
                             class="items-start self-stretch flex justify-between gap-2"
                           >
                             <div
-                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                              class="w-34 h-34 p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
                             >
                               <img
                                 class="w-[20px] justify-center items-center"
@@ -2048,7 +2047,7 @@
                     <div class="z-10 flex grow flex-col">
                       <div class="relative">
                         <img
-                          class="object-top rounded-[10px] aspect-[0.79] object-cover object-center w-full overflow-hidden self-stretch"
+                          class="object-top rounded-10 aspect-[0.79] object-cover object-center w-full overflow-hidden self-stretch"
                           src="https://res-4.cloudinary.com/dcp9dwff4/image/private/s--FiVaMGg9--/yly6hbg0wdlxhmmweyl4"
                         />
                         <div
@@ -2144,7 +2143,7 @@
                             class="justify-start flex w-full items-start gap-2 inline-flex"
                           >
                             <div
-                              class="h-11 bg-rose-400 rounded-[10px] grow shrink border border-rose-300 justify-start items-center gap-2.5 flex"
+                              class="h-11 bg-rose-400 rounded-10 grow shrink border border-rose-300 justify-start items-center gap-2.5 flex"
                             >
                               <input
                                 value="Tricia Dach"
@@ -2155,7 +2154,7 @@
                               />
                             </div>
                             <div
-                              class="w-11 h-11 px-2 py-1 rounded-[10px] border-2 border-white border-opacity-50 justify-center items-center flex"
+                              class="w-11 h-11 px-2 py-1 rounded-10 border-2 border-white border-opacity-50 justify-center items-center flex"
                             >
                               <button
                                 name="button"
@@ -2203,7 +2202,7 @@
                                 >
                                   <svg
                                     id="pause-icon"
-                                    class="text-[#C14DA0]"
+                                    class="text-orchidPink"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke-width="3"
@@ -2403,7 +2402,7 @@
                         >
                           <div class="items-start flex gap-2">
                             <div
-                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                              class="w-34 h-34 p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
                             >
                               <img
                                 class="w-[20px] justify-center items-center"
@@ -2426,7 +2425,7 @@
                           <div class="items-start flex gap-2">
                             <div class="items-start flex gap-2">
                               <div
-                                class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                                class="w-34 h-34 p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
                               >
                                 <img
                                   class="w-[20px] justify-center items-center"
@@ -2453,7 +2452,7 @@
                         >
                           <div class="items-start flex gap-2">
                             <div
-                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                              class="w-34 h-34 p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
                             >
                               <img
                                 class="w-[20px] justify-center items-center"
@@ -2475,7 +2474,7 @@
                           </div>
                           <div class="items-start flex gap-2">
                             <div
-                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                              class="w-34 h-34 p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
                             >
                               <img
                                 class="w-[20px] justify-center items-center"
@@ -2523,7 +2522,7 @@
                             class="items-start self-stretch flex justify-between gap-2"
                           >
                             <div
-                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                              class="w-34 h-34 p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
                             >
                               <img
                                 class="w-[20px] justify-center items-center"
@@ -2549,7 +2548,7 @@
                             class="items-start self-stretch flex justify-between gap-2"
                           >
                             <div
-                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                              class="w-34 h-34 p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
                             >
                               <img
                                 class="w-[20px] justify-center items-center"
@@ -2579,7 +2578,7 @@
                             class="items-start self-stretch flex justify-between gap-2"
                           >
                             <div
-                              class="w-[34px] h-[34px] p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
+                              class="w-34 h-34 p-[7px] rounded-[100px] border border-white border-opacity-20 justify-center items-center inline-flex"
                             >
                               <img
                                 class="w-[20px] justify-center items-center"
